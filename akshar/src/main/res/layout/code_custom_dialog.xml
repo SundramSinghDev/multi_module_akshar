@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_margin="@dimen/txt_subheading15"
+        android:padding="@dimen/txt_subheading15"
+        android:layout_height="wrap_content">
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/label"
+            android:layout_width="match_parent"
+            android:adjustViewBounds="true"
+            android:text="@string/please_enter_the_code_received_from_your_school_college"
+            android:fontFamily="@font/celias_regular"
+            android:layout_gravity="center"
+            android:padding="@dimen/pad_5dp"
+            android:textSize="@dimen/txt_15sp"
+            android:gravity="center|start"
+            android:textColor="@color/darker_gray2"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"/>
+
+
+        <com.google.android.material.textfield.TextInputLayout
+            style="@style/LoginTextInputLayoutStyle"
+            app:hintTextColor="@color/user_icon_default_gray"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:minHeight="50dp"
+            android:gravity="center"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/label">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/code"
+                android:layout_width="match_parent"
+                android:layout_gravity="center"
+                android:gravity="center|start"
+                android:focusable="true"
+                android:inputType="number"
+                android:focusableInTouchMode="true"
+                android:focusedByDefault="true"
+                android:layout_height="match_parent"
+                android:textSize="14sp"
+                android:padding="@dimen/pad_10dp" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

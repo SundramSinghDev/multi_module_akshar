@@ -1,0 +1,257 @@
+<?xml version="1.0" encoding="utf-8"?><!--
+  ~ Copyright/**
+  ~          * CedCommerce
+  ~           *
+  ~           * NOTICE OF LICENSE
+  ~           *
+  ~           * This source file is subject to the End User License Agreement (EULA)
+  ~           * that is bundled with this package in the file LICENSE.txt.
+  ~           * It is also available through the world-wide-web at this URL:
+  ~           * http://cedcommerce.com/license-agreement.txt
+  ~           *
+  ~           * @category  Ced
+  ~           * @package   MageNative
+  ~           * @author    CedCommerce Core Team <connect@cedcommerce.com >
+  ~           * @copyright Copyright CEDCOMMERCE (http://cedcommerce.com/)
+  ~           * @license      http://cedcommerce.com/license-agreement.txt
+  ~           */
+  -->
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <data>
+        <variable
+            name="test"
+            type="com.akshar.store.ui.addresssection.model.AddressItem"/>
+    </data>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/MageNative_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp"
+        android:background="@color/white"
+        app:cardUseCompatPadding="true">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:weightSum="1"
+                android:padding="3dp">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/MageNative_order_id_tag"
+                    android:layout_width="0dp"
+                    android:layout_weight="0.5"
+                    android:layout_height="wrap_content"
+                    android:text="@string/orderid"
+                    android:fontFamily="@font/celias_regular"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/txt_13sp"
+                    />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/MageNative_order_id"
+                    android:layout_width="0dp"
+                    android:layout_weight="0.5"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/celias_regular"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/txt_13sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:weightSum="1"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="3dp">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/MageNative_date_tag"
+                    android:layout_width="0dp"
+                    android:layout_weight="0.5"
+                    android:layout_height="wrap_content"
+                    android:text="@string/date"
+                    android:fontFamily="@font/celias_regular"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/txt_13sp"
+                    />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/MageNative_date"
+                    android:layout_width="0dp"
+                    android:layout_weight="0.5"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/celias_regular"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/txt_13sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:weightSum="1"
+                android:padding="3dp">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/MageNative_title_tag"
+                    android:layout_width="0dp"
+                    android:layout_weight="0.5"
+                    android:layout_height="wrap_content"
+                    android:text="@string/tittle"
+                    android:fontFamily="@font/celias_regular"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/txt_13sp"
+                    />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/MageNative_title"
+                    android:fontFamily="@font/celias_regular"
+                    android:layout_width="0dp"
+                    android:layout_weight="0.5"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/txt_13sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:weightSum="1"
+                android:orientation="horizontal"
+                android:padding="3dp">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/MageNative_link_title_tag"
+                    android:layout_width="0dp"
+                    android:layout_weight="0.5"
+                    android:layout_height="wrap_content"
+                    android:text="@string/linktittle"
+                    android:fontFamily="@font/celias_regular"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/txt_13sp"
+                    />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/MageNative_link_title"
+                    android:layout_width="0dp"
+                    android:layout_weight="0.5"
+                    android:fontFamily="@font/celias_regular"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/txt_13sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:weightSum="1"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="3dp">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/MageNative_status_tag"
+                    android:layout_width="0dp"
+                    android:layout_weight="0.5"
+                    android:layout_height="wrap_content"
+                    android:text="@string/status"
+                    android:textColor="@color/black"
+                    android:fontFamily="@font/celias_regular"
+                    android:textSize="@dimen/txt_13sp"
+                    />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/MageNative_status"
+                    android:layout_width="0dp"
+                    android:layout_weight="0.5"
+                    android:fontFamily="@font/celias_regular"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/txt_13sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:weightSum="1"
+                android:padding="3dp">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/MageNative_remaining_dowload_tag"
+                    android:layout_width="0dp"
+                    android:layout_weight="0.5"
+                    android:layout_height="wrap_content"
+                    android:text="@string/remainingdoenload"
+                    android:textColor="@color/black"
+                    android:fontFamily="@font/celias_regular"
+                    android:textSize="@dimen/txt_13sp"
+                    />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/MageNative_remaining_dowload"
+                    android:layout_width="0dp"
+                    android:layout_weight="0.5"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/celias_regular"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/txt_13sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:gravity="center"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:orientation="vertical"
+                android:padding="5dp">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/clickhere"
+                    android:textColor="@color/black"
+                    android:gravity="center"
+                    android:fontFamily="@font/celias_regular"
+                    android:textSize="@dimen/txt_13sp" />
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/MageNative_Downloadlink"
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:layout_gravity="center_horizontal"
+                    android:paddingStart="@dimen/pad_5dp"
+                    android:src="@drawable/mydownloadpro"
+                    android:textColor="@color/black"
+
+                    />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:visibility="gone">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/MageNative_file_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/MageNative_download_url"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+
+
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+</layout>

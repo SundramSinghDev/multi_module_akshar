@@ -1,0 +1,333 @@
+<?xml version="1.0" encoding="utf-8"?><!--
+  ~ Copyright/**
+  ~          * CedCommerce
+  ~           *
+  ~           * NOTICE OF LICENSE
+  ~           *
+  ~           * This source file is subject to the End User License Agreement (EULA)
+  ~           * that is bundled with this package in the file LICENSE.txt.
+  ~           * It is also available through the world-wide-web at this URL:
+  ~           * http://cedcommerce.com/license-agreement.txt
+  ~           *
+  ~           * @category  Ced
+  ~           * @package   MageNative
+  ~           * @author    CedCommerce Core Team <connect@cedcommerce.com >
+  ~           * @copyright Copyright CEDCOMMERCE (http://cedcommerce.com/)
+  ~           * @license   http://cedcommerce.com/license-agreement.txt
+  ~           */
+  -->
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true">
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/main"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="visible">
+
+            <RelativeLayout
+                android:id="@+id/couponheader"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                android:background="@color/green"
+                android:visibility="gone"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/icon"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_centerVertical="true"
+                    android:layout_marginStart="15dp"
+                    android:src="@drawable/coupon200" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/couponcodetext"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_margin="5dp"
+                    android:layout_toEndOf="@+id/icon"
+                    android:text="@string/coupontext"
+                    android:textColor="@color/black"
+                    android:textSize="13sp" />
+            </RelativeLayout>
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/MageNative_line"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:alpha="0.5"
+                android:background="@color/border"
+                android:visibility="visible"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <LinearLayout
+                android:id="@+id/MageNative_countsection"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:weightSum="1"
+                app:layout_constraintTop_toBottomOf="@id/MageNative_line">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/MageNative_count"
+                    android:layout_width="0dp"
+                    android:fontFamily="@font/celias_regular"
+                    android:layout_height="match_parent"
+                    android:layout_weight=".7"
+                    android:background="@color/txtapptheme_color"
+                    android:ellipsize="end"
+                    android:gravity="center"
+                    android:maxLines="2"
+                    android:textColor="@color/AppTheme"
+                    android:textSize="13sp"
+                    />
+
+                <com.balysv.materialripple.MaterialRippleLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight=".3"
+                    android:background="#ffffff"
+                    app:mrl_rippleAlpha="0.2"
+                    app:mrl_rippleColor="#000"
+                    app:mrl_rippleDelayClick="false"
+                    app:mrl_rippleHover="true"
+                    app:mrl_rippleOverlay="true">
+
+                    <LinearLayout
+                        android:id="@+id/MageNative_clearcartsection"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@color/AppTheme"
+                        android:orientation="vertical">
+                        <androidx.appcompat.widget.AppCompatImageView
+                            android:id="@+id/MageNative_carticon"
+                            android:layout_width="25dp"
+                            android:layout_height="25dp"
+                            android:layout_gravity="center_horizontal"
+                            android:layout_marginTop="5dp"
+                            android:tint="@color/txtapptheme_color"
+                            android:src="@drawable/shoppingcart" />
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/celias_regular"
+                            android:layout_gravity="center_horizontal"
+                            android:layout_marginTop="5dp"
+                            android:text="@string/clearcart"
+                            android:textColor="@color/txtapptheme_color"
+                            />
+                    </LinearLayout>
+                </com.balysv.materialripple.MaterialRippleLayout>
+
+            </LinearLayout>
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/line2"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_below="@+id/MageNative_countsection"
+                android:background="@color/AppTheme"
+                android:textColor="@color/txtapptheme_color"
+                app:layout_constraintTop_toBottomOf="@id/MageNative_countsection" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/cart_recycler"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                app:layout_constraintTop_toBottomOf="@id/line2" />
+
+            <LinearLayout
+                android:id="@+id/MageNative_couponcode"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:minHeight="40dp"
+                android:layout_margin="10dp"
+                android:background="@color/white"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:weightSum="1"
+                app:layout_constraintTop_toBottomOf="@id/cart_recycler">
+
+                <EditText
+                    android:id="@+id/MageNative_applycoupantag"
+                    android:fontFamily="@font/celias_regular"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_margin="2dp"
+                    android:layout_weight="0.6"
+                    android:background="@drawable/filterselector"
+                    android:gravity="center"
+                    android:textSize="@dimen/txt_12sp"
+                    android:hint="@string/couponcode"
+                    android:textColor="@color/onwhitetextcolor"
+                    android:textColorHint="@color/main_color_gray" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/MageNative_applycoupan"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:fontFamily="@font/celias_regular"
+                    android:layout_margin="2dp"
+                    android:textSize="@dimen/txt_12sp"
+                    android:layout_weight="0.4"
+                    android:background="@drawable/sortbyselector"
+                    android:gravity="center"
+                    android:text="@string/apply"
+                    android:textAllCaps="true"
+                    android:textColor="@color/AppTheme"
+                    />
+            </LinearLayout>
+
+            <!--   <androidx.appcompat.widget.AppCompatTextView
+                   android:id="@+id/amounttopay"
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:layout_gravity="end"
+                   android:layout_margin="10dp"
+                   android:gravity="end"
+                   android:textAllCaps="true"
+                   android:textColor="@color/black"
+                   android:textSize="15sp"
+                   app:layout_constraintEnd_toEndOf="parent"
+                   app:layout_constraintTop_toBottomOf="@id/MageNative_couponcode" />
+
+               <androidx.appcompat.widget.AppCompatTextView
+                   android:id="@+id/line3"
+                   android:layout_width="200dp"
+                   android:layout_height="1dp"
+                   android:layout_gravity="end"
+                   android:layout_margin="10dp"
+                   android:alpha="0.5"
+                   android:background="@color/black"
+                   android:gravity="end"
+                   app:layout_constraintEnd_toEndOf="parent"
+                   app:layout_constraintTop_toBottomOf="@id/amounttopay" />
+
+               <androidx.appcompat.widget.AppCompatTextView
+                   android:id="@+id/shippingcharges"
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:layout_gravity="end"
+                   android:layout_margin="10dp"
+                   android:gravity="end"
+                   android:textAllCaps="true"
+                   android:textColor="@color/black"
+                   android:textSize="15sp"
+                   app:layout_constraintEnd_toEndOf="parent"
+                   app:layout_constraintTop_toBottomOf="@id/line3" />
+
+               <androidx.appcompat.widget.AppCompatTextView
+                   android:id="@+id/line4"
+                   android:layout_width="200dp"
+                   android:layout_height="1dp"
+                   android:layout_gravity="end"
+                   android:layout_margin="10dp"
+                   android:alpha="0.5"
+                   android:background="@color/black"
+                   android:gravity="end"
+                   app:layout_constraintEnd_toEndOf="parent"
+                   app:layout_constraintTop_toBottomOf="@id/shippingcharges" />
+
+               <androidx.appcompat.widget.AppCompatTextView
+                   android:id="@+id/taxamount"
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:layout_gravity="end"
+                   android:layout_margin="10dp"
+                   android:gravity="end"
+                   android:textAllCaps="true"
+                   android:textColor="@color/black"
+                   android:textSize="15sp"
+                   app:layout_constraintEnd_toEndOf="parent"
+                   app:layout_constraintTop_toBottomOf="@id/line4" />
+
+               <androidx.appcompat.widget.AppCompatTextView
+                   android:id="@+id/line5"
+                   android:layout_width="200dp"
+                   android:layout_height="1dp"
+                   android:layout_gravity="end"
+                   android:layout_margin="10dp"
+                   android:alpha="0.5"
+                   android:background="@color/black"
+                   android:gravity="end"
+                   app:layout_constraintEnd_toEndOf="parent"
+                   app:layout_constraintTop_toBottomOf="@id/taxamount" />
+
+               <androidx.appcompat.widget.AppCompatTextView
+                   android:id="@+id/discountamount"
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:layout_gravity="end"
+                   android:layout_margin="10dp"
+                   android:gravity="end"
+                   android:textAllCaps="true"
+                   android:textColor="@color/black"
+                   android:textSize="15sp"
+                   app:layout_constraintEnd_toEndOf="parent"
+                   app:layout_constraintTop_toBottomOf="@id/line5" />
+
+               <androidx.appcompat.widget.AppCompatTextView
+                   android:id="@+id/line6"
+                   android:layout_width="200dp"
+                   android:layout_height="1dp"
+                   android:layout_gravity="end"
+                   android:layout_margin="10dp"
+                   android:alpha="0.5"
+                   android:background="@color/black"
+                   android:gravity="end"
+                   app:layout_constraintEnd_toEndOf="parent"
+                   app:layout_constraintTop_toBottomOf="@id/discountamount" />
+
+               <androidx.appcompat.widget.AppCompatTextView
+                   android:id="@+id/grandamount"
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:layout_gravity="end"
+                   android:layout_margin="10dp"
+                   android:gravity="end"
+                   android:textAllCaps="true"
+                   android:textColor="@color/black"
+                   android:textSize="20sp"
+                   app:layout_constraintEnd_toEndOf="parent"
+                   app:layout_constraintTop_toBottomOf="@id/line6" />-->
+            <LinearLayout
+                android:id="@+id/allprices"
+                android:layout_width="match_parent"
+                android:layout_margin="10dp"
+                android:gravity="end"
+                android:orientation="vertical"
+                android:layout_height="wrap_content"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/MageNative_couponcode"/>
+           <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/MageNative_checkout"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                android:layout_margin="10dp"
+                android:background="@drawable/buttonbackground"
+                android:textColor="@color/txtapptheme_color"
+                android:text="@string/ProceedTocheckout"
+                android:textSize="13sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/allprices" />
+
+            <!--<ListView
+                android:id="@+id/MageNative_cartlist"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@+id/couponheader"
+                android:color="@color/main_color_gray_lt"
+                android:divider="@null"
+                android:scrollbars="none" />-->
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.core.widget.NestedScrollView>
+</layout>

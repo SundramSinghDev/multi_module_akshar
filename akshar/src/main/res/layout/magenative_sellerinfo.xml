@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="utf-8"?><!--
+  ~ Copyright/*
+  ~           * CedCommerce
+  ~           *
+  ~           * NOTICE OF LICENSE
+  ~           *
+  ~           * This source file is subject to the End User License Agreement (EULA)
+  ~           * that is bundled with this package in the file LICENSE.txt.
+  ~           * It is also available through the world-wide-web at this URL:
+  ~           * http://cedcommerce.com/license-agreement.txt
+  ~           *
+  ~           * @category  Ced
+  ~           * @package   MageNative
+  ~           * @author    CedCommerce Core Team <connect@cedcommerce.com >
+  ~           * @copyright Copyright CEDCOMMERCE (http://cedcommerce.com/)
+  ~           * @license      http://cedcommerce.com/license-agreement.txt
+  ~           */
+  -->
+<layout>
+    <androidx.cardview.widget.CardView
+
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardElevation="0dp"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        app:cardBackgroundColor="@color/white">
+        <RelativeLayout
+            android:id="@+id/maincontainer"
+            android:layout_width="match_parent"
+            android:background="@drawable/cornerdeafult"
+            android:layout_margin="@dimen/pad_5dp"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/pad_10dp">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/magenative_ShopName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:clickable="false"
+                android:ellipsize="end"
+                android:focusable="false"
+                android:focusableInTouchMode="false"
+                android:maxLines="1"
+                android:text="name"
+                android:scrollHorizontally="true"
+                android:textColor="@color/black"
+                android:textSize="20sp"
+                />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/magenative_averagerating"
+                android:layout_width="40dp"
+                android:layout_height="30dp"
+                android:layout_alignParentEnd="true"
+                android:background="@drawable/round_corner"
+                android:gravity="center"
+                android:textColor="@color/white"
+                android:textSize="14sp"
+                />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/magenative_address"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="hgjg"
+                android:layout_below="@+id/magenative_ShopName"
+                android:textColor="@color/onwhitetextcolor"
+                android:textSize="14sp" />
+
+           <!-- <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/addto_favvendor"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Add to favourite seller"
+                android:drawablePadding="@dimen/pad_5dp"
+                android:drawableEnd="@drawable/ic_add_favseller"
+                android:layout_alignParentEnd="true"
+                android:paddingTop="@dimen/pad_5dp"
+                android:paddingBottom="@dimen/pad_5dp"
+                android:gravity="center"
+                android:layout_below="@id/magenative_address"
+                android:textColor="@color/onwhitetextcolor"
+                android:textSize="@dimen/txt_subheading13"
+                />-->
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/magenative_reviewcount"
+                android:layout_width="wrap_content"
+                android:text="reviwq"
+                android:minHeight="30dp"
+                android:gravity="center|start"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/magenative_address"
+                android:paddingTop="@dimen/pad_5dp"
+                android:paddingBottom="@dimen/pad_5dp"
+                android:textColor="@color/onwhitetextcolor"
+                android:textSize="@dimen/txt_subheading13" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/line"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_below="@+id/magenative_reviewcount"
+                android:layout_centerHorizontal="true"
+                android:background="@color/ebebebe"
+                android:paddingTop="5dp"
+                android:paddingBottom="3dp" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/magenative_shopImage"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_below="@+id/line"
+                android:adjustViewBounds="true"
+                android:focusableInTouchMode="false" />
+
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/magenative_ShopId"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:clickable="false"
+                android:focusable="false"
+                android:focusableInTouchMode="false"
+                android:visibility="gone" />
+           <!-- <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/magenative_shop_url"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:clickable="false"
+                android:focusable="false"
+                android:focusableInTouchMode="false"
+                android:visibility="gone" />-->
+        </RelativeLayout>
+    </androidx.cardview.widget.CardView>
+</layout>
+
+
+
+
+

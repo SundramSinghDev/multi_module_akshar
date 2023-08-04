@@ -1,0 +1,684 @@
+<!--
+  ~ Copyright/**
+  ~          * CedCommerce
+  ~           *
+  ~           * NOTICE OF LICENSE
+  ~           *
+  ~           * This source file is subject to the End User License Agreement (EULA)
+  ~           * that is bundled with this package in the file LICENSE.txt.
+  ~           * It is also available through the world-wide-web at this URL:
+  ~           * http://cedcommerce.com/license-agreement.txt
+  ~           *
+  ~           * @category  Ced
+  ~           * @package   MageNative
+  ~           * @author    CedCommerce Core Team <connect@cedcommerce.com >
+  ~           * @copyright Copyright CEDCOMMERCE (http://cedcommerce.com/)
+  ~           * @license      http://cedcommerce.com/license-agreement.txt
+  ~           */
+  -->
+<resources>
+    <string name="app_name">Akshar’s School Store</string>
+    <string name="header">c9f7f8f114089b7c0b4f396913cad6</string>
+    <string name="facebook_app_id" translatable="false">1960029430949204</string>
+    <string name="fb_login_protocol_scheme" translatable="false">fb1960029430949204</string>
+    <string-array name="gender">
+        <item>Please Select Gender</item>
+        <item>Male</item>
+        <item>Female</item>
+        <item>Not specified</item>
+    </string-array>
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+    <string name="action_search">search</string>
+    <string name="action_notification">notification</string>
+    <string name="drawer_open">Slider Menu Opened</string>
+    <string name="drawer_close">Slider Menu Closed</string>
+    <string-array name="nav_drawer_items">
+        <item>Home</item>
+        <item>Category</item>
+        <item>Profile</item>
+        <item>Address Book</item>
+        <item>My Orders</item>
+        <item>My WishList</item>
+        <item>My Downloads</item>
+        <item>My Stores</item>
+        <item>More..</item>
+        <item>Contact Us</item>
+    </string-array>
+
+    <string name="addtocart">Add to cart</string>
+    <string name="MyWishList">My WishList</string>
+    <string name="Company">More..</string>
+    <string name="Home">Home</string>
+    <string name="Category">Category</string>
+    <string name="Profile">Profile</string>
+    <string name="AddressBook">Address Book</string>
+    <string name="MyOrders">My Orders</string>
+    <string name="MyStores">My Stores</string>
+    <string name="ContactUs">Contact Us</string>
+    <string name="MyDownloads">My Downloads</string>
+    <string name="title_activity_product_listing">ProductListing</string>
+    <string name="title_activity_product_view_page">ProductViewPage</string>
+    <string name="title_activity_product_view_fagment">ProductViewFagment</string>
+    <string name="title_activity_test">TestActivity</string>
+    <string name="title_activity_show_image">ShowImage</string>
+    <string name="title_activity_wish_listing">WishListing</string>
+    <string name="title_activity_cart_listing">CartListing</string>
+    <string name="desc_list_item_icon">Item Icon</string>
+    <string name="SignIn">Sign in</string>
+    <string name="action_cart">cart</string>
+    <string name="cmspage">CMS pages</string>
+    <string name="title_activity_sub_category_listing">SubCategoryListing</string>
+    <string name="title_activity_gallery">GalleryActivity</string>
+    <string name="Username">UserName</string>
+    <string name="Password">Password</string>
+    <string name="ForgotPassword">Forgot Password?</string>
+    <string name="Registration">Register Here</string>
+    <string name="Register">Registration</string>
+    <string name="Required">*:Required</string>
+    <string name="FirstName">First Name*</string>
+    <string name="Email">Email*</string>
+    <string name="Write_a_Review">Write a Review</string>
+    <string name="howdoyourate">How do you rate this product ?</string>
+    <string name="Pass">Password*</string>
+    <string name="allcategories">ALL Categories</string>
+    <string name="ConfirmPassword">Confirm Password*</string>
+    <string name="reg">Register</string>
+    <string name="LastName">Last Name*</string>
+    <string name="SignOut">Logout</string>
+    <string name="Send">Send</string>
+    <string name="CreateAccount">Create Account</string>
+    <string name="update">Update</string>
+    <string name="MyAddresses">My Address Book</string>
+    <string name="AddAddress">Add An Address</string>
+    <string name="Pincode">Postcode*</string>
+    <string name="Address">Address</string>
+    <string name="Street">Street*</string>
+    <string name="City">City*</string>
+    <string name="State">State*</string>
+    <string name="Country">Country*</string>
+    <string name="Save">Save</string>
+    <string name="PhoneNumber">Phone Number*</string>
+    <string name="MyOrder">My Orders</string>
+    <string name="AddAddressOutput">You have not added an Address to your Address book</string>
+    <string name="Noordderplaced">You have Placed no Orders</string>
+    <string name="profile">Profile</string>
+    <string name="btn_logout_from_google">Logout from Google</string>
+    <string name="btn_revoke_access">Revoke Access</string>
+    <string name="AddReview">Write a Review</string>
+    <string name="GeneratePass">Generate Your New Password</string>
+    <string name="title_activity_testingtabs">Testingtabs</string>
+    <string name="title_activity_my_downloadable_products">MyDownloadableProducts</string>
+    <string name="title_activity_product_description">ProductDescription</string>
+    <string name="title_activity_load_webdescription">LoadWebdescription</string>
+    <!-- <string name="base_url">https://207.246.97.160/</string>-->
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="title_activity_tabsact">Tabsact</string>
+    <string name="confirm_first">Are You Sure You Want To  Delete This ?</string>
+    <string name="confirm_alldelete">Are You Sure You Want To delete all items existing in cart ?</string>
+    <string name="confirm_allwishdelete">Are You Sure You Want To delete all items existing in wishlist ? <br /> You can also delete 1 item just by swiping left to that item.</string>
+    <string name="yes">Yes</string>
+    <string name="cancel">Cancel</string>
+    <string name="qty">Qty : </string>
+    <string name="price">Price :</string>
+    <string name="subtotal"> Subtotal : </string>
+    <string name="title_activity_maps">Map</string>
+    <string name="shareurl">http://viewShareProduct.com/</string>
+    <string name="networkissue">Please Try After Some Time</string>
+    <string name="url_not_found">PLease Try After Sometime</string>
+    <string name="lownetwork">Low Network connection is detected</string>
+    <string name="title_activity_no_module">NoModule</string>
+    <string name="Checkout_Address">Checkout_Address</string>
+    <string name="Action">Action</string>
+    <string name="empty">Please Enter Some Value</string>
+    <string name="downloadableproductsincart">Please Login/Register first as you are having downloadable products in your cart</string>
+    <string name="itemcounttext">Items In Your Cart</string>
+    <string name="suntotal">Sub total:</string>
+    <string name="shippingamount">ShippingAmount:</string>
+    <string name="ProceedTocheckout">Proceed To checkout</string>
+    <string name="YourOrderHasBeenPlacedSuccessfully">Your Order Has Been Placed Successfully</string>
+    <string name="continueshopping"><![CDATA[Continue Shopping ]]></string>
+    <string name="orderquantity">Ordered Quantity :</string>
+    <string name="Proceed_as_Guest">Proceed as Guest</string>
+    <string name="Proceed_as_User">Proceed as User</string>
+    <string name="Email_Hint">Enter your email here..</string>
+    <string name="Login_as_User">Login as User</string>
+    <string name="select_payment_method">Select Payment Method</string>
+    <string name="select_method_for_shipping">Select Shipping Method</string>
+    <string name="continuee">Continue</string>
+    <string name="Choose_Address_from_addressbook">Choose Address from addressbook</string>
+    <string name="Price">Price</string>
+    <string name="filter">Filters</string>
+    <string name="ForgotPass">Generate New Password</string>
+    <string name="Viewall">View All</string>
+    <string name="shipto">SHIP TO</string>
+    <string name="orderid">Order Id:</string>
+    <string name="cost">COST :</string>
+    <string name="Amount">Amount : </string>
+    <string name="orderdate">ORDER DATE</string>
+    <string name="Shipping_Address">Shipping Address</string>
+    <string name="shippingmethod">SHIPPING METHOD:</string>
+    <string name="shipping_method_small_letters">Shipping Method</string>
+    <string name="paymentmethod">PAYMENT METHOD:</string>
+    <string name="paymentmethod_small_letter">Payment Method:</string>
+    <string name="paymentmethod_small_letter_">Payment Method</string>
+    <string name="subtotalatorder">SUBTOTAL:</string>
+    <string name="taxprice">Tax Price :</string>
+    <string name="shipping">Shipping :</string>
+    <string name="discount">Discount :</string>
+    <string name="grandtotal">Grand Total:</string>
+    <string name="clearfilter">Clear Filter</string>
+    <string name="New_Price">New Price :</string>
+    <string name="STOCK">STOCK :</string>
+    <string name="Quantity">Quantity: </string>
+    <string name="Description">Description</string>
+    <string name="Details">Details</string>
+    <string name="ATC">Add to Cart</string>
+    <string name="New_Password">New Password</string>
+    <string name="Confirm_Password">Confirm Password</string>
+    <string name="ShowPass">Show Password</string>
+    <string name="sortby">SortBy</string>
+    <string name="sortbycat">Category</string>
+    <string name="Featured_Products">Featured Products</string>
+    <string name="areyousure">Are You Sure You Want To Delete This??</string>
+    <string name="MostViewed_Products">Most Viewed</string>
+    <string name="BestSellers">Best Sellers</string>
+    <string name="New_Arrivals">New Arrivals</string>
+    <string name="PLACE_ORDER">PLACE ORDER</string>
+    <string name="invalidemail">Invalid email</string>
+    <string name="invalidphone">This Phone Number appears to be invalid</string>
+    <string name="succesfullLogin">Login Successful</string>
+    <string name="invalidLogin">Invalid Login Details</string>
+    <string name="adding">Adding...</string>
+    <string name="minimum_8_character">Minimum 8 character Required</string>
+    <string name="confirmnotmatch">Confirm Password and Password do not match</string>
+    <string name="SearchYourProducts">Search Your Products</string>
+    <string name="your_order_id">Your Order Id is</string>
+    <string name="orderplacesuccess">Your order has been placed successfully </string>
+    <string name="pleaseTryagain">Please Try Again</string>
+    <string name="title_activity_un_authourized_request_error">UnAuthourizedRequestError</string>
+    <string name="saved">saved</string>
+    <string name="title_activity_no_internetconnection">NoInternetconnection</string>
+    <string name="enteremail">Please Enter Your Email</string>
+    <string name="submit">Submit</string>
+    <string name="loginfirst">Please Login first to view this Section</string>
+    <string name="loginfirsttocompare">Please Login first to compare your products</string>
+    <string name="itemtodownload">Items To Download</string>
+    <string name="youhave">You Have</string>
+    <string name="inwishlist">In WishList</string>
+    <string name="loginfirsttoaddwish">Please Login First to add this item to wishlist</string>
+    <string name="addtowishlist"> Wishlist</string>
+    <string name="review">reviews</string>
+    <string name="offer">offer</string>
+    <string name="percent">% off</string>
+    <string name="shareproduct">Share Product</string>
+    <string name="similar">Similar Products</string>
+    <string name="options">Choose Options</string>
+    <string name="nooption">No Options Available!</string>
+    <string name="samples">Samples</string>
+    <string name="pleasechoose">Please Choose Options first</string>
+
+
+    <string name="value">Value</string>
+    <string name="letusknow">Let Us Know Your Thoughts</string>
+    <string name="summaryofreview">Summary Of Your Review</string>
+    <string name="nickname">What\'s Your Nickname?</string>
+    <string name="couponcode">Enter Coupon Code</string>
+    <string name="apply">Apply</string>
+    <string name="selectyourlogin">Select Your Login Here</string>
+    <string name="wishlistitems">Whishlist Items</string>
+    <string name="continueasguest">Continue as Guest</string>
+    <string name="continueasuser">Continue as User</string>
+    <string name="taptoselect">Tap To Select The Country</string>
+    <string name="date">Date :</string>
+    <string name="tittle">Tittle :</string>
+    <string name="linktittle">Link Title :</string>
+    <string name="status">Status :</string>
+    <string name="remainingdoenload">Remaining Dowloads :</string>
+    <string name="clickhere">Click Here To Download</string>
+    <string name="applyfilter">Apply Filter</string>
+    <string name="enteremailtogenerate">Enter Your regestered Email-id to generate a new password</string>
+    <string name="refresh">Refresh</string>
+    <string name="from">From:</string>
+    <string name="to">To:</string>
+    <string name="links">Links:</string>
+    <string name="oldpass">Old Password</string>
+    <string name="alreadyhave">Already Have an Account?</string>
+    <string name="by">By</string>
+    <string name="allSubcat">All SubCategories</string>
+    <string name="title_activity_store_view">StoreView</string>
+    <string name="startingfrom">Starting At :</string>
+    <string name="aslowas">As Low As :</string>
+    <string name="removecoupon">Remove Coupon</string>
+    <string name="registercanreview">Only registered users can write reviews. Please, log in or register</string>
+    <string name="NoProductFound">No Product Found</string>
+    <string name="BestSellingProducts">Best Sellers</string>
+    <string name="Mostviewed">Most Viewed</string>
+    <string name="NewArrivals">New Arrivals</string>
+    <string name="FeaturedProducts">Featured Products</string>
+    <string name="Quality">Quality</string>
+    <string name="title_activity_mage_native_maps">Map</string>
+    <string name="title_activity_ads_for_cedcommerce">AdsForCedcommerce</string>
+    <string name="interstitial_ad_sample">Interstitial Ad Sample</string>
+    <string name="start_level">Level 1</string>
+    <string name="next_level">Next Level</string>
+    <string name="banner_ad_unit_id">ca-app-pub-8238723280053978/7292270040</string>
+    <string name="specialPrice">New Price :</string>
+    <string name="browse">Browse</string>
+    <string name="newfrom">From</string>
+    <string name="newto">To</string>
+    <string name="rating">Review &amp; Rating</string>
+    <string name="title_activity_scrolling">ScrollingActivity</string>
+    <string name="large_text">
+        "Material is the metaphor.\n\n"
+
+        "A material metaphor is the unifying theory of a rationalized space and a system of motion."
+        "The material is grounded in tactile reality, inspired by the study of paper and ink, yet "
+        "technologically advanced and open to imagination and magic.\n"
+        "Surfaces and edges of the material provide visual cues that are grounded in reality. The "
+        "use of familiar tactile attributes helps users quickly understand affordances. Yet the "
+        "flexibility of the material creates new affordances that supercede those in the physical "
+        "world, without breaking the rules of physics.\n"
+        "The fundamentals of light, surface, and movement are key to conveying how objects move, "
+        "interact, and exist in space and in relation to each other. Realistic lighting shows "
+        "seams, divides space, and indicates moving parts.\n\n"
+
+        "Bold, graphic, intentional.\n\n"
+
+        "The foundational elements of print based design typography, grids, space, scale, color, "
+        "and use of imagery guide visual treatments. These elements do far more than please the "
+        "eye. They create hierarchy, meaning, and focus. Deliberate color choices, edge to edge "
+        "imagery, large scale typography, and intentional white space create a bold and graphic "
+        "interface that immerse the user in the experience.\n"
+        "An emphasis on user actions makes core functionality immediately apparent and provides "
+        "waypoints for the user.\n\n"
+
+        "Motion provides meaning.\n\n"
+
+        "Motion respects and reinforces the user as the prime mover. Primary user actions are "
+        "inflection points that initiate motion, transforming the whole design.\n"
+        "All action takes place in a single environment. Objects are presented to the user without "
+        "breaking the continuity of experience even as they transform and reorganize.\n"
+        "Motion is meaningful and appropriate, serving to focus attention and maintain continuity. "
+        "Feedback is subtle yet clear. Transitions are efﬁcient yet coherent.\n\n"
+
+        "3D world.\n\n"
+
+        "The material environment is a 3D space, which means all objects have x, y, and z "
+        "dimensions. The z-axis is perpendicularly aligned to the plane of the display, with the "
+        "positive z-axis extending towards the viewer. Every sheet of material occupies a single "
+        "position along the z-axis and has a standard 1dp thickness.\n"
+        "On the web, the z-axis is used for layering and not for perspective. The 3D world is "
+        "emulated by manipulating the y-axis.\n\n"
+
+        "Light and shadow.\n\n"
+
+        "Within the material environment, virtual lights illuminate the scene. Key lights create "
+        "directional shadows, while ambient light creates soft shadows from all angles.\n"
+        "Shadows in the material environment are cast by these two light sources. In Android "
+        "development, shadows occur when light sources are blocked by sheets of material at "
+        "various positions along the z-axis. On the web, shadows are depicted by manipulating the "
+        "y-axis only. The following example shows the card with a height of 6dp.\n\n"
+
+        "Resting elevation.\n\n"
+
+        "All material objects, regardless of size, have a resting elevation, or default elevation "
+        "that does not change. If an object changes elevation, it should return to its resting "
+        "elevation as soon as possible.\n\n"
+
+        "Component elevations.\n\n"
+
+        "The resting elevation for a component type is consistent across apps (e.g., FAB elevation "
+        "does not vary from 6dp in one app to 16dp in another app).\n"
+        "Components may have different resting elevations across platforms, depending on the depth "
+        "of the environment (e.g., TV has a greater depth than mobile or desktop).\n\n"
+
+        "Responsive elevation and dynamic elevation offsets.\n\n"
+
+        "Some component types have responsive elevation, meaning they change elevation in response "
+        "to user input (e.g., normal, focused, and pressed) or system events. These elevation "
+        "changes are consistently implemented using dynamic elevation offsets.\n"
+        "Dynamic elevation offsets are the goal elevation that a component moves towards, relative "
+        "to the component’s resting state. They ensure that elevation changes are consistent "
+        "across actions and component types. For example, all components that lift on press have "
+        "the same elevation change relative to their resting elevation.\n"
+        "Once the input event is completed or cancelled, the component will return to its resting "
+        "elevation.\n\n"
+
+        "Avoiding elevation interference.\n\n"
+
+        "Components with responsive elevations may encounter other components as they move between "
+        "their resting elevations and dynamic elevation offsets. Because material cannot pass "
+        "through other material, components avoid interfering with one another any number of ways, "
+        "whether on a per component basis or using the entire app layout.\n"
+        "On a component level, components can move or be removed before they cause interference. "
+        "For example, a floating action button (FAB) can disappear or move off screen before a "
+        "user picks up a card, or it can move if a snackbar appears.\n"
+        "On the layout level, design your app layout to minimize opportunities for interference. "
+        "For example, position the FAB to one side of stream of a cards so the FAB won’t interfere "
+        "when a user tries to pick up one of cards.\n\n"
+    </string>
+    <string name="HotDeals">Hot Deals</string>
+    <string name="products">Products</string>
+    <string name="NoDealsAvailable">No Deals Available at this Time</string>
+    <string name="NoProductsAvailable">Sorry No products Available at this Time.</string>
+    <string name="title_activity_new_product_listing">NewProductListing</string>
+    <string name="title_activity_andro__aaka">Andro_Aaka</string>
+    <string name="speech_prompt">Say something&#8230;</string>
+    <string name="speech_not_supported">Sorry! Your device doesn\'t support speech input</string>
+    <string name="tap_on_mic">Tap on mic to speak</string>
+    <string name="title_activity_voice_recognition">VoiceRecognitionActivity</string>
+    <string name="selectgender">Please Select Your Gender</string>
+    <string name="logout">Logout</string>
+    <string name="Login">LOGIN</string>
+    <string name="signupwithustext">sign up with  us</string>
+    <string name="Usrname">Username</string>
+    <string name="EditProfile">Edit Profile</string>
+    <string name="title_activity_filteractivity">Filteractivity</string>
+    <string name="Settings">Settings</string>
+    <string name="Vendor_review">Seller Ratings :</string>
+    <string name="sold_by">Sold By</string>
+    <string name="slide"><![CDATA[<<--slide left to edit/delete]]></string>
+    <string name="searchvendors">Search  Vendors</string>
+    <string name="Countrysearch">Country</string>
+    <string name="statesearch">State</string>
+    <string name="zipsearch">Zip/PostalCode</string>
+    <string name="vendornamesearch">Vendor Name</string>
+    <string name="company">Company </string>
+    <string name="vendorsince">Vendor Since :</string>
+    <string name="citysearch">City</string>
+    <string name="appstoreurl">https://play.google.com/store/apps/details?id=com.akshar.store</string>
+    <string name="Enable_Log">yes</string>
+    <string name="BuyNow">Buy Now</string>
+    <string name="shop_cat">Shop by Categories</string>
+    <string name="Viewdetails"><u>View Details</u></string>
+    <string name="Viewdetails_">View Details</string>
+    <string name="oops">OooPs!!</string>
+    <string name="placedontext">Placed on</string>
+    <string name="tobepaid">To be Paid By</string>
+    <string name="items">items</string>
+    <string name="amounttopay">Amount to Pay :</string>
+    <string name="shippingcharges">Shipping Charges :</string>
+    <string name="discounttext">Discount :</string>
+    <string name="grandamount">Grand total :</string>
+    <string name="logintype">Please Select Login Type</string>
+    <string name="loginattemptcancled">Login attempt canceled.</string>
+    <string name="loginfailed">Login Failed</string>
+    <string name="specifiedapp">This is not the specified app</string>
+    <string name="excitingoffers">Exciting Offers</string>
+    <string name="featuredproducts">Featured Products</string>
+    <string name="sortbyitems">Sort Items by </string>
+    <string name="hey">```Hey! Checkout</string>
+    <string name="on">on</string>
+    <string name="reviews">reviews</string>
+    <string name="ratings">Ratings</string>
+    <string name="nooptionsavailable">No Option Availables</string>
+    <string name="storage">Storage permission allows us to access data. Please allow in App Settings for additional functionality.</string>
+    <string name="nosimilarproductfound">No Similar Product Found</string>
+    <string name="buynow">Buy Now</string>
+    <string name="permissiondenied">Permission Denied</string>
+    <string name="totalreviews">Total Review:</string>
+    <string name="nofilteravailables">No Filters Availables</string>
+    <string name="selectwebstore">Select Your WebStore :</string>
+    <string name="wishlistitemsin"> Items In Your Wishlist</string>
+    <string name="selectcountry">Select Your  Country:</string>
+    <string name="selectstate">Select Your  STATE:</string>
+    <string name="fillsomevalue">please fill some value or select some address above</string>
+    <string name="somethingbadhappended">something went wrong, please try after some time</string>
+    <string name="selectonebillingaddress">Please select One Billing address please</string>
+    <string name="orderquantitynative">Ordered Quantity</string>
+    <string name="nativecontinue">Continue</string>
+    <string name="placeorder">Place Order</string>
+    <string name="selectpaymentfirst">Please Select some payment method first</string>
+    <string name="fillsomevaluefirst">Please fill some value</string>
+    <string name="selectshippinfmethodfirst">Please Select some shipping method first</string>
+    <string name="transactioncanceled">Transaction canceled due to some technical issue..try again later</string>
+    <string name="bethefirstone">Be the first one to Review</string>
+    <string name="heycheckout">```Hey! Checkout the new</string>
+    <string name="googleplayservcices">app on google play store ```</string>
+    <string name="invitefriends">Invite Friends</string>
+    <string name="camerapermission">camera permission allows us to access data. Please allow in App Settings for additional functionality.</string>
+    <string name="myaccount">My Account</string>
+    <string name="signup">SignIn/SignUp</string>
+    <string name="signup_txt">Sign Up</string>
+    <string name="noresultfound">No Result found</string>
+    <string name="billingaddress">Billing Address</string>
+    <string name="addnewaddress">+Add New Address</string>
+    <string name="email">Email</string>
+    <string name="firstname">FirstName</string>
+    <string name="lastname">LastName</string>
+    <string name="streetaddress">Street Address</string>
+    <string name="city">City</string>
+    <string name="Zipcode">Postcode</string>
+    <string name="number">Phone Number</string>
+    <string name="country">Country</string>
+    <string name="state">State</string>
+    <string name="taptoselectdata">Tap to select State</string>
+    <string name="paymentmethods">Payment Methods</string>
+    <string name="revieworder">Review Order</string>
+    <string name="shippingmethods">Shipping Methods</string>
+    <string name="Order">Order</string>
+    <string name="order_id">Order id</string>
+    <string name="amount">Amount</string>
+    <string name="statusnative">Status</string>
+    <string name="coupontext">Your coupon code has been applied successfully, You will be notify if you are one of the lucky winners.</string>
+    <string name="cantconnet">Can’t connect to server . Please check network connection.</string>
+    <string name="outofstock">Out Of Stock</string>
+    <string name="share">Share</string>
+    <string name="wishlist">Wishlist</string>
+    <string name="specification">Specification</string>
+    <string name="more_info">More info</string>
+    <string name="morereviews">User reviews</string>
+    <string name="upgradenow">upgrade Now !!</string>
+    <string name="noreviews">no reviews Available for this product.</string>
+    <string name="delete">Delete</string>
+    <string name="noexicitingofferstoshow">No Exciting Offers to Show.</string>
+    <string name="clearcart">Clear Cart</string>
+    <string name="postedon">Posted On :</string>
+    <string name="noaddress">Looks Like you don\'t have any saved addresses</string>
+    <string name="datehash">#DATE</string>
+    <string name="select">#SELECT</string>
+    <string name="noshopping">You have no items in your shopping cart.</string>
+    <string name="nodownloads">You have no downloadable items</string>
+    <string name="nowishlist">You have no items in your wishlist</string>
+    <string name="textarea">#TEXTAREA</string>
+    <string name="file">#FILE</string>
+    <string name="nofileselected">No File Selected</string>
+    <string name="allowfiletype">Allowed file type:</string>
+    <string name="png">Png</string>
+    <string name="maxwidth">Maximum Image Width :</string>
+    <string name="maxheight">Maximum Image Height :</string>
+    <string name="scanproducts">Scan Products</string>
+    <string name="visitseller">Visit Sellers</string>
+    <string name="exclusive">Exculsive categories!!</string>
+    <string name="OR">OR</string>
+    <string name="signupforgoogle">Sign up with google</string>
+    <string name="signupforfacebook">Sign up with facebook</string>
+    <string name="Mr">Male.</string>
+    <string name="mis">Female.</string>
+    <string name="done">Done</string>
+    <string name="newsletter">Sign up for NewsLetter</string>
+    <string name="noorder">You have no Orders</string>
+    <string name="noproducts">No products in this category</string>
+    <string name="nointernet">Internet Connection Lost!</string>
+    <string name="shipment">Shipment</string>
+    <string name="skip">Skip</string>
+    <string name="next">Next</string>
+    <string name="gotit">Got it! lets begin</string>
+    <string name="rated">RATED</string>
+    <string name="browseby">Browse By</string>
+    <string name="callus">Call us</string>
+    <string name="mailus">Mail us</string>
+    <string name="aboutvendor">About Vendor</string>
+    <string name="ourproducts">Our Products</string>
+    <string name="time">#Time</string>
+    <string name="clearwishlist">Clear Wishlist</string>
+    <string name="selectsomeprefixvalue">Select Some prefix value first</string>
+    <string name="selectdob">Select DOB.</string>
+    <string name="selectsomesuffixvalue">Please fill some suffix value first</string>
+    <string name="deliverydata"><![CDATA[We use a variety of carriers to deliver our orders. Royal Mail, Parcel Force and Plus Delivery. Delivery Returns /exchanges policy & cancellation rights If you are not happy with any item you have ordered, you must contact us by emailing info@hairtreat.co.uk or by phone +447921707560. UK returns on any full price and sale items returned to us in perfect condition and original packaging, within 14 days of receipt of order, and proof of purchase. We only refund postage paid if the product is faulty. Photographic evidence must be recorded and submitted to sales@hairtreat.co.uk Please return the item/s to us on the following address: 2 Portal Way, Suite 507, London W3 6RT and we will be able to process your refund once the item/s have been arrived. Items received that are not in perfect condition, or are not deemed faulty, will be returned to you, at your cost. Money will only be refunded once we have received the item. Returns Policy You can return items within 28 days for a refund or replacement. Items have to be unopened, unused and in the original packaging to the return address provided. Return cost will be at buyer’s expense therefore we will refund the purchase price less the postage. Our aim is to please all customers with our carefully selected products and problems rarely occur but if wish to return your purchased item/s, please contact us via info@hairtreat.co.uk stating your reason for return/refund and we will deal with it promptly and effectively. DAMAGED ITEMS All our products have been properly packed before dispatch. If you receive an item that have been damaged we will require photographic evidence which can be sent to our email info@hairtreat.co.uk therefore please do not dispose of the product as we will require this for a claim. A replacement product will then be sent. Alternatively, a full refund will be offered for the purchase price including postage or for minor damage we may be able to agree on a part replacement or partial refund. Please note that a refund can take up to 14 days to be processed back onto your card by your bank.]]></string>
+    <string name="privacydata">HAIR TREAT LTD (\"We\") are committed to protecting and respecting your privacy. This policy (together with our terms of use and any other documents referred to therein) sets out the basis on which any personal data we collect from you, or that you provide to us, will be processed by us.  Please read the following carefully to understand our views and practices regarding your personal data and how we will treat it. For the purpose of the Data Protection Act 1998 (the Act), the data controller is HAIR TREAT LTD of 2 PORTAL WAY, SUITE 507, LONDON, W3 6RT. Information we may collect from you We may collect and process the following data about you: Information that you provide by filling in forms on our site www.hairtreat.co.uk . This includes information provided at the time of registering to use our site, subscribing to our service, posting material or requesting further services. We may also ask you for information [when you enter a competition or promotion sponsored by, and] when you report a problem with our site. If you contact us, we may keep a record of that correspondence. We may also ask you to complete surveys that we use for research purposes, although you do not have to respond to them. Details of transactions you carry out through our site and of the fulfilment of your orders. Details of your visits to our site including, but not limited to, traffic data, location data, weblogs and other communication data, whether this is required for our own billing purposes or otherwise and the resources that you access. IP addresses We may collect information about your computer, including where available your IP address, operating system and browser type, for system administration and to report aggregate information to our advertisers. This is statistical data about our users\' browsing actions and patterns, and does not identify any individual. Cookies Our website uses cookies to distinguish you from other users of our website. This helps us to provide you with a good experience when you browse our website and also allows us to improve our site. For detailed information on the cookies we use and the purposes for which we use them see our Cookie policy Where we store your personal data The data that we collect from you may be transferred to, and stored at, a destination outside the European Economic Area (\"EEA\"). It may also be processed by staff operating outside the EEA who work for us or for one of our suppliers. Such staff maybe engaged in, among other things,  the fulfilment of your order, the processing of your payment details and the provision of support services. By submitting your personal data, you agree to this transfer, storing or processing. We will take all steps reasonably necessary to ensure that your data is treated securely and in accordance with this privacy policy. All information you provide to us is stored on our secure servers. Any payment transactions will be encrypted [using SSL technology]. Where we have given you (or where you have chosen) a password which enables you to access certain parts of our site, you are responsible for keeping this password confidential. We ask you not to share a password with anyone. Unfortunately, the transmission of information via the internet is not completely secure. Although we will do our best to protect your personal data, we cannot guarantee the security of your data transmitted to our site; any transmission is at your own risk. Once we have received your information, we will use strict procedures and security features to try to prevent unauthorised access. Uses made of the information We use information held about you in the following ways: To ensure that content from our site is presented in the most effective manner for you and for your computer. To provide you with information, products or services that you request from us or which we feel may interest you, where you have consented to be contacted for such purposes. To carry out our obligations arising from any contracts entered into between you and us. To allow you to participate in interactive features of our service, when you choose to do so. To notify you about changes to our service. We may also use your data, or permit selected third parties to use your data, to provide you with information about goods and services which may be of interest to you and we or they may contact you about these by post or telephone. If you are an existing customer, we will only contact you by electronic means (e-mail or SMS) with information about goods and services similar to those which were the subject of a previous sale to you. If you are a new customer, and where we permit selected third parties to use your data, we (or they) will contact you by electronic means only if you have consented to this. If you do not want us to use your data in this way, or to pass your details on to third parties for marketing purposes, please tick the relevant box situated on the form on which we collect your data. We do not disclose information about identifiable individuals to our advertisers, but we may provide them with aggregate information about our users (for example, we may inform them that 500 men aged under 30 have clicked on their advertisement on any given day). We may also use such aggregate information to help advertisers reach the kind of audience they want to target (for example, women in SW1). We may make use of the personal data we have collected from you to enable us to comply with our advertisers\' wishes by displaying their advertisement to that target audience. Disclosure of your information We may disclose your personal information to any member of our group, which means our subsidiaries, our ultimate holding company and its subsidiaries, as defined in section 1159 of the UK Companies Act 2006. We may disclose your personal information to third parties: In the event that we sell or buy any business or assets, in which case we may disclose your personal data to the prospective seller or buyer of such business or assets. If HAIR TREAT LTD or substantially all of its assets are acquired by a third party, in which case personal data held by it about its customers will be one of the transferred assets. If we are under a duty to disclose or share your personal data in order to comply with any legal obligation, or in order to enforce or apply our terms of use or terms and conditions of supply and other agreements; or to protect the rights, property, or safety of HAIR TREAT LTD, our customers, or others. This includes exchanging information with other companies and organisations for the purposes of fraud protection and credit risk reduction. Your rights You have the right to ask us not to process your personal data for marketing purposes. We will usually inform you (before collecting your data) if we intend to use your data for such purposes or if we intend to disclose your information to any third party for such purposes. You can exercise your right to prevent such processing by checking certain boxes on the forms we use to collect your data.  You can also exercise the right at any time by contacting us at info@hairtreat.co.uk. Our site may, from time to time, contain links to and from the websites of our partner networks, advertisers and affiliates.  If you follow a link to any of these websites, please note that these websites have their own privacy policies and that we do not accept any responsibility or liability for these policies.  Please check these policies before you submit any personal data to these websites. Access to information The Act gives you the right to access information held about you. Your right of access can be exercised in accordance with the Act. Any access request may be subject to a fee of £10 to meet our costs in providing you with details of the information we hold about you. Changes to our privacy policy Any changes we may make to our privacy policy in the future will be posted on this page and, where appropriate, notified to you by e-mail. Contact Questions, comments and requests regarding this privacy policy are welcomed and should be addressed to 2 PORTAL WAY, SUITE 507, LONDON, W3 6RT.</string>
+    <string name="relatedproducts">Related Products</string>
+    <string name="upsellproducts">Upsell Products</string>
+    <string name="crosssellproducts">Cross Sell Products</string>
+    <string name="additional_info">Additional Info</string>
+    <string name="signin_drawer">Sign In</string>
+    <string name="drawertext">Save, shop and view orders</string>
+    <string name="account">Your Account</string>
+    <string name="image">image</string>
+    <string name="home">Home</string>
+    <string name="bag">My Shopping Bag</string>
+    <string name="saved_items">My Wishlist</string>
+    <string name="invite">Invite Your Friends</string>
+    <string name="extras">MarketPlace</string>
+    <string name="copyright">Copyright</string>
+    <string name="noemailfound">No Email Found in this facebook account</string>
+    <string name="errorString">Something went wrong. Please try again.</string>
+    <string name="middleName">Middle Name*</string>
+    <string name="OrderNum">Order #</string>
+    <string name="details">Details</string>
+    <string name="description">Description</string>
+    <string name="appversion">App Version </string>
+    <string name="totalreview">Total Review: </string>
+    <string name="sunmitting">submitting....</string>
+    <string name="noinforegardingaddress">no info regarding address</string>
+
+    <string name="Setasdefaultforbilling">Set as default billing address</string>
+    <string name="Setasdefaultforshipping">Set as default shipping address</string>
+    <string name="DefaultBilling">Default Billing</string>
+    <string name="DefaultShipping">Default Shipping</string>
+    <string name="re_ordered">Re-Ordered</string>
+    <string name="reorder_product_s">Reorder Product(s)</string>
+    <string name="order_summary">Order summary</string>
+    <string name="totalitems">"Total Item(s) : "</string>
+    <string name="Quantity_">Quantity :</string>
+    <string name="product_basic_info">Basic Product Information</string>
+    <string name="OFF">"% Off "</string>
+    <string name="selectedspecification_notavailable">Product having selected specification is not available.</string>
+    <string name="CompareList">Compare Products</string>
+    <string name="thisvedorhavenotprovidedanysupportnumber">This Vendor haven\'t provided any support number</string>
+    <string name="thevendornotprovidedsupportmail">This Vendor haven\'t provided any support email</string>
+    <string name="compare_your_products">Compare your Products:</string>
+    <string name="my_notifications">My Notifications</string>
+    <string name="nosubcategory_toexplore">Subcategories options are not available to explore.</string>
+    <string name="enter_quantity">Enter Quantity</string>
+    <string name="search">Search</string>
+    <string name="ordersummary">Order Summary</string>
+    <string name="sortoptionsnotavailable">Sort Options aren\'t available for now.</string>
+    <string name="filternotavailblefornow">Filters not available for now.</string>
+    <string name="total_">Total:</string>
+    <string name="stillnotconnected">Still not connected to network.</string>
+    <string name="loginfirstto_postreview">Please login first to post vendor review.</string>
+    <string name="pleaseentervalidemail">Please Enter Valid Email.</string>
+    <string name="select_qty">Select Qty</string>
+    <string name="product_n_details">Product Details</string>
+    <string name="selectallavailableoptions">Select all Availble Options first</string>
+    <string name="please_enter_the_code_received_from_your_school_college">Please enter the code received from your school/college</string>
+    <string name="continue_to_payu_with_below_credentials">Continue to PayU with below Credentials.</string>
+    <string name="do_not_press_back_button_or_refresh_the_page_processing_your_order">Do not press back button or refresh the page processing your order!</string>
+    <string name="your_preferred_n_online_school_store_n_with_best_discounts">Your Preferred Online School Store with best discounts.</string>
+    <string name="anything_for_your_daily_school">Anything for your daily school!</string>
+    <string name="exclusive_deals_on_school_stationery">Exclusive deals on school stationery.</string>
+    <string name="grade">Grade</string>
+    <string name="district">District</string>
+    <string name="by_district">By District</string>
+    <string name="postal_code">Postal Code</string>
+    <string name="by_postal_code">By Postal Code</string>
+    <string name="select_school">Select School</string>
+    <string name="school">School</string>
+
+    <string name="mobile_number">Mobile Number</string>
+    <string name="verify_your_mobile_number">Verify your mobile number</string>
+    <string name="we_have_send_you_otp_via_sms_to">We have send you OTP via SMS to</string>
+    <string name="verify">Verify</string>
+    <string name="didn_t_get_the_otp_resend_otp">Didn\'t get the OTP? Resend OTP.</string>
+    <string name="enter_4_digit_otp">Enter 4-digit OTP</string>
+    <string name="enter_valid_code">Enter valid code</string>
+    <string name="enter_postal_code_here">Enter Postal Code Here</string>
+    <string name="no_more_data_available">NO More Data Available</string>
+
+    <string name="change_mobile_number">Change Mobile Number</string>
+    <string name="change_password">Change Password</string>
+    <string name="change_email">Change Email</string>
+    <string name="verify_and_update">Verify and Update</string>
+    <string name="please_enter_some_word">Please enter some word...</string>
+    <string name="products_not_available">Products Not Available</string>
+    <string name="class_1">Class 1</string>
+    <string name="all">All</string>
+    <string name="by_state">By State</string>
+    <string name="by_using_the_options_below_you_can_search_for_schools_based_on_their_location">By using the options below, you can search for schools based on their location</string>
+    <string name="select_category">Select Category</string>
+    <string name="school_orders">School Orders</string>
+    <string name="my_schools">My School</string>
+    <string name="additional_information">Additional Information</string>
+    <string name="nomoreorders">No more Orders.</string>
+    <string name="generate_otp">Generate OTP</string>
+    <string name="already_have_coupon_apply">Already Have Coupon? Apply.</string>
+    <string name="total_amount">Total amount</string>
+    <string name="demo_price">Rs 112.00</string>
+    <string name="_2_items">2 Items</string>
+    <string name="product_details_2_items">Product Details: 2 Items</string>
+    <string name="_1">1</string>
+    <string name="error">error</string>
+    <string name="my_cart">My Cart</string>
+    <string name="product_details_">Product Details: </string>
+    <string name="items_s_"> Item(s)</string>
+    <string name="pay_with_razorpay">Pay with Razorpay</string>
+    <string name="pay_with_payu">Pay with PayU</string>
+    <string name="pay">Pay</string>
+    <string name="subtotal_">Subtotal :</string>
+    <string name="order_id_">Order ID:</string>
+    <string name="order_placed_">Order Placed:</string>
+    <string name="shipping_details_">Shipping Details</string>
+    <string name="m_g_road_opposite_gopal_swamy_temple_warangal_telangana_506012">M. G Road, Opposite Gopal Swamy Temple, Warangal, Telangana 506012</string>
+    <string name="mobile_no_">Mobile no :</string>
+    <string name="amount_paid_">Amount Paid</string>
+    <string name="payment_summary_">Payment Summary</string>
+    <string name="_919690886776">+919690886776</string>
+    <string name="_37854785">#37854785</string>
+    <string name="_9_jan_2022_01_10_pm">9 Jan 2022, 01:10 PM</string>
+    <string name="order_status_">Order Status :</string>
+    <string name="dd_mm_yyyy">DD/MM/YYYY</string>
+    <string name="name">Name</string>
+    <string name="create_an_account_to_continue">Create an account to continue</string>
+    <string name="male">Male</string>
+    <string name="female">Female</string>
+    <string name="welcome_to_akshar_s_school_store">Welcome to Akshar’s School Store</string>
+    <string name="using_email">Using Email</string>
+    <string name="using_mobile">Using Mobile</string>
+    <string name="login_with_mobile">LogIn With Mobile</string>
+    <string name="login_with_email">LogIn With Email</string>
+    <string name="you_can_sign_in_with_your_mobile_number_or_email_id">You can sign in with your mobile number or email ID.</string>
+    <string name="don_t_have_an_account_sign_up">Don’t have an account? <font color='#30B7C5'>  SIGN UP</font></string>
+    <string name="sign_in_with_otp">Sign In with OTP</string>
+    <string name="sign_in_with_email">Sign In with Email</string>
+    <string name="_0">0</string>
+    <string name="please_enter_the_otp_you_received_to">Please enter the OTP you received to</string>
+    <string name="validate_sign_in"><![CDATA[Validate & Sign In]]></string>
+    <string name="main_menu">Main Menu</string>
+    <string name="open">open</string>
+    <string name="product_details">Product Details</string>
+    <string name="kedo_running_shoeggggggggs_runninghdgh_shoes">Kedo Running shoeggggggggs Runninghdgh shoes</string>
+    <string name="select_quantity">Select Quantity</string>
+    <string name="delivering_to">Delivering To</string>
+    <string name="change_address">Change Address</string>
+    <string name="my_billing_and_shipping_address_are_the_same">My billing and shipping address are the same</string>
+    <string name="price_details">Price Details</string>
+    <string name="selecte_delivery_address">Select Delivery Address</string>
+    <string name="_please_select_delivery_address">Please Select Delivery Address</string>
+    <string name="select_shipping_address">Select Shipping Address</string>
+    <string name="add_new_address">Add New Address</string>
+    <string name="go_to_checkout">Go To Checkout</string>
+    <string name="please_add_delivery_address_select_shipping_method">Please add delivery address to select shipping method.</string>
+    <string name="please_add_delivery_address_to_select_payment_method">Please add delivery address to select payment method.</string>
+    <string name="there_is_no_delivery_address_for_your_order_please_add_a_delivery_address">There is no delivery address for your order. Please add a delivery address.</string>
+    <string name="no_quote_available">No Quotes Available.</string>
+    <string name="incl_of_cgst">Incl Of CGST</string>
+    <string name="incl_of_sgst">Incl of SGST</string>
+    <string name="incl_of_igst">Incl of IGST</string>
+    <string name="resend_otp">Resend OTP</string>
+    <string name="total">Total</string>
+
+    <string name="invalid_email_id">This email appears to be invalid</string>
+</resources>

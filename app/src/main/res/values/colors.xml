@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <color name="amber_200">#FFFDEAB0</color>
+    <color name="amber_500">#FFFBD460</color>
+    <color name="amber_700">#FFFAC94E</color>
+    <color name="blue_200">#9091AC</color>
+    <color name="blue_700">#001F61</color>
+    <color name="black">#0E0D0D</color>
+    <color name="text_color">#686868</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="white_trans">#CBFFFFFF</color>
+
+    <color name="black_overlay">#66000000</color>
+    <color name="divider_light_grey">#AEAEAE</color>
+    <color name="text_heading">#2C2C2C</color>
+    <color name="bg_divider">#1A000000</color>
+    <color name="bg_light_grey">#F0F0F0</color>
+    <color name="dark_blue">#212358</color>
+    <color name="blue">#2C98F0</color>
+    <color name="maroon">#F55757</color>
+
+    <color name="light_pink">#FFE8F9</color>
+    <color name="light_blue1">#D8EFFF</color>
+    <color name="light_orange1">#FFF1D1</color>
+    <color name="light_green1">#C2FFBD</color>
+    <color name="pink">#FF427C</color>
+    <color name="light_blue">#3395E5</color>
+    <color name="green_normal">#63C95A</color>
+    <color name="light_grey">#BDBBB9</color>
+    <color name="light_grey_200">#DABDBBB9</color>
+    <color name="red_400">#ef5350
+    </color>
+
+
+    <color name="btn_yellow">#FFFBD460</color>
+    <color name="btn_yellow_selected">#FFFAC94E</color>
+    <color name="btn_yellow_disabled">#F8E098</color>
+    <color name="cal_bg">#F8F8F8</color>
+    <color name="black_80">#88000000</color>
+
+    //subject colors
+    <color name="telugu_blue">#72D5C7</color>
+    <color name="hindi_orange">#F59C73</color>
+    <color name="english_pink">#F69372</color>
+    <color name="math_purple">#AA3C6D</color>
+    <color name="science_blue">#72D5C7</color>
+    <color name="environment_green">#089E9E</color>
+    <color name="bio_purple">#AA3C6D</color>
+    <color name="physics_pink">#F69372</color>
+    <color name="socialstudy_purple">#BC8DBB</color>
+    <color name="civics_green">#089E9E</color>
+    <color name="commerce_peach">#F59C73</color>
+    <color name="economics_purple">#BC8DBB</color>
+    <color name="chemistry_blue">#2887BF</color>
+    <color name="undefined_black">#928DAB</color>
+
+
+//time table periods
+    <color name="timetable_chemistry">#DBE4EB</color>
+    <color name="timetable_telugu">#F3FFFD</color>
+    <color name="timetable_other">#D2E3F1</color>
+    <color name="timetable_hindi">#FEF3EF</color>
+    <color name="timetable_english">#FFE7E8</color>
+    <color name="timetable_math">#FBE8F2</color>
+    <color name="timetable_science">#E1FCFE</color>
+    <color name="timetable_commerce">#FEF3EF</color>
+    <color name="timetable_economics">#F6E7FF</color>
+    <color name="timetable_civics">#D3F0EE</color>
+    <color name="timetable_socialstudy">#F6E7FF</color>
+    <color name="timetable_physics">#FEF3EF</color>
+    <color name="timetable_bio">#FBE8F2</color>
+    <color name="timetable_environmental">#EFFAEF</color>
+
+
+    <color name="undefined_green">#93F9B9</color>
+    <color name="lightish_grey">#F0F0F0</color>
+    <color name="blue_notice">#AAD3FF</color>
+    <color name="pink_notice">#FCC5A7</color>
+    <color name="purple_notice">#E1D9FD</color>
+    <color name="light_yellow">#FBD460</color>
+    <color name="dark_yellow">#CFA21C</color>
+    <color name="orange">#F87D0B</color>
+    //birthday item
+    <color name="bd_bg_color">#9AFFFFFF</color>
+    <color name="bd_bg_month">#2887BF</color>
+    <color name="badge_stroke_color">#a6a0a0</color>
+    <color name="badge_color">#ea5444</color>
+    <color name="mtrl_textinput_default_box_stroke_color" tools:override="true">#fff</color>
+
+
+    <array name="colors_chart_fee_amount">
+        <item>@color/green_normal</item>
+        <item>@color/light_yellow</item>
+        <item>@color/maroon</item>
+    </array>
+
+    <array name="colors_chart_collections">
+        <item>@color/light_blue</item>
+        <item>@color/green_normal</item>
+        <item>@color/light_yellow</item>
+        <item>@color/orange</item>
+        <item>@color/science_blue</item>
+        <item>@color/dark_yellow</item>
+        <item>@color/maroon</item>
+        <item>@color/hindi_orange</item>
+        <item>@color/bio_purple</item>
+        <item>@color/physics_pink</item>
+        <item>@color/socialstudy_purple</item>
+        <item>@color/english_pink</item>
+    </array>
+
+    <array name="colors_chart_attendance">
+        <item>@color/green_normal</item>
+        <item>@color/maroon</item>
+        <item>@color/light_yellow</item>
+    </array>
+    <color name="light_red">#F24E4E</color>
+    <color name="week_off">#007bff</color>
+    <color name="holiday">#17a2b8</color>
+</resources>

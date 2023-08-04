@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <com.google.android.material.chip.ChipGroup
+            android:id="@+id/chip_group_main"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="2dp"
+            app:chipSpacingHorizontal="4dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/chip_class_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/_4sdp"
+                app:closeIconEnabled="false" />
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/chip_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/_4sdp"
+                app:closeIconEnabled="false" />
+        </com.google.android.material.chip.ChipGroup>
+
+        <com.google.android.material.tabs.TabLayout
+            android:id="@+id/fee_tab_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/tab_selector_bd"
+            android:elevation="0dp"
+            android:layout_marginTop="@dimen/_1sdp"
+            app:layout_constraintTop_toBottomOf="@+id/chip_group_main"
+            app:tabIndicatorFullWidth="false"
+            app:tabRippleColor="@color/btn_yellow"
+            app:tabSelectedTextColor="@color/black"
+            app:tabTextAppearance="@style/TabLayoutTextStyle" />
+
+        <androidx.viewpager2.widget.ViewPager2
+            android:id="@+id/fee_view_pager"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginTop="@dimen/_4sdp"
+            android:layout_marginBottom="@dimen/_4sdp"
+            android:clipToPadding="false"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/fee_tab_layout" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/transparent"
+        android:padding="@dimen/pad_10dp">
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/orderNumberLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/celias_regular"
+            android:text="@string/order_id_"
+            android:textColor="@color/color_757575"
+            android:textFontWeight="500"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:targetApi="p" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/orderNumberTxt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dimen_8dp"
+            android:fontFamily="@font/celias_bold"
+            android:textColor="@color/color_191919"
+            android:textFontWeight="500"
+            android:textStyle="bold"
+            app:layout_constraintStart_toEndOf="@id/orderNumberLabel"
+            app:layout_constraintTop_toTopOf="@id/orderNumberLabel"
+            tools:targetApi="p" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/pad_10dp"
+            android:background="@drawable/coupon_view_bg_new"
+            android:padding="@dimen/pad_10dp"
+            app:layout_constraintStart_toStartOf="@+id/orderNumberLabel"
+            app:layout_constraintTop_toBottomOf="@+id/orderNumberLabel">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/orderStatusTV"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/coupon_view_bg_new"
+                android:drawableStart="@drawable/order_status_img"
+                android:drawablePadding="@dimen/pad_5dp"
+                android:fontFamily="@font/celias_regular"
+                android:padding="@dimen/pad_5dp"
+                android:textSize="@dimen/txt_10sp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/order_date"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/pad_15dp"
+                android:fontFamily="@font/celias_regular"
+                android:textColor="@color/color_4747"
+                android:textSize="@dimen/txt_11sp"
+                app:layout_constraintBottom_toBottomOf="@id/orderStatusTV"
+                app:layout_constraintStart_toEndOf="@id/orderStatusTV"
+                app:layout_constraintTop_toTopOf="@id/orderStatusTV" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/orderedProductItemRV"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/pad_15dp"
+                tools:itemCount="1"
+                tools:listitem="@layout/single_product_item_view_for_order_list"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/viewMore"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/orderStatusTV" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/viewMore"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_right_chevron"
+                android:tint="@color/color_A1A1A1"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:ignore="ImageContrastCheck" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

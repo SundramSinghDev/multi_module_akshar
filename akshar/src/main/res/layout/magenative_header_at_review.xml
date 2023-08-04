@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?><!--
+  ~ Copyright/**
+  ~          * CedCommerce
+  ~           *
+  ~           * NOTICE OF LICENSE
+  ~           *
+  ~           * This source file is subject to the End User License Agreement (EULA)
+  ~           * that is bundled with this package in the file LICENSE.txt.
+  ~           * It is also available through the world-wide-web at this URL:
+  ~           * http://cedcommerce.com/license-agreement.txt
+  ~           *
+  ~           * @category  Ced
+  ~           * @package   MageNative
+  ~           * @author    CedCommerce Core Team <connect@cedcommerce.com >
+  ~           * @copyright Copyright CEDCOMMERCE (http://cedcommerce.com/)
+  ~           * @license      http://cedcommerce.com/license-agreement.txt
+  ~           */
+  -->
+<layout  xmlns:android="http://schemas.android.com/apk/res/android">
+    <data/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white">
+
+        <RelativeLayout
+            android:id="@+id/overlaysection"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/comapnybanner"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:src="@drawable/placeholder"
+                android:scaleType="fitXY" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/ShopName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="15dp"
+                android:layout_marginTop="20dp"
+                android:clickable="false"
+                android:ellipsize="end"
+                android:focusable="false"
+                android:layout_below="@+id/comapnybanner"
+                android:focusableInTouchMode="false"
+                android:maxLines="1"
+                android:scrollHorizontally="true"
+                android:textColor="@color/onwhitetextcolor"
+                android:textSize="25sp"
+                 />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/averagerating"
+                android:layout_width="30dp"
+                android:layout_height="25dp"
+                android:layout_alignParentEnd="true"
+                android:layout_marginTop="23dp"
+                android:layout_marginEnd="10dp"
+                android:layout_below="@+id/comapnybanner"
+                android:background="@drawable/round_corner"
+                android:gravity="center_vertical|center_horizontal"
+                android:textColor="@color/onwhitetextcolor"
+
+
+
+                />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/address"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/ShopName"
+                android:layout_marginStart="15dp"
+                android:layout_marginTop="10dp"
+                android:textColor="@color/onwhitetextcolor"
+                android:textSize="18sp"
+                 />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/reviewcount"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/address"
+                android:layout_marginStart="15dp"
+                android:paddingTop="3dp"
+                android:textColor="@color/onwhitetextcolor"
+                android:textSize="10sp"
+                 />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/line"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_below="@+id/reviewcount"
+                android:layout_marginStart="15dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginEnd="15dp"
+                android:alpha="0.5"
+                android:background="@color/white"
+                android:paddingTop="5dp"
+                android:paddingBottom="3dp" />
+
+            <!--  <android.support.design.widget.FloatingActionButton
+                      android:id="@+id/addreviewfab"
+                      android:layout_width="wrap_content"
+                      android:layout_height="wrap_content"
+                      android:src="@drawable/addreview"
+                      app:backgroundTint="@color/red"
+                      android:layout_alignParentBottom="true"
+                      android:layout_alignParentRight="true"
+                      android:layout_marginBottom="20dp"
+                      android:layout_marginRight="10dp"
+                  />-->
+
+        </RelativeLayout>
+    </RelativeLayout>
+
+</layout>

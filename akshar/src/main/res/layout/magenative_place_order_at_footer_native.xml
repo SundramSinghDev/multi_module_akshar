@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  ~ Copyright/**
+  ~          * CedCommerce
+  ~           *
+  ~           * NOTICE OF LICENSE
+  ~           *
+  ~           * This source file is subject to the End User License Agreement (EULA)
+  ~           * that is bundled with this package in the file LICENSE.txt.
+  ~           * It is also available through the world-wide-web at this URL:
+  ~           * http://cedcommerce.com/license-agreement.txt
+  ~           *
+  ~           * @category  Ced
+  ~           * @package   MageNative
+  ~           * @author    CedCommerce Core Team <connect@cedcommerce.com >
+  ~           * @copyright Copyright CEDCOMMERCE (http://cedcommerce.com/)
+  ~           * @license      http://cedcommerce.com/license-agreement.txt
+  ~           */
+  -->
+
+
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/amounttopay"
+        android:layout_gravity="end"
+        android:gravity="end"
+        android:layout_margin="10dp"
+        android:textSize="15sp"
+        android:textColor="@color/black"
+        android:textAllCaps="true"
+        />
+    <androidx.appcompat.widget.AppCompatTextView
+        android:layout_width="200dp"
+        android:layout_height="1dp"
+        android:layout_gravity="end"
+        android:gravity="end"
+        android:layout_margin="10dp"
+        android:alpha="0.5"
+        android:background="@color/black"/>
+    <androidx.appcompat.widget.AppCompatTextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/shippingcharges"
+        android:layout_gravity="end"
+        android:gravity="end"
+        android:layout_margin="10dp"
+        android:textSize="15sp"
+        android:textAllCaps="true"
+        android:textColor="@color/black"
+        />
+    <androidx.appcompat.widget.AppCompatTextView
+        android:layout_width="200dp"
+        android:layout_height="1dp"
+        android:layout_gravity="end"
+        android:gravity="end"
+        android:layout_margin="10dp"
+        android:alpha="0.5"
+        android:background="@color/black"/>
+    <androidx.appcompat.widget.AppCompatTextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/discountamount"
+        android:layout_gravity="end"
+        android:gravity="end"
+        android:layout_margin="10dp"
+        android:textSize="15sp"
+        android:textAllCaps="true"
+        android:textColor="@color/black"
+        />
+    <androidx.appcompat.widget.AppCompatTextView
+        android:layout_width="200dp"
+        android:layout_height="1dp"
+        android:layout_gravity="end"
+        android:gravity="end"
+        android:layout_margin="10dp"
+        android:alpha="0.5"
+        android:background="@color/black"/>
+    <androidx.appcompat.widget.AppCompatTextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/grandamount"
+        android:layout_gravity="end"
+        android:gravity="end"
+        android:layout_margin="10dp"
+        android:textSize="25sp"
+        android:textAllCaps="true"
+        android:textColor="@color/black"
+        />
+   <androidx.appcompat.widget.AppCompatButton
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/MageNative_checkout"
+        android:text="@string/PLACE_ORDER"
+        android:textSize="15sp"
+        android:padding="5dp"
+        android:background="@drawable/round_corner_reting"
+        android:textColor="@color/black"
+        android:layout_margin="25dp"
+        />
+</LinearLayout>

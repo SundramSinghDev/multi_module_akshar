@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!--
+  ~ Copyright/**
+  ~          * CedCommerce
+  ~           *
+  ~           * NOTICE OF LICENSE
+  ~           *
+  ~           * This source file is subject to the End User License Agreement (EULA)
+  ~           * that is bundled with this package in the file LICENSE.txt.
+  ~           * It is also available through the world-wide-web at this URL:
+  ~           * http://cedcommerce.com/license-agreement.txt
+  ~           *
+  ~           * @category  Ced
+  ~           * @package   MageNative
+  ~           * @author    CedCommerce Core Team <connect@cedcommerce.com >
+  ~           * @copyright Copyright CEDCOMMERCE (http://cedcommerce.com/)
+  ~           * @license      http://cedcommerce.com/license-agreement.txt
+  ~           */
+  -->
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:weightSum="1.0"
+    >
+    <androidx.appcompat.widget.AppCompatTextView
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="0.50"
+        android:id="@+id/MageNative_fill_rating_code"
+        android:gravity="center"
+        />
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="0.50"
+        android:orientation="vertical"
+        >
+        <RelativeLayout
+            android:layout_width="40dp"
+            android:layout_height="15dp"
+            android:orientation="horizontal"
+            android:background="@drawable/round_corner"
+            android:layout_marginTop="5dp"
+            android:id="@+id/MageNative_reviewsection"
+
+            >
+            <androidx.appcompat.widget.AppCompatImageView
+                android:layout_width="15dp"
+                android:layout_height="15dp"
+                android:src="@drawable/stat_white"
+                android:padding="2dp"
+                android:id="@+id/MageNative_star"
+                />
+            <androidx.appcompat.widget.AppCompatTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/white"
+                android:id="@+id/MageNative_reviewtext"
+                android:textSize="10sp"
+                android:layout_toEndOf="@+id/MageNative_star"
+                android:layout_marginStart="2dp"
+                />
+        </RelativeLayout>
+        <RelativeLayout
+            android:layout_width="40dp"
+            android:layout_height="15dp"
+            android:orientation="horizontal"
+            android:background="@drawable/round_corner"
+            android:layout_marginTop="5dp"
+            android:id="@+id/MageNative_reviewsection2"
+            android:visibility="gone"
+            >
+            <androidx.appcompat.widget.AppCompatImageView
+                android:layout_width="15dp"
+                android:layout_height="15dp"
+                android:src="@drawable/stat_black"
+                android:padding="2dp"
+                android:id="@+id/MageNative_star1"
+                />
+            <androidx.appcompat.widget.AppCompatTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="#000"
+                android:id="@+id/MageNative_reviewtext2"
+                android:textSize="10sp"
+                android:layout_toEndOf="@+id/MageNative_star1"
+                android:layout_marginStart="2dp"
+                />
+        </RelativeLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

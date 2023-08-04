@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<network-security-config>
+    <domain-config cleartextTrafficPermitted="true">
+        <domain includeSubdomains="true">myakshar.in</domain>
+        <domain includeSubdomains="true">myakshar.com</domain>
+        <domain includeSubdomains="true">pronted.in</domain>
+        <domain includeSubdomains="true">staging.myakshar.com</domain>
+<!--        <domain includeSubdomains="true">demo2.cedcommerce.com</domain>-->
+    </domain-config>
+</network-security-config>

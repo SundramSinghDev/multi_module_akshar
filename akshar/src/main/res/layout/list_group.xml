@@ -1,0 +1,202 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/card_order"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="4dp"
+        app:cardBackgroundColor="@color/white"
+        app:cardCornerRadius="4dp">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:padding="15dp">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/ordertext"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/OrderNum"
+                android:textColor="@color/black"
+                android:textSize="13sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/order_id"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/onwhitetextcolor"
+                android:textSize="13sp"
+                app:layout_constraintStart_toEndOf="@id/ordertext"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/placedontext"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/ordertext"
+                android:text="@string/placedontext"
+                android:textColor="#999999"
+                android:textSize="12sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/ordertext" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/order_date"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/ordertext"
+                android:layout_marginStart="5dp"
+                android:layout_toEndOf="@+id/placedontext"
+                android:textColor="#999999"
+                android:textSize="12sp"
+                app:layout_constraintStart_toEndOf="@id/placedontext"
+                app:layout_constraintTop_toBottomOf="@id/ordertext" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/amount_text_value"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:textColor="@color/AppTheme"
+                android:textSize="13sp"
+                app:layout_constraintBottom_toBottomOf="@id/order_id"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@id/order_id" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/order_info"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_info"
+                android:tint="@color/onwhitetextcolor"
+                android:contentDescription="@string/app_name"
+                app:layout_constraintEnd_toEndOf="parent" />
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/details"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                app:layout_constraintTop_toBottomOf="@id/placedontext">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/items_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:drawableStart="@drawable/delivery"
+                    android:drawablePadding="5dp"
+                    android:drawableTint="@color/onwhitetextcolor"
+                    android:gravity="center"
+                    android:padding="2dp"
+                    android:text="@string/order_id"
+                    android:textAllCaps="true"
+                    android:textColor="@color/black"
+                    android:textSize="12sp"
+                    android:visibility="gone"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    tools:targetApi="m" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/items_text_value"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="15dp"
+                    android:gravity="center"
+                    android:textColor="#B6B6B6"
+                    android:textSize="12sp"
+                    android:visibility="gone"
+                    app:layout_constraintBottom_toBottomOf="@id/items_text"
+                    app:layout_constraintStart_toEndOf="@id/items_text"
+                    app:layout_constraintTop_toTopOf="@id/items_text" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/ship_to_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="2dp"
+                    android:drawableStart="@drawable/rich"
+                    android:drawablePadding="5dp"
+                    android:drawableTint="@color/onwhitetextcolor"
+                    android:gravity="center"
+                    android:padding="2dp"
+                    android:text="@string/shipto"
+                    android:textAllCaps="true"
+                    android:textColor="@color/black"
+                    android:textSize="12sp"
+
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/items_text"
+                    tools:targetApi="m" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/ship_to_text_value"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginStart="15dp"
+                    android:textColor="#B6B6B6"
+                    android:textSize="12sp"
+
+                    app:layout_constraintBottom_toBottomOf="@id/ship_to_text"
+                    app:layout_constraintStart_toEndOf="@id/ship_to_text"
+                    app:layout_constraintTop_toTopOf="@id/ship_to_text" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/order_status_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="2dp"
+                    android:drawableStart="@drawable/orderstatus"
+                    android:drawablePadding="5dp"
+
+                    android:drawableTint="@color/onwhitetextcolor"
+                    android:gravity="center"
+                    android:padding="2dp"
+                    android:text="@string/statusnative"
+                    android:textAllCaps="true"
+                    android:textColor="@color/black"
+                    android:textSize="12sp"
+
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/ship_to_text"
+                    tools:targetApi="m" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/order_status_text_value"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/order_status_text"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginStart="15dp"
+                    android:textColor="#B6B6B6"
+                    android:textSize="12sp"
+
+                    app:layout_constraintBottom_toBottomOf="@id/order_status_text"
+                    app:layout_constraintStart_toEndOf="@id/order_status_text"
+                    app:layout_constraintTop_toTopOf="@id/order_status_text" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/orderedProductItemRV"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@+id/details"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    </androidx.cardview.widget.CardView>
+
+</layout>

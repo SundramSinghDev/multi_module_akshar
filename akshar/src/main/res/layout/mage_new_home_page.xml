@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+
+
+    <androidx.core.widget.NestedScrollView
+        android:id="@+id/parent_home"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/white">
+
+            <RelativeLayout
+                android:id="@+id/bannersection"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:visibility="gone">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="100dp"
+                    android:background="@color/AppTheme">
+
+                </RelativeLayout>
+
+                <androidx.cardview.widget.CardView
+                    app:cardCornerRadius="6dp"
+                    android:layout_margin="10dp"
+                    app:cardElevation="4dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <com.smarteist.autoimageslider.SliderView
+                        android:id="@+id/imageSlider"
+                        android:layout_width="match_parent"
+                        android:layout_height="170dp"
+                        app:sliderAnimationDuration="600"
+                        app:sliderAutoCycleEnabled="true"
+                        app:sliderIndicatorAnimationDuration="600"
+                        app:sliderIndicatorGravity="center_horizontal|bottom"
+                        app:sliderIndicatorMargin="15dp"
+                        app:sliderIndicatorOrientation="horizontal"
+                        app:sliderIndicatorPadding="3dp"
+                        app:sliderIndicatorRadius="2dp" />
+
+                </androidx.cardview.widget.CardView>
+
+                <!--<androidx.viewpager.widget.ViewPager
+                    android:id="@+id/MageNative_homepagebanner"
+                    android:layout_width="match_parent"
+                    android:layout_height="170dp"
+                    android:layout_margin="10dp" />
+
+                <com.akshar.store.ced_new_homepage_section.ViewPagerIndicator
+                    android:id="@+id/indicator"
+                    android:layout_width="wrap_content"
+                    android:layout_height="12dp"
+                    android:layout_alignBottom="@+id/MageNative_homepagebanner"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginBottom="8dp"
+                    android:alpha="0.3"
+                    android:background="@drawable/indicator_corner"
+                    android:gravity="center"
+                    android:paddingStart="5dp"
+                    android:paddingEnd="5dp" />
+
+                <com.akshar.store.ced_new_homepage_section.ViewPagerIndicator
+                    android:id="@+id/indicator2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="12dp"
+                    android:layout_alignBottom="@+id/MageNative_homepagebanner"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginBottom="8dp"
+                    android:gravity="center"
+                    android:paddingStart="5dp"
+                    android:paddingEnd="5dp" />-->
+            </RelativeLayout>
+
+            <LinearLayout
+                android:id="@+id/dealsection"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/bannersection"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+            </LinearLayout>
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/featuretittle"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_below="@id/dealsection"
+                android:background="@color/AppTheme"
+                android:gravity="center"
+                android:text="@string/featuredproducts"
+                android:visibility="gone"
+                android:textAllCaps="true"
+                android:textColor="@color/white"
+                android:textSize="15sp"
+                 />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/feature_grid"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/featuretittle"
+                app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
+                app:spanCount="2"
+                android:visibility="visible"/>
+
+            <!--<LinearLayout
+                android:id="@+id/feature_grid"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/featuretittle"
+                android:orientation="vertical"
+                android:visibility="gone"/>-->
+        </RelativeLayout>
+    </androidx.core.widget.NestedScrollView>
+</layout>

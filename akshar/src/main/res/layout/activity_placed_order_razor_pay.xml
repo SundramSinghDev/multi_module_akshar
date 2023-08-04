@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/transparent"
+        android:scrollbars="none">
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/warning"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="@color/AppTheme"
+            android:gravity="center"
+            android:text="@string/do_not_press_back_button_or_refresh_the_page_processing_your_order"
+            android:textColor="@color/black"
+            android:textSize="12sp"
+            android:contentDescription="@string/app_name"
+            android:visibility="gone" />
+
+        <ScrollView
+            android:id="@+id/scrollView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/warning"
+            android:background="@color/transparent"
+            android:scrollbars="none">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:visibility="gone"
+                android:background="@color/white">
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/check"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:adjustViewBounds="true"
+                    android:contentDescription="@string/app_name"
+                    android:src="@drawable/check4" />
+            </RelativeLayout>
+        </ScrollView>
+
+    </RelativeLayout>
+
+</layout>

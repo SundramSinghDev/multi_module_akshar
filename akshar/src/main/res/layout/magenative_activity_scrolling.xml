@@ -1,0 +1,1304 @@
+<?xml version="1.0" encoding="utf-8"?><!--
+  ~ Copyright/**
+  ~          * CedCommerce
+  ~           *
+  ~           * NOTICE OF LICENSE
+  ~           *
+  ~           * This source file is subject to the End User License Agreement (EULA)
+  ~           * that is bundled with this package in the file LICENSE.txt.
+  ~           * It is also available through the world-wide-web at this URL:
+  ~           * http://cedcommerce.com/license-agreement.txt
+  ~           *
+  ~           * @category  Ced
+  ~           * @package   MageNative
+  ~           * @author    CedCommerce Core Team <connect@cedcommerce.com >
+  ~           * @copyright Copyright CEDCOMMERCE (http://cedcommerce.com/)
+  ~           * @license      http://cedcommerce.com/license-agreement.txt
+  ~           */
+  -->
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <RelativeLayout
+        android:id="@+id/maincontainer"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        android:visibility="gone">
+
+        <ScrollView
+            android:id="@+id/scrollmain"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/MageNative_addtocartsection"
+            android:layout_alignParentTop="true"
+            android:fillViewport="true">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/pad_5dp"
+                android:layout_marginEnd="@dimen/pad_5dp">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/MageNative_imagesection"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <androidx.viewpager.widget.ViewPager
+                        android:id="@+id/MageNative_productimages"
+                        android:layout_width="match_parent"
+                        android:layout_height="380dp"
+                        android:background="@color/white"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <com.akshar.store.ui.productsection.util.Ced_CircleCedPageIndicator
+                        android:id="@+id/MageNative_indicator"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@color/white"
+                        android:minHeight="45dp"
+                        android:padding="12dp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/MageNativeStocksection"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:drawableLeft="@drawable/warning"
+                        android:drawablePadding="@dimen/pad_10dp"
+                        android:gravity="center"
+                        android:padding="@dimen/pad_5dp"
+                        android:text="@string/outofstock"
+                        android:textAllCaps="true"
+
+                        android:textColor="@color/AppTheme"
+                        android:textSize="12sp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:id="@+id/MageNative_relatedproduct"
+                        android:layout_width="35dp"
+                        android:layout_height="35dp"
+                        android:layout_margin="15dp"
+                        android:src="@drawable/similar"
+                        android:tint="@color/black"
+                        android:visibility="gone"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toStartOf="parent" />
+
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/MageNative_ProductID"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/MageNative_imagesection"
+                    android:background="@color/ebebebe"
+                    android:focusable="true"
+                    android:visibility="gone"/>
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/MageNative_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/MageNative_ProductID"
+                    android:background="@color/white"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/pad_2dp"
+                        android:orientation="vertical"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toStartOf="@+id/icons_section"
+                        app:layout_constraintHorizontal_weight="0.7"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent">
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/MageNative_productname"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:ellipsize="end"
+                            android:fontFamily="@font/celias_bold"
+                            android:maxLines="2"
+                            android:paddingStart="@dimen/pad_10dp"
+                            android:paddingEnd="@dimen/pad_10dp"
+                            android:text="name"
+                            android:textAppearance="?android:attr/textAppearanceLarge"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/pad_15dp" />
+
+                        <LinearLayout
+                            android:id="@+id/pricesection"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/MageNative_productname"
+                            android:layout_alignParentStart="true"
+                            android:layout_alignParentEnd="true"
+                            android:background="@color/white"
+                            android:orientation="horizontal"
+                            android:paddingStart="@dimen/pad_10dp">
+
+                            <androidx.appcompat.widget.AppCompatTextView
+                                android:id="@+id/MageNative_normalprice"
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:fontFamily="@font/celias_bold"
+                                android:gravity="center"
+                                android:maxLines="1"
+                                android:paddingEnd="@dimen/pad_10dp"
+                                android:text="$22"
+                                android:textColor="@color/black"
+                                android:textSize="12sp" />
+
+                            <androidx.appcompat.widget.AppCompatTextView
+                                android:id="@+id/MageNative_specialprice"
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:fontFamily="@font/celias_bold"
+                                android:gravity="center"
+                                android:maxLines="1"
+                                android:text="$232"
+                                android:textColor="@color/red"
+                                android:textSize="12sp" />
+
+                            <LinearLayout
+                                android:id="@+id/MageNative_offersection"
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:layout_margin="@dimen/pad_5dp"
+                                android:layout_marginStart="5dp"
+                                android:background="@drawable/sortbyselector"
+                                android:gravity="center"
+                                android:orientation="horizontal"
+                                android:padding="@dimen/pad_5dp"
+                                android:visibility="gone">
+
+                                <androidx.appcompat.widget.AppCompatTextView
+                                    android:id="@+id/MageNative_offerpercent"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:ellipsize="end"
+                                    android:maxLines="1"
+                                    android:text="0%"
+                                    android:textColor="@color/txtapptheme_color"
+                                    android:textSize="13sp"
+                                    android:textStyle="italic" />
+                            </LinearLayout>
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:id="@+id/Qrcode"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:paddingStart="@dimen/pad_5dp"
+                        android:paddingEnd="@dimen/pad_5dp"
+                        android:src="@drawable/placeholder"
+                        android:visibility="gone"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_weight="0.3"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <LinearLayout
+                        android:id="@+id/icons_section"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentStart="true"
+                        android:layout_alignParentEnd="true"
+                        android:background="@color/white"
+                        android:orientation="horizontal"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_weight="0.3"
+                        app:layout_constraintTop_toTopOf="parent">
+
+                        <androidx.appcompat.widget.AppCompatImageView
+                            android:id="@+id/MageNative_comparesection2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_marginStart="@dimen/pad_5dp"
+                            android:layout_marginEnd="@dimen/pad_10dp"
+                            android:gravity="center"
+                            android:src="@drawable/ic_compare_blank"
+                            android:textAllCaps="true"
+                            android:textColor="@color/black"
+                            android:textSize="12sp"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <androidx.appcompat.widget.AppCompatImageView
+                            android:id="@+id/MageNative_wishlist2"
+                            android:layout_width="40dp"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="start"
+                            android:layout_marginEnd="@dimen/pad_5dp"
+                            android:padding="@dimen/pad_5dp"
+                            android:src="@drawable/wishlike"
+                            android:visibility="gone" />
+
+                        <androidx.appcompat.widget.AppCompatImageView
+                            android:id="@+id/MageNative_sharesection2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="start"
+                            android:layout_marginEnd="@dimen/pad_5dp"
+                            android:padding="@dimen/pad_5dp"
+                            android:src="@drawable/share_25" />
+                    </LinearLayout>
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <LinearLayout
+                    android:id="@+id/MageNative_tierpricesection"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/MageNative_name"
+                    android:layout_marginTop="5dp"
+                    android:background="@color/white"
+                    android:orientation="horizontal"
+                    android:visibility="gone">
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/MageNative_tierprice"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:maxLines="1"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/txt_12sp" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/MageNative_bundlepricesection"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/MageNative_tierpricesection"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginStart="@dimen/pad_5dp"
+                    android:layout_marginEnd="@dimen/pad_5dp"
+                    android:background="@color/white"
+                    android:orientation="vertical"
+                    android:visibility="gone">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/pad_5dp"
+                        android:orientation="horizontal"
+                        android:weightSum="4">
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/MageNative_fromtag"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="0.5"
+                            android:text="@string/newfrom"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/txt_12sp" />
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="0.1"
+                            android:text=":"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/txt_12sp" />
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/MageNative_fromprice"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="3.4"
+                            android:maxLines="1"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/txt_12sp" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:orientation="horizontal"
+                        android:weightSum="4">
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/MageNative_totag"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="0.5"
+                            android:text="@string/newto"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/txt_12sp" />
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="0.1"
+                            android:text=":"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/txt_12sp" />
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/MageNative_toprice"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="3.4"
+                            android:maxLines="1"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/txt_12sp" />
+                    </LinearLayout>
+                </LinearLayout>
+
+
+                <!--<androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/MageNative_shareandwishlist1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/MageNative_quantitysection"
+                    android:layout_marginTop="5dp"
+                    android:background="@color/white"
+                    android:orientation="horizontal">
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/MageNative_comparetext"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Add to Compare"
+                        android:textAllCaps="true"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        android:gravity="center"
+                        android:textColor="@color/black"
+                        android:drawableStart="@drawable/compare_25"
+                        android:drawablePadding="@dimen/pad_5dp"
+                        android:padding="@dimen/pad_5dp"
+                        android:background="@drawable/corner_two"
+                        android:layout_margin="@dimen/pad_5dp"
+                        android:textSize="@dimen/txt_subheading13" />
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/MageNative_wishtext"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Wishlist"
+                        android:textAllCaps="true"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toEndOf="@+id/MageNative_comparetext"
+                        android:gravity="center"
+                        android:textColor="@color/black"
+                        android:padding="@dimen/pad_5dp"
+                        android:background="@drawable/corner_two"
+                        android:layout_margin="@dimen/pad_5dp"
+                        android:drawableStart="@drawable/wishlike"
+                        android:drawablePadding="5dp"
+                        android:textSize="@dimen/txt_subheading13" />
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/MageNative_sharetext2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:text="Share"
+                        android:textAllCaps="true"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toEndOf="@+id/MageNative_wishtext"
+                        android:gravity="center"
+                        android:textColor="@color/black"
+                        android:padding="@dimen/pad_5dp"
+                        android:background="@drawable/corner_two"
+                        android:layout_margin="@dimen/pad_5dp"
+                        android:drawableStart="@drawable/share_25"
+                         android:drawablePadding="5dp"
+                        android:textSize="@dimen/txt_subheading13" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/MageNative_shareandwishlist"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/MageNative_shareandwishlist1"
+                    android:layout_marginTop="5dp"
+                    android:background="@color/white"
+                    android:orientation="horizontal"
+                    android:visibility="gone"
+                    android:weightSum="1">
+
+                    <RelativeLayout
+                        android:id="@+id/MageNative_sharesection"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginTop="0.5dp"
+                        android:layout_marginEnd="1dp"
+                        android:layout_marginBottom="0.5dp"
+                        android:gravity="center"
+                        app:layout_constraintWidth_percent="0.5"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toStartOf="parent">
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/MageNative_sharetext"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerInParent="true"
+                            android:text="@string/share"
+                            android:textColor="@color/black"
+                            android:gravity="center"
+                            android:textSize="12sp" />
+
+                        <androidx.appcompat.widget.AppCompatImageView
+                            android:id="@+id/MageNative_shareimage"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_toStartOf="@+id/MageNative_sharetext"
+                            android:src="@drawable/share_icon" />
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/MageNative_wishlistsection"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginStart="1dp"
+                        android:layout_marginTop="0.5dp"
+                        android:layout_marginBottom="0.5dp"
+                        android:gravity="center"
+                        android:visibility="gone"
+                        app:layout_constraintWidth_percent="0.5"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintBottom_toBottomOf="parent">
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/MageNative_wishlisttext"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerInParent="true"
+                            android:layout_marginStart="5dp"
+                            android:text="@string/wishlist"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/txt_12sp" />
+
+                        <androidx.appcompat.widget.AppCompatImageView
+                            android:id="@+id/MageNative_wishlist"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_toStartOf="@+id/MageNative_wishlisttext"
+                            android:src="@drawable/wishlike" />
+                    </RelativeLayout>
+                </androidx.constraintlayout.widget.ConstraintLayout>-->
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/MageNative_customoptionsection"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/MageNative_bundlepricesection"
+                    android:layout_margin="6dp"
+                    android:visibility="gone"
+                    app:cardBackgroundColor="@color/white">
+
+                    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                        android:id="@+id/MageNative_custom_layout"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="4dp"
+                        android:orientation="vertical">
+
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
+
+                <LinearLayout
+                    android:id="@+id/MageNative_quantitysection"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/MageNative_customoptionsection"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentEnd="true"
+                    android:background="@color/white"
+                    android:gravity="start|center"
+                    android:minHeight="20dp"
+                    android:orientation="horizontal">
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/MageNative_quantitytag"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:fontFamily="@font/celias_bold"
+                        android:gravity="center"
+                        android:padding="@dimen/pad_10dp"
+                        android:text="@string/Quantity"
+                        android:textColor="@color/black"
+                        android:textSize="12sp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/MageNative_downquant"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/corner_two"
+                        android:gravity="center"
+                        android:paddingStart="@dimen/pad_5dp"
+                        android:paddingEnd="@dimen/pad_5dp"
+                        android:text="−"
+                        android:textColor="@color/black"
+                        android:textSize="25dp" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/MageNative_buynow"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_below="@+id/MageNative_quantitytag"
+                        android:layout_centerHorizontal="true"
+                        android:layout_gravity="center"
+                        android:background="@drawable/corner_two"
+                        android:gravity="center"
+                        android:inputType="number"
+                        android:padding="8dp"
+                        android:text="1"
+                        android:textColor="@color/black"
+                        android:textSize="25sp" />
+
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/MageNative_upquant"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/corner_two"
+                        android:gravity="center"
+                        android:paddingStart="@dimen/pad_5dp"
+                        android:paddingEnd="@dimen/pad_5dp"
+                        android:text="+"
+                        android:textColor="@color/black"
+                        android:textSize="25dp" />
+
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:id="@+id/MageNative_view_4"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/MageNative_quantitysection"
+                    android:layout_marginStart="4dp"
+                    android:layout_marginEnd="4dp"
+                    android:orientation="vertical"
+                    android:textColor="@color/white"
+                    android:visibility="gone">
+
+                    <LinearLayout
+                        android:id="@+id/configsection"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                    </LinearLayout>
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/MageNative_configtype"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingStart="4dp"
+                        android:paddingTop="4dp"
+                        android:textSize="@dimen/txt_12sp"
+
+                        android:visibility="gone" />
+
+                    <Spinner
+                        android:id="@+id/MageNative_configlist"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:visibility="gone">
+
+                    </Spinner>
+
+                    <LinearLayout
+                        android:id="@+id/MageNative_view_6"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:animateLayoutChanges="true"
+                        android:orientation="vertical"
+                        android:paddingStart="4dp"
+                        android:paddingTop="4dp"
+                        android:visibility="gone">
+
+                    </LinearLayout>
+                </LinearLayout>
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/MageNative_bundleview"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/MageNative_view_4"
+                    android:layout_marginStart="4dp"
+                    android:layout_marginTop="6dp"
+                    android:layout_marginEnd="4dp"
+                    android:textColor="@color/white"
+                    android:visibility="gone"
+                    app:cardBackgroundColor="@color/white">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="5dp"
+                        android:orientation="vertical">
+
+                        <LinearLayout
+                            android:id="@+id/MageNative_bundlelistsingleselect"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="5dp"
+                            android:animateLayoutChanges="true"
+                            android:orientation="vertical">
+
+                        </LinearLayout>
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:layout_width="match_parent"
+                            android:layout_height="2dp"
+                            android:background="#EBEBEB" />
+
+                        <LinearLayout
+                            android:id="@+id/MageNative_bundlelistmultiselect"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="5dp"
+                            android:animateLayoutChanges="true"
+                            android:orientation="vertical">
+
+                        </LinearLayout>
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/MageNative_downloadproducts"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/MageNative_bundleview"
+                    android:layout_marginStart="4dp"
+                    android:layout_marginTop="6dp"
+                    android:layout_marginEnd="4dp"
+                    android:visibility="gone"
+                    app:cardBackgroundColor="@color/white">
+
+                    <LinearLayout
+                        android:id="@+id/MageNative_productlinks"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:padding="5dp">
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/MageNative_linkstittle"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="5dp"
+                            android:text="@string/links"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/txt_subheading15" />
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
+
+                <RelativeLayout
+                    android:id="@+id/MageNative_groupproductlist"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/MageNative_downloadproducts"
+                    android:layout_marginStart="4dp"
+                    android:layout_marginTop="6dp"
+                    android:layout_marginEnd="4dp"
+                    android:textColor="@color/white"
+                    android:visibility="gone">
+
+                    <!--<ListView
+                        android:id="@+id/MageNative_grouplist"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                    </ListView>-->
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/MageNative_grouplist"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/pad_5dp"
+                        android:nestedScrollingEnabled="false" />
+
+                </RelativeLayout>
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/MageNative_lineabovespecification"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_below="@+id/MageNative_groupproductlist"
+                    android:layout_marginTop="15dp"
+                    android:background="#EBEBEB" />
+
+                <RelativeLayout
+                    android:id="@+id/MageNative_specification"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/MageNative_lineabovespecification"
+                    android:background="@color/white">
+
+                    <RelativeLayout
+                        android:id="@+id/MageNative_specificrelative"
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp">
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/MageNative_specificationtext"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_marginStart="10dp"
+                            android:layout_marginEnd="@dimen/pad_10dp"
+                            android:text="@string/specification"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/txt_subheading13" />
+
+                        <androidx.appcompat.widget.AppCompatImageView
+                            android:id="@+id/MageNative_drop"
+                            android:layout_width="25dp"
+                            android:layout_height="25dp"
+                            android:layout_alignParentEnd="true"
+                            android:layout_centerVertical="true"
+                            android:layout_marginEnd="10dp"
+                            android:padding="5dp"
+                            android:src="@drawable/ic_arrowdown" />
+
+                    </RelativeLayout>
+
+                    <!--  <LinearLayout
+                          android:id="@+id/MageNative_specificationlinear"
+                          android:layout_width="match_parent"
+                          android:layout_height="match_parent"
+                          android:layout_below="@+id/MageNative_specificrelative"
+                          android:layout_marginStart="20dp"
+                          android:layout_marginTop="5dp"
+                          android:layout_marginEnd="15dp"
+                          android:layout_marginBottom="10dp"
+                          android:orientation="vertical">
+                          <WebView
+                              android:id="@+id/MageNative_description"
+                              android:layout_width="wrap_content"
+                              android:layout_height="wrap_content" />
+                      </LinearLayout>-->
+                    <LinearLayout
+                        android:id="@+id/MageNative_specificationlinear"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/MageNative_specificrelative"
+                        android:layout_marginStart="@dimen/pad_10dp"
+                        android:layout_marginEnd="@dimen/pad_10dp"
+                        android:orientation="vertical">
+                        <!--  <WebView xmlns:android="http://schemas.android.com/apk/res/android"
+                              android:id="@+id/MageNative_description"
+                              android:layout_width="wrap_content"
+                              android:layout_height="wrap_content" />-->
+                    </LinearLayout>
+                </RelativeLayout>
+
+
+                <RelativeLayout
+                    android:id="@+id/MageNative_additionalinfosection"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/MageNative_specification"
+                    android:layout_marginTop="5dp"
+                    android:background="@color/white"
+                    android:visibility="gone">
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/MageNative_linebelowspecification"
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:background="#EBEBEB" />
+
+                    <RelativeLayout
+                        android:id="@+id/MageNative_additionalinforelative"
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginEnd="10dp"
+                        android:layout_marginBottom="5dp">
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/MageNative_additionalinfotext"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:text="@string/additional_info"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/txt_12sp" />
+
+                        <androidx.appcompat.widget.AppCompatImageView
+                            android:id="@+id/MageNative_additionalarrowinfo"
+                            android:layout_width="25dp"
+                            android:layout_height="25dp"
+                            android:layout_alignParentEnd="true"
+                            android:layout_centerVertical="true"
+                            android:padding="5dp"
+                            android:src="@drawable/ic_arrowdown" />
+
+                    </RelativeLayout>
+
+                    <LinearLayout
+                        android:id="@+id/MageNative_additionalinfolinear"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_below="@+id/MageNative_additionalinforelative"
+                        android:layout_marginStart="20dp"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginEnd="15dp"
+                        android:layout_marginBottom="10dp"
+                        android:orientation="vertical">
+
+                    </LinearLayout>
+                </RelativeLayout>
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/MageNative_linebelowadditionalinfo"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_below="@+id/MageNative_additionalinfosection"
+                    android:background="#EBEBEB" />
+
+                <RelativeLayout
+                    android:id="@+id/MageNative_moreinfosection"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/MageNative_linebelowadditionalinfo"
+                    android:background="@color/white"
+                    android:minHeight="40dp"
+                    android:orientation="vertical">
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/MageNative_moreinfotext"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginEnd="@dimen/pad_10dp"
+                        android:text="@string/more_info"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/txt_subheading13" />
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:id="@+id/MageNative_arrowinfo"
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
+                        android:layout_alignParentEnd="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginEnd="10dp"
+                        android:padding="5dp"
+                        android:src="@drawable/ic_rightarrow_" />
+                </RelativeLayout>
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/MageNative_linebelowmoreinfo"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_below="@+id/MageNative_moreinfosection"
+                    android:background="#EBEBEB" />
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/sellersection"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/MageNative_linebelowmoreinfo"
+                    android:layout_margin="10dp"
+                    android:visibility="gone"
+                    app:cardBackgroundColor="@color/ebebebe"
+                    app:cardUseCompatPadding="true">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_margin="2dp"
+                        android:background="@color/white">
+
+                        <androidx.appcompat.widget.AppCompatImageView
+                            android:id="@+id/sold"
+                            android:layout_width="50dp"
+                            android:layout_height="50dp"
+                            android:layout_margin="5dp"
+                            android:layout_toStartOf="@+id/soldtext"
+                            android:src="@drawable/sold_by" />
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/soldtext"
+                            android:layout_width="80dp"
+                            android:layout_height="50dp"
+                            android:layout_centerHorizontal="true"
+                            android:gravity="center"
+                            android:text="@string/sold_by"
+                            android:textAllCaps="true"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/txt_12sp"
+                            android:textStyle="italic|bold" />
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/vendor_id"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:visibility="gone" />
+
+                        <androidx.appcompat.widget.AppCompatImageView
+                            android:id="@+id/vendor_logo"
+                            android:layout_width="70dp"
+                            android:layout_height="70dp"
+                            android:layout_below="@+id/sold"
+                            android:layout_marginStart="15dp"
+                            android:layout_marginEnd="15dp"
+                            android:adjustViewBounds="true"
+                            android:src="@drawable/conta" />
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/vendor_name"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/sold"
+                            android:layout_marginTop="10dp"
+                            android:layout_toEndOf="@+id/vendor_logo"
+                            android:textAllCaps="true"
+                            android:textColor="@color/AppTheme"
+                            android:textSize="19sp" />
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/line"
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:layout_below="@+id/vendor_name"
+                            android:layout_marginTop="10dp"
+                            android:layout_marginEnd="20dp"
+                            android:layout_toEndOf="@+id/vendor_logo"
+                            android:alpha="0.5"
+                            android:background="@color/black" />
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/reviewtag"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/line"
+                            android:layout_margin="5dp"
+                            android:layout_toEndOf="@+id/vendor_logo"
+                            android:text="@string/Vendor_review"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/txt_12sp" />
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/vendor_rating"
+                            android:layout_width="30dp"
+                            android:layout_height="25dp"
+                            android:layout_below="@+id/line"
+                            android:layout_margin="5dp"
+                            android:layout_toEndOf="@+id/reviewtag"
+                            android:background="@drawable/round_corner"
+                            android:gravity="center_vertical|center_horizontal"
+                            android:textColor="@color/white" />
+                    </RelativeLayout>
+                </androidx.cardview.widget.CardView>
+
+                <RelativeLayout
+                    android:id="@+id/MageNative_reviewsection"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/sellersection"
+                    android:layout_marginTop="15dp"
+                    android:visibility="gone">
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/MageNative_rating_heading"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginBottom="20dp"
+                        android:text="@string/rating"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/txt_subheading13" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/MageNative_totalrating"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/MageNative_rating_heading"
+                        android:layout_centerInParent="true"
+                        android:layout_marginStart="7dp"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/txt_12sp" />
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:id="@+id/MageNative_ratestar"
+                        android:layout_width="15dp"
+                        android:layout_height="15dp"
+                        android:layout_below="@+id/MageNative_rating_heading"
+                        android:layout_marginStart="2dp"
+                        android:layout_marginTop="2dp"
+                        android:layout_toStartOf="@+id/MageNative_totalrating"
+                        android:src="@drawable/rate" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/MageNative_reviewtext"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/MageNative_totalrating"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="5dp"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/txt_12sp" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/MageNative_morereviewsection"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_below="@+id/MageNative_reviewsection"
+                    android:background="@color/white"
+                    android:orientation="vertical">
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/MageNative_morereviewtext"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginStart="10dp"
+                        android:text="@string/morereviews"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/txt_subheading13" />
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
+                        android:layout_alignParentEnd="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginEnd="10dp"
+                        android:padding="5dp"
+                        android:src="@drawable/ic_rightarrow_" />
+                </RelativeLayout>
+
+                <LinearLayout
+                    android:id="@+id/MageNative_userreviewsection"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/MageNative_morereviewsection"
+                    android:layout_marginTop="5dp"
+                    android:background="@color/white"
+                    android:orientation="vertical"></LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/MageNative_relatedprod_section"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/MageNative_morereviewsection"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginBottom="15dp"
+                    android:orientation="vertical"
+                    android:visibility="gone">
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="10dp"
+                        android:text="@string/relatedproducts"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/txt_subheading13" />
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/MageNative_relatedrecycler_view"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:orientation="horizontal"
+                        android:scrollbars="none"
+                        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                        tools:listitem="@layout/magenative_item_row" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/MageNative_crosssellprod_section"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/MageNative_relatedprod_section"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginBottom="15dp"
+                    android:orientation="vertical"
+                    android:visibility="gone">
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="10dp"
+                        android:text="@string/crosssellproducts"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/txt_subheading13" />
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/MageNative_crosssellrecycler_view"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:scrollbars="none" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/MageNative_upsellprod_section"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/MageNative_crosssellprod_section"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginBottom="15dp"
+                    android:orientation="vertical"
+                    android:visibility="gone">
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="10dp"
+                        android:text="@string/upsellproducts"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/txt_subheading13" />
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/MageNative_upsellrecycler_view"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:scrollbars="none" />
+
+                </LinearLayout>
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/MageNative_linebelowmorereview"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_below="@+id/MageNative_morereviewsection"
+                    android:layout_marginBottom="20dp"
+                    android:background="#EBEBEB"
+                    android:visibility="gone" />
+
+            </RelativeLayout>
+
+        </ScrollView>
+
+        <LinearLayout
+            android:id="@+id/MageNative_addtocartsection"
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:layout_alignParentBottom="true"
+            android:background="@color/black"
+            android:orientation="horizontal"
+            android:padding="@dimen/pad_5dp"
+            android:weightSum="1">
+
+            <RelativeLayout
+                android:id="@+id/MageNative_addtobagsection"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="0.495"
+                android:background="@drawable/sortbyselector"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/cart_img"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_centerVertical="true"
+                    android:src="@drawable/shop"
+                    android:tint="@color/AppTheme" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/MageNative_atc"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginStart="6dp"
+                    android:layout_toEndOf="@id/cart_img"
+                    android:text="@string/addtocart"
+                    android:textAllCaps="true"
+                    android:textColor="@color/AppTheme"
+                    android:textSize="13sp" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/MageNative_atcadding"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginStart="6dp"
+                    android:layout_toEndOf="@id/cart_img"
+                    android:text="@string/adding"
+                    android:textAllCaps="true"
+                    android:textColor="@color/AppTheme"
+                    android:textSize="13sp"
+                    android:visibility="gone" />
+            </RelativeLayout>
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="0.01"
+                android:background="@color/black" />
+
+            <RelativeLayout
+                android:id="@+id/MageNative_buysection"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="0.495"
+                android:background="@drawable/filterselector"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/img2"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_centerVertical="true"
+                    android:src="@drawable/ic_shopping"
+                    android:tint="@color/white" />
+                <!-- <androidx.appcompat.widget.AppCompatImageView
+                     android:id="@+id/img2"
+                     android:layout_width="20dp"
+                     android:layout_height="20dp"
+                     android:layout_toStartOf="@+id/MageNative_atwl"
+                     android:src="@drawable/ic_shopping" />
+     -->
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/MageNative_atwl"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginStart="6dp"
+                    android:layout_toEndOf="@id/img2"
+                    android:text="@string/buynow"
+                    android:textAllCaps="true"
+                    android:textColor="@color/white"
+                    android:textSize="13sp" />
+
+            </RelativeLayout>
+
+        </LinearLayout>
+    </RelativeLayout>
+</layout>

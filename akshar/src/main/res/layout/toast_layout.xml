@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.AppCompatTextView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/btnDefaultToast"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+    android:textSize="@dimen/txt_13sp"
+        android:padding="@dimen/pad_15dp"
+        android:background="@drawable/toast"
+        android:textColor="@color/txtsecondory_color"
+        android:layout_centerInParent="true"
+        android:textAllCaps="false" />

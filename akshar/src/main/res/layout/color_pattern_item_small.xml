@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/pad_10dp"
+        android:background="@drawable/corner_two"
+        android:layout_marginTop="@dimen/pad_10dp"
+        android:orientation="vertical"
+        android:id="@+id/image_layout"
+        android:padding="@dimen/pad_5dp"
+        >
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/config_images"
+            android:layout_width="50dp"
+            android:scaleType="fitXY"
+            android:layout_height="50dp" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:visibility="gone"
+            android:id="@+id/color_label"
+            android:text="color_label"
+            android:gravity="center"
+            android:layout_gravity="center"
+            android:textColor="@color/black"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:orientation="horizontal"
+            android:layout_marginTop="@dimen/pad_5dp"
+            android:layout_marginBottom="@dimen/pad_5dp"
+            android:layout_height="wrap_content">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="finalprice"
+                android:visibility="gone"
+                android:id="@+id/finalprice"
+                android:textColor="@color/black"
+                android:layout_marginEnd="@dimen/pad_5dp"/>
+            <androidx.appcompat.widget.AppCompatTextView
+                android:layout_width="wrap_content"
+                android:id="@+id/oldprice"
+                android:layout_height="wrap_content"
+                android:visibility="gone"
+                android:layout_marginEnd="@dimen/pad_5dp"
+                android:text="oldprice"/>
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/swatch_offer"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:visibility="gone"
+                android:text="offer"/>
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:visibility="gone">
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/attr_id"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/option_id"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+</layout>

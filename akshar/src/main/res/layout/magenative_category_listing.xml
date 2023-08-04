@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  ~ Copyright/**
+  ~          * CedCommerce
+  ~           *
+  ~           * NOTICE OF LICENSE
+  ~           *
+  ~           * This source file is subject to the End User License Agreement (EULA)
+  ~           * that is bundled with this package in the file LICENSE.txt.
+  ~           * It is also available through the world-wide-web at this URL:
+  ~           * http://cedcommerce.com/license-agreement.txt
+  ~           *
+  ~           * @category  Ced
+  ~           * @package   MageNative
+  ~           * @author    CedCommerce Core Team <connect@cedcommerce.com >
+  ~           * @copyright Copyright CEDCOMMERCE (http://cedcommerce.com/)
+  ~           * @license      http://cedcommerce.com/license-agreement.txt
+  ~           */
+  -->
+
+<ScrollView
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:background="@color/white"
+    android:layout_marginTop="10dp"
+    android:scrollbars="none">
+    <RelativeLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        android:id="@+id/deal"
+        >
+        <androidx.appcompat.widget.AppCompatTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/noexicitingofferstoshow"
+            android:textAllCaps="true"
+            android:textColor="@color/main_color_gray"
+            android:textSize="14sp"
+            android:id="@+id/cart"
+
+            android:layout_centerInParent="true"
+            android:gravity="center"
+            android:layout_marginBottom="10dp"
+            android:visibility="gone"
+            android:padding="10dp"
+            />
+        <!--<cn.trinea.android.view.autoscrollviewpager.AutoScrollViewPager
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:id="@+id/MageNative_homepagebanner"
+            android:padding="10dp"
+            android:background="@color/white"
+            />-->
+        <androidx.viewpager.widget.ViewPager
+            android:id="@+id/MageNative_homepagebanner"
+            android:layout_width="match_parent"
+            android:layout_height="170dp"
+            android:background="@color/white"
+            android:layout_margin="5dp"
+
+            />
+        <com.akshar.store.ui.productsection.util.Ced_CircleCedPageIndicator
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/MageNative_indicator2"
+            android:layout_below="@+id/MageNative_homepagebanner"
+            android:layout_marginTop="5dp"
+            android:padding="5dp"
+
+            />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/MageNative_catsection"
+            android:orientation="vertical"
+            android:layout_below="@+id/MageNative_indicator2"
+            android:background="@color/white"
+            android:layout_marginBottom="5dp"
+            android:layout_marginTop="5dp"
+
+            >
+        </LinearLayout>
+    </RelativeLayout>
+</ScrollView>

@@ -1,0 +1,203 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data />
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        android:id="@+id/main"
+        android:fillViewport="true"
+        android:visibility="visible"
+        android:scrollbars="none">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:paddingStart="@dimen/dimen_8dp"
+            android:paddingEnd="@dimen/dimen_8dp"
+            android:paddingBottom="@dimen/pad_10dp">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/header_label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/pad_10dp"
+                android:layout_marginTop="@dimen/dimen_20dp"
+                android:layout_marginEnd="@dimen/pad_10dp"
+                android:fontFamily="@font/celias_bold"
+                android:text="@string/create_an_account_to_continue"
+                android:textColor="@color/black"
+                android:textSize="@dimen/txt_15sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/msg_one"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/pad_10dp"
+                android:layout_marginTop="@dimen/pad_10dp"
+                android:layout_marginEnd="@dimen/pad_10dp"
+                android:fontFamily="@font/celias_regular"
+                android:text="@string/please_enter_the_otp_you_received_to"
+                android:textColor="@color/color_gray_717171"
+                android:textSize="@dimen/txt_14sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/header_label" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/mobile_txt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/pad_10dp"
+                android:layout_marginTop="@dimen/pad_10dp"
+                android:layout_marginEnd="@dimen/pad_10dp"
+                android:fontFamily="@font/celias_bold"
+                android:textColor="@color/black"
+                android:textSize="@dimen/txt_14sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/msg_one" />
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/input_field_view"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dimen_15dp"
+                android:orientation="vertical"
+                android:weightSum="1"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/mobile_txt">
+
+                <androidx.appcompat.widget.AppCompatEditText
+                    android:id="@+id/one"
+                    android:layout_width="@dimen/dimen_42dp"
+                    android:layout_height="@dimen/dimen_42dp"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginEnd="3dp"
+                    android:background="@drawable/otp_field_bg"
+                    android:gravity="center"
+                    android:importantForAutofill="no"
+                    android:imeOptions="actionNext"
+                    android:hint="@string/_0"
+                    android:enabled="false"
+                    android:inputType="number"
+                    android:maxLength="1"
+                    app:layout_constraintEnd_toStartOf="@id/two"
+                    app:layout_constraintHorizontal_chainStyle="packed"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    tools:ignore="TouchTargetSizeCheck,DuplicateSpeakableTextCheck,TextContrastCheck" />
+
+                <androidx.appcompat.widget.AppCompatEditText
+                    android:id="@+id/two"
+                    android:layout_width="@dimen/dimen_42dp"
+                    android:layout_height="@dimen/dimen_42dp"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginEnd="3dp"
+                    android:background="@drawable/otp_field_bg"
+                    android:gravity="center"
+                    android:hint="@string/_0"
+                    android:enabled="false"
+                    android:importantForAutofill="no"
+                    android:imeOptions="actionNext"
+                    android:inputType="number"
+                    android:maxLength="1"
+                    app:layout_constraintEnd_toStartOf="@id/three"
+                    app:layout_constraintStart_toEndOf="@id/one"
+                    app:layout_constraintTop_toTopOf="parent"
+                    tools:ignore="TouchTargetSizeCheck,TextContrastCheck" />
+
+                <androidx.appcompat.widget.AppCompatEditText
+                    android:id="@+id/three"
+                    android:layout_width="@dimen/dimen_42dp"
+                    android:layout_height="@dimen/dimen_42dp"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginEnd="3dp"
+                    android:enabled="false"
+                    android:importantForAutofill="no"
+                    android:imeOptions="actionNext"
+                    android:background="@drawable/otp_field_bg"
+                    android:gravity="center"
+                    android:hint="@string/_0"
+                    android:inputType="number"
+                    android:maxLength="1"
+                    app:layout_constraintEnd_toStartOf="@id/four"
+                    app:layout_constraintStart_toEndOf="@id/two"
+                    app:layout_constraintTop_toTopOf="parent"
+                    tools:ignore="TouchTargetSizeCheck,TextContrastCheck" />
+
+                <androidx.appcompat.widget.AppCompatEditText
+                    android:id="@+id/four"
+                    android:layout_width="@dimen/dimen_42dp"
+                    android:layout_height="@dimen/dimen_42dp"
+                    android:layout_marginTop="15dp"
+                    android:enabled="false"
+                    android:background="@drawable/otp_field_bg"
+                    android:gravity="center"
+                    android:hint="@string/_0"
+                    android:inputType="number"
+                    android:importantForAutofill="no"
+                    android:imeOptions="actionDone"
+                    android:maxLength="1"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@id/three"
+                    app:layout_constraintTop_toTopOf="parent"
+                    tools:ignore="TouchTargetSizeCheck,TextContrastCheck" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/resend_otp_txt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dimen_20dp"
+                android:layout_marginTop="@dimen/dimen_15dp"
+                android:fontFamily="@font/celias_bold"
+                android:text="@string/resend_otp"
+                android:textColor="@color/blue_variant_figma"
+                android:textSize="@dimen/txt_14sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/input_field_view"
+                tools:ignore="TextContrastCheck" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/otp_timer_txt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/pad_10dp"
+                android:layout_marginTop="@dimen/dimen_15dp"
+                android:fontFamily="@font/celias_regular"
+                android:textColor="@color/black"
+                android:textSize="@dimen/txt_14sp"
+                app:layout_constraintStart_toEndOf="@+id/resend_otp_txt"
+                app:layout_constraintTop_toBottomOf="@+id/input_field_view"
+                tools:ignore="TextContrastCheck" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btn_register"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dimen_40dp"
+                android:layout_marginBottom="@dimen/dimen_15dp"
+                android:background="@drawable/buttonbackground"
+                android:backgroundTint="@color/blue_variant_figma"
+                android:fontFamily="@font/celias_bold"
+                android:text="@string/validate_sign_in"
+                android:textAllCaps="false"
+                android:textColor="@color/white"
+                android:textSize="@dimen/txt_subheading15"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/input_field_view"
+                tools:ignore="TouchTargetSizeCheck,TextContrastCheck"
+                tools:layout_editor_absoluteX="8dp" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+</layout>

@@ -1,0 +1,277 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:id="@+id/searchview_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/corner_grey_1bottomline_white"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:padding="5dp"
+            android:visibility="gone"
+            android:weightSum="1">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/back"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:layout_marginStart="@dimen/pad_5dp"
+                android:layout_marginEnd="@dimen/pad_5dp"
+                android:layout_weight="0.1"
+                android:padding="@dimen/pad_10dp"
+                android:src="@drawable/ic_back"
+                android:tint="@color/onwhitetextcolor" />
+
+            <AutoCompleteTextView
+                android:id="@+id/MageNative_editText1"
+                android:layout_width="0dp"
+                android:layout_height="40dp"
+                android:layout_weight="0.8"
+                android:background="@drawable/corner_two"
+                android:dropDownWidth="match_parent"
+                android:ellipsize="end"
+                android:ems="10"
+                android:fontFamily="@font/celias_regular"
+                android:hint="@string/SearchYourProducts"
+                android:imeOptions="actionSearch"
+                android:inputType="textAutoComplete|textAutoCorrect"
+                android:padding="8dp"
+                android:scrollbarSize="@dimen/pad_10dp"
+                android:scrollbarStyle="outsideOverlay"
+                android:scrollbars="vertical"
+                android:singleLine="true"
+                android:textColor="@color/black"
+                android:textSize="13sp"/>
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/voicesearch"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:layout_marginStart="@dimen/pad_5dp"
+                android:layout_marginEnd="@dimen/pad_5dp"
+                android:layout_weight="0.1"
+                android:padding="@dimen/pad_5dp"
+                android:src="@drawable/micro"
+                android:tint="@color/onwhitetextcolor" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/search_btn"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:layout_marginStart="@dimen/pad_5dp"
+                android:layout_weight="0"
+                android:padding="@dimen/pad_5dp"
+                android:src="@drawable/ic_right"
+                android:visibility="gone" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/MageNative_sortingsection"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_alignParentTop="true"
+            android:background="@drawable/corner_grey_1bottomline_white"
+            android:paddingBottom="@dimen/pad_1dp"
+            android:weightSum="3.3">
+            <!--example section for subcategory don't remove from base..-->
+            <LinearLayout
+                android:id="@+id/MageNative_subcatselectsection"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/corner_grey_1rightline"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:visibility="gone">
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/MageNative_subcatselectimage"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:padding="5dp"
+                    android:src="@drawable/caton"
+                    android:tint="@color/black" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/MageNative_subcatselect"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/celias_regular"
+                    android:text="@string/sortbycat"
+                    android:textAllCaps="true"
+                    android:textColor="#000000"
+                    android:textSize="@dimen/txt_13sp" />
+            </LinearLayout>
+            <!--filter section .-->
+            <LinearLayout
+                android:id="@+id/MageNative_filtersection"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1.5"
+                android:background="@drawable/corner_grey_1rightline"
+                android:gravity="center">
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/MageNative_filterproductimage"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:padding="@dimen/pad_5dp"
+                    android:src="@drawable/filterimg"
+                    android:tint="@color/black" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/MageNative_filterproduct"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/celias_regular"
+                    android:text="@string/filter"
+                    android:textAllCaps="true"
+                    android:textColor="#000000"
+                    android:textSize="@dimen/txt_13sp" />
+            </LinearLayout>
+            <!--sort section .-->
+            <LinearLayout
+                android:id="@+id/MageNative_sortsection"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1.5"
+                android:background="@drawable/corner_grey_1rightline"
+                android:gravity="center">
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/MageNative_sortbyimage"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:padding="3dp"
+                    android:src="@drawable/sortimg"
+                    android:tint="@color/black" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/MageNative_sortproduct"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/celias_regular"
+                    android:text="@string/sortby"
+                    android:textAllCaps="true"
+                    android:textColor="#000000"
+                    android:textSize="@dimen/txt_13sp" />
+            </LinearLayout>
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/MageNative_changeview"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_centerInParent="true"
+                android:layout_weight="0.3"
+                android:padding="@dimen/pad_10dp"
+                android:src="@drawable/list_icon" />
+        </LinearLayout>
+
+        <androidx.core.widget.NestedScrollView
+            android:id="@+id/nestedscroll"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="fill_vertical"
+            android:fillViewport="true"
+            android:fitsSystemWindows="true"
+            app:contentScrim="?attr/colorPrimary"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior"
+            app:layout_scrollFlags="scroll|enterAlways">
+
+            <RelativeLayout
+                android:id="@+id/MageNative_main"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/white">
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/MageNative_subcategories_listing"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentEnd="true"
+                    android:orientation="vertical"
+                    android:paddingBottom="@dimen/pad_2dp"
+                    app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
+                    app:spanCount="3" />
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/recycler"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/MageNative_subcategories_listing"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentEnd="true"
+                    app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
+                    app:spanCount="2"/>
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/noproduct_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@color/white"
+                    android:orientation="vertical"
+                    android:visibility="gone">
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/cart"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_above="@+id/conti"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginBottom="@dimen/pad_20dp"
+                        android:fontFamily="@font/celias_regular"
+                        android:gravity="center"
+                        android:padding="10dp"
+                        android:text="@string/noproducts"
+                        android:textColor="@color/black"
+                        android:textSize="12sp"
+                        app:layout_constraintBottom_toTopOf="@+id/conti"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/conti"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:background="@drawable/secondary_box"
+                        android:fontFamily="@font/celias_regular"
+                        android:gravity="center"
+                        android:minHeight="40dp"
+                        android:padding="@dimen/pad_10dp"
+                        android:text="@string/cancel"
+                        android:textAllCaps="true"
+                        android:textColor="@color/txtsecondory_color"
+                        android:textSize="12sp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </RelativeLayout>
+        </androidx.core.widget.NestedScrollView>
+
+        <View
+            android:id="@+id/view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#99000000"
+            android:visibility="gone" />
+    </LinearLayout>
+</layout>

@@ -1,0 +1,540 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/maincontainer"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#F8F8F8"
+        android:visibility="visible">
+
+        <ScrollView
+            android:id="@+id/scrollview"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            app:layout_constraintBottom_toTopOf="@id/addToCart"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/wishlist2"
+                    android:layout_width="40dp"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="start"
+                    android:layout_marginEnd="@dimen/pad_5dp"
+                    android:padding="@dimen/pad_5dp"
+                    android:src="@drawable/wishlike"
+                    android:visibility="gone"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <androidx.viewpager.widget.ViewPager
+                    android:id="@+id/productimages_pager"
+                    android:layout_width="match_parent"
+                    android:layout_height="300dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <com.akshar.store.ui.productsection.util.Ced_CircleCedPageIndicator
+                    android:id="@+id/indicator"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/pad_10dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/productimages_pager" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/stocksection"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:alpha="0.5"
+                    android:background="@color/AppTheme"
+                    android:fontFamily="@font/celias_bold"
+                    android:gravity="center"
+                    android:padding="@dimen/pad_5dp"
+                    android:text="@string/outofstock"
+                    android:textAllCaps="true"
+                    android:textColor="@color/txtapptheme_color"
+                    android:textSize="15sp"
+                    android:textStyle="bold"
+                    app:layout_constraintBottom_toBottomOf="@+id/productimages_pager"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="@+id/productimages_pager" />
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_marginTop="@dimen/pad_10dp"
+                    android:background="#F8F8F8"
+                    android:padding="@dimen/pad_15dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/indicator">
+
+                    <!--                    android:lines="2"-->
+                    <!--                    android:maxLines="2"-->
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/productname"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:ellipsize="end"
+                        android:fontFamily="@font/celias_bold"
+                        android:gravity="start"
+                        android:lineSpacingExtra="10dp"
+                        android:text="Kedo Running shoeggggggggs Runninghdgh shoes"
+                        android:textAppearance="?android:attr/textAppearanceLarge"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/dimen_18dp"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintWidth_percent="0.61" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/offerpercent"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:ellipsize="end"
+                        android:fontFamily="@font/celias_bold"
+                        android:gravity="end|center"
+                        android:maxLines="1"
+                        android:text="0%"
+                        android:textColor="#7EC09F"
+                        android:textSize="13sp"
+                        android:visibility="gone"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="@+id/productname"
+                        app:layout_constraintWidth_percent="0.25" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/tierprice"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:maxLines="1"
+                        android:text="tierpr"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/txt_12sp"
+                        android:visibility="gone"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/offerpercent" />
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:id="@+id/bundlepricesection"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:gravity="end|center"
+                        android:orientation="horizontal"
+                        android:visibility="gone"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toEndOf="@+id/productname"
+                        app:layout_constraintTop_toBottomOf="@+id/offerpercent"
+                        app:layout_constraintWidth_percent="0.38">
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/fromtag"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/newfrom"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/pad_15dp"
+                            app:layout_constraintEnd_toStartOf="@id/colon1"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/colon1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:paddingStart="@dimen/pad_2dp"
+                            android:paddingEnd="@dimen/pad_2dp"
+                            android:text=":"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/pad_15dp"
+                            app:layout_constraintEnd_toStartOf="@id/fromprice"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/fromprice"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:maxLines="1"
+                            android:text="454555"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/pad_15dp"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/totag"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/pad_5dp"
+                            android:text="@string/newto"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/pad_15dp"
+                            app:layout_constraintEnd_toStartOf="@id/colon2"
+                            app:layout_constraintTop_toBottomOf="@+id/fromtag" />
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/colon2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:paddingStart="@dimen/pad_2dp"
+                            android:paddingEnd="@dimen/pad_2dp"
+                            android:text=":"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/pad_15dp"
+                            app:layout_constraintEnd_toStartOf="@id/toprice"
+                            app:layout_constraintTop_toBottomOf="@+id/fromtag" />
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/toprice"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:maxLines="1"
+                            android:text="454555"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/pad_15dp"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/fromtag" />
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/specialprice"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/celias_bold"
+                        android:gravity="center"
+                        android:maxLines="1"
+                        android:text="$2232"
+                        android:textColor="@color/red"
+                        android:textSize="@dimen/pad_15dp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/offerpercent" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/normalprice"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/celias_bold"
+                        android:gravity="center"
+                        android:maxLines="1"
+                        android:paddingEnd="@dimen/pad_5dp"
+                        android:text="$2222"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/pad_15dp"
+                        app:layout_constraintEnd_toStartOf="@+id/specialprice"
+                        app:layout_constraintTop_toBottomOf="@+id/offerpercent" />
+
+                    <LinearLayout
+                        android:id="@+id/custom_layout"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/pad_5dp"
+                        android:orientation="vertical"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/productname" />
+                    <!-- //-&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;//-->
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/bundleview"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="4dp"
+                        android:layout_marginTop="6dp"
+                        android:layout_marginEnd="4dp"
+                        android:textColor="@color/white"
+                        android:visibility="gone"
+                        app:cardBackgroundColor="@color/white"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/custom_layout">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="5dp"
+                            android:orientation="vertical">
+
+                            <LinearLayout
+                                android:id="@+id/bundlelistsingleselect"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="5dp"
+                                android:animateLayoutChanges="true"
+                                android:orientation="vertical" />
+
+                            <androidx.appcompat.widget.AppCompatTextView
+                                android:layout_width="match_parent"
+                                android:layout_height="1dp"
+                                android:background="#EBEBEB" />
+
+                            <LinearLayout
+                                android:id="@+id/bundlelistmultiselect"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="5dp"
+                                android:animateLayoutChanges="true"
+                                android:orientation="vertical" />
+                        </LinearLayout>
+                    </androidx.cardview.widget.CardView>
+
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/downloadproducts"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="4dp"
+                        android:layout_marginTop="6dp"
+                        android:layout_marginEnd="4dp"
+                        android:visibility="gone"
+                        app:cardBackgroundColor="@color/white"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/bundleview">
+
+                        <LinearLayout
+                            android:id="@+id/productlinks"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:padding="5dp">
+
+                            <androidx.appcompat.widget.AppCompatTextView
+                                android:id="@+id/linkstittle"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="5dp"
+                                android:text="@string/links"
+                                android:textColor="@color/black"
+                                android:textSize="@dimen/txt_subheading15" />
+                        </LinearLayout>
+                    </androidx.cardview.widget.CardView>
+
+                    <RelativeLayout
+                        android:id="@+id/groupproductlist"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="4dp"
+                        android:layout_marginTop="6dp"
+                        android:layout_marginEnd="4dp"
+                        android:textColor="@color/white"
+                        android:visibility="gone"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/downloadproducts">
+
+                        <androidx.recyclerview.widget.RecyclerView
+                            android:id="@+id/grouplist"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/pad_5dp"
+                            android:nestedScrollingEnabled="false" />
+
+                    </RelativeLayout>
+                    <!-- //-&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;//-->
+                    <LinearLayout
+                        android:id="@+id/configsection"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/pad_5dp"
+                        android:orientation="vertical"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/groupproductlist" />
+
+                    <LinearLayout
+                        android:id="@+id/specificationlinear"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/pad_10dp"
+                        android:background="@drawable/cardcorner"
+                        android:gravity="center"
+                        android:orientation="vertical"
+                        android:padding="@dimen/pad_5dp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/configsection" />
+
+                    <!--                    android:textColor="@color/darker_gray"-->
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/productdetails"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/pad_10dp"
+                        android:ellipsize="end"
+                        android:fontFamily="@font/celias_bold"
+                        android:gravity="start"
+                        android:lineSpacingExtra="10dp"
+                        android:text="Product Details"
+                        android:textAppearance="?android:attr/textAppearanceLarge"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/pad_15dp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/specificationlinear" />
+
+                    <LinearLayout
+                        android:id="@+id/specificationlinear2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/pad_10dp"
+                        android:background="@drawable/cardcorner"
+                        android:gravity="center"
+                        android:orientation="vertical"
+                        android:padding="@dimen/pad_5dp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/productdetails" />
+
+                    <LinearLayout
+                        android:id="@+id/moreinfo_layout"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/pad_10dp"
+                        android:background="@drawable/cardcorner"
+                        android:gravity="center"
+                        android:orientation="vertical"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/specificationlinear2" />
+
+                    <LinearLayout
+                        android:id="@+id/relatedprod_section"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="15dp"
+                        android:layout_marginBottom="15dp"
+                        android:orientation="vertical"
+                        android:visibility="gone"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/moreinfo_layout">
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/relatedproducts"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/txt_subheading13" />
+
+                        <androidx.recyclerview.widget.RecyclerView
+                            android:id="@+id/relatedrecycler_view"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp"
+                            android:orientation="horizontal"
+                            android:scrollbars="none"
+                            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                            tools:listitem="@layout/magenative_item_row" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/crosssellprod_section"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="15dp"
+                        android:layout_marginBottom="15dp"
+                        android:orientation="vertical"
+                        android:visibility="gone"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/relatedprod_section">
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/crosssellproducts"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/txt_subheading13" />
+
+                        <androidx.recyclerview.widget.RecyclerView
+                            android:id="@+id/crosssellrecycler_view"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp"
+                            android:scrollbars="none" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/upsellprod_section"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="15dp"
+                        android:layout_marginBottom="15dp"
+                        android:orientation="vertical"
+                        android:visibility="gone"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/crosssellprod_section">
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/upsellproducts"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/txt_subheading13" />
+
+                        <androidx.recyclerview.widget.RecyclerView
+                            android:id="@+id/upsellrecycler_view"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp"
+                            android:scrollbars="none" />
+
+                    </LinearLayout>
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </ScrollView>
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/buynow"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:background="@drawable/corner_round_topleft_apptheme"
+            android:minHeight="50dp"
+            android:text="@string/BuyNow"
+            android:textColor="@color/AppTheme"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintWidth_percent="0.5" />
+
+        <!--        <androidx.appcompat.widget.AppCompatButton-->
+        <!--            android:id="@+id/addToCart"-->
+        <!--            android:layout_width="0dp"-->
+        <!--            android:layout_height="wrap_content"-->
+        <!--            android:background="@drawable/corner_round_topright_apptheme"-->
+        <!--            android:minHeight="50dp"-->
+        <!--            android:text="@string/addtocart"-->
+        <!--            android:textColor="@color/txtapptheme_color"-->
+        <!--            app:layout_constraintBottom_toBottomOf="parent"-->
+        <!--            app:layout_constraintEnd_toEndOf="parent"-->
+        <!--            app:layout_constraintWidth_percent="0.5" />-->
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/addToCart"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/round_top_corner"
+            android:minHeight="50dp"
+            android:text="@string/addtocart"
+            android:textColor="@color/white"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintWidth_percent="0.5" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

@@ -1,0 +1,149 @@
+plugins {
+    id 'com.android.library'
+    id 'kotlin-android'
+    id 'kotlin-kapt'
+    id 'kotlin-parcelize'
+    id 'com.google.dagger.hilt.android'
+    id 'com.google.gms.google-services'
+}
+
+android {
+    namespace 'com.akshar.store'
+    compileSdk 33
+
+    defaultConfig {
+//        applicationId "com.akshar.store"
+        minSdk 26
+        targetSdk 32
+        versionCode 1
+        versionName "1.0"
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+    buildTypes {
+        debug {
+            debuggable true
+            renderscriptDebuggable true
+            minifyEnabled false
+            shrinkResources false
+        }
+        release {
+            shrinkResources false
+            debuggable false
+            renderscriptDebuggable false
+            zipAlignEnabled true
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+    kotlinOptions {
+        jvmTarget = '1.8'
+    }
+    buildFeatures {
+        dataBinding true
+    }
+    // Allow references to generated code
+    kapt {
+        correctErrorTypes true
+    }
+    lintOptions {
+        checkReleaseBuilds false
+    }
+}
+
+dependencies {
+    implementation fileTree(include: ['*.jar'], dir: 'libs')
+    implementation 'androidx.appcompat:appcompat:1.6.1'
+    implementation 'com.google.android.material:material:1.9.0'
+    testImplementation 'junit:junit:4.13.2'
+    androidTestImplementation 'androidx.test.ext:junit:1.1.5'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.5.1'
+
+    //hilt
+    implementation "com.google.dagger:hilt-android:2.44"
+    kapt "com.google.dagger:hilt-compiler:2.44"
+
+    //zxing for qr
+    implementation 'com.google.zxing:core:3.3.3'
+    implementation 'com.journeyapps:zxing-android-embedded:3.6.0@aar'
+
+    //net working
+    implementation 'com.squareup.okhttp3:logging-interceptor:4.10.0'
+    implementation 'com.google.code.gson:gson:2.10'
+    implementation 'com.squareup.retrofit2:retrofit:2.9.0'
+    implementation 'com.squareup.retrofit2:converter-gson:2.9.0'
+
+    //lifecycle
+    implementation 'androidx.lifecycle:lifecycle-extensions:2.2.0'
+    implementation 'androidx.lifecycle:lifecycle-runtime:2.2.0'
+    //noinspection LifecycleAnnotationProcessorWithJava8
+    annotationProcessor 'androidx.lifecycle:lifecycle-compiler:2.2.0'
+
+    //drawer
+    implementation "androidx.drawerlayout:drawerlayout:1.2.0"
+
+    //card view
+    implementation 'androidx.cardview:cardview:1.0.0'
+
+    //facebook login
+    //    implementation 'com.facebook.android:facebook-android-sdk:5.15.3'
+    implementation 'com.facebook.android:facebook-android-sdk:12.0.0'
+
+    //recycler view for listing
+    implementation 'androidx.recyclerview:recyclerview:1.3.1'
+
+    //legacy android lib support
+    implementation 'androidx.legacy:legacy-support-v4:1.0.0'
+
+    //google play related libs
+    implementation 'com.google.android.gms:play-services-plus:17.0.0'
+    implementation 'com.google.android.gms:play-services-auth:18.0.0'
+    implementation 'com.google.android.gms:play-services-analytics:17.0.0'
+    implementation 'com.google.android.gms:play-services-gcm:17.0.0'
+    implementation 'com.google.android.gms:play-services-vision:20.0.0'
+
+    //for view
+    implementation 'com.astuetz:pagerslidingtabstrip:1.0.1'
+
+    implementation 'com.facebook.network.connectionclass:connectionclass:1.0.1'
+
+    //multidex that helps to increase the limit of number of methods in project
+    implementation 'androidx.multidex:multidex:2.0.1'
+
+    implementation 'com.daimajia.swipelayout:library:1.2.0@aar'
+
+    implementation 'com.balysv:material-ripple:1.0.2'
+
+    implementation 'de.hdodenhof:circleimageview:3.1.0'
+
+    //image loading and cache lib
+    implementation 'com.github.bumptech.glide:glide:4.13.2'
+    annotationProcessor 'com.github.bumptech.glide:compiler:4.12.0'
+
+    implementation 'com.github.ybq:Android-SpinKit:1.4.0'
+    implementation 'com.github.smarteist:autoimageslider:1.3.7'
+    implementation 'com.razorpay:checkout:1.6.26' //razorpay
+
+    implementation 'com.pierfrancescosoffritti.androidyoutubeplayer:core:10.0.5'
+    implementation 'com.pierfrancescosoffritti.androidyoutubeplayer:chromecast-sender:0.23'
+
+    implementation 'com.tbuonomo.andrui:viewpagerdotsindicator:4.1.2'
+    implementation 'com.github.pzienowicz:androidx-auto-scroll-view-pager:1.1.0'
+
+    implementation 'com.google.android.play:core:1.9.0'
+    implementation 'org.jsoup:jsoup:1.11.1'
+
+    implementation 'com.google.firebase:firebase-core:18.0.0'
+    implementation 'com.google.firebase:firebase-auth:20.0.0'   //Authentication
+    implementation 'com.google.firebase:firebase-messaging:21.0.0'  //Push-Notification
+    implementation 'com.google.firebase:firebase-analytics:18.0.0'   //Analytics
+
+    //-----payU
+//    implementation 'com.payumoney.sdkui:plug-n-play:1.6.1'
+
+//    implementation "androidx.viewpager2:viewpager2:1.0.0"
+//    implementation 'androidx.viewpager2:viewpager2:1.1.0-beta01'
+}

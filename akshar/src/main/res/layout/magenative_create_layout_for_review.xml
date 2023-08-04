@@ -1,0 +1,360 @@
+<?xml version="1.0" encoding="utf-8"?><!--
+  ~ Copyright/**
+  ~          * CedCommerce
+  ~           *
+  ~           * NOTICE OF LICENSE
+  ~           *
+  ~           * This source file is subject to the End User License Agreement (EULA)
+  ~           * that is bundled with this package in the file LICENSE.txt.
+  ~           * It is also available through the world-wide-web at this URL:
+  ~           * http://cedcommerce.com/license-agreement.txt
+  ~           *
+  ~           * @category  Ced
+  ~           * @package   MageNative
+  ~           * @author    CedCommerce Core Team <connect@cedcommerce.com >
+  ~           * @copyright Copyright CEDCOMMERCE (http://cedcommerce.com/)
+  ~           * @license      http://cedcommerce.com/license-agreement.txt
+  ~           */
+  -->
+        <layout xmlns:android="http://schemas.android.com/apk/res/android">
+        <data/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:orientation="vertical">
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/headtitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="15dp"
+                android:layout_marginTop="5dp"
+                android:textAllCaps="true"
+                android:textColor="@color/black"
+                android:textSize="@dimen/pad_15dp"
+                 />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="15dp"
+                android:layout_marginTop="5dp"
+                android:orientation="horizontal">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/by"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/txt_13sp" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/by"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:textAllCaps="true"
+                    android:textColor="@color/AppTheme"
+                    android:textSize="@dimen/txt_13sp"
+                    />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="15dp"
+                android:layout_marginTop="5dp"
+                android:orientation="horizontal">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/postedon"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/txt_13sp" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/posted_on"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="5dp"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/txt_13sp" />
+            </LinearLayout>
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/description"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="15dp"
+                android:textSize="@dimen/txt_13sp"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="10dp"
+                android:textColor="@color/main_color_gray_lt"
+                 />
+
+            <LinearLayout
+                android:id="@+id/dynamic_ratings"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="15dp"
+                android:layout_marginTop="5dp"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:id="@+id/rating1"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:visibility="gone"
+                    android:weightSum="1.0">
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/fill_rating_code1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingStart="0dp"
+                        android:paddingEnd="10dp"
+                        android:gravity="center"
+                        android:textColor="@color/black" />
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="5dp"
+                        android:orientation="vertical">
+
+                        <RelativeLayout
+                            android:id="@+id/reviewsection1"
+                            android:layout_width="40dp"
+                            android:layout_height="25dp"
+                            android:gravity="center"
+                            android:background="@drawable/round_corner_reting"
+                            android:orientation="horizontal">
+
+                            <androidx.appcompat.widget.AppCompatImageView
+                                android:id="@+id/star1"
+                                android:layout_width="15dp"
+                                android:layout_height="15dp"
+                                android:padding="2dp"
+                                android:src="@drawable/stat_white" />
+
+                            <androidx.appcompat.widget.AppCompatTextView
+                                android:id="@+id/reviewtext1"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="2dp"
+                                android:padding="2dp"
+                                android:layout_toEndOf="@+id/star1"
+                                android:textColor="@color/white"
+                                android:textSize="10sp"
+                                />
+                        </RelativeLayout>
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/rating2"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal"
+                    android:visibility="gone"
+                    android:weightSum="1.0">
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/fill_rating_code2"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.50"
+                        android:gravity="center"
+                        android:textColor="@color/black" />
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.50"
+                        android:orientation="vertical">
+
+                        <RelativeLayout
+                            android:id="@+id/reviewsection2"
+                            android:layout_width="40dp"
+                            android:layout_height="15dp"
+                            android:layout_marginTop="5dp"
+                            android:background="@drawable/round_corner_reting"
+                            android:orientation="horizontal">
+
+                            <androidx.appcompat.widget.AppCompatImageView
+                                android:id="@+id/star2"
+                                android:layout_width="15dp"
+                                android:layout_height="15dp"
+                                android:padding="2dp"
+                                android:src="@drawable/stat_white" />
+
+                            <androidx.appcompat.widget.AppCompatTextView
+                                android:id="@+id/reviewtext2"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="2dp"
+                                android:layout_toEndOf="@+id/star2"
+                                android:textColor="@color/white"
+                                android:textSize="10sp" />
+                        </RelativeLayout>
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/rating3"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal"
+                    android:visibility="gone"
+                    android:weightSum="1.0">
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/fill_rating_code3"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.50"
+                        android:gravity="center"
+                        android:textColor="@color/black" />
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.50"
+                        android:orientation="vertical">
+
+                        <RelativeLayout
+                            android:id="@+id/reviewsection3"
+                            android:layout_width="40dp"
+                            android:layout_height="15dp"
+                            android:layout_marginTop="5dp"
+                            android:background="@drawable/round_corner_reting"
+                            android:orientation="horizontal">
+
+                            <androidx.appcompat.widget.AppCompatImageView
+                                android:id="@+id/star3"
+                                android:layout_width="15dp"
+                                android:layout_height="15dp"
+                                android:padding="2dp"
+                                android:src="@drawable/stat_white" />
+
+                            <androidx.appcompat.widget.AppCompatTextView
+                                android:id="@+id/reviewtext3"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="2dp"
+                                android:layout_toEndOf="@+id/star3"
+                                android:textColor="@color/white"
+                                android:textSize="10sp" />
+                        </RelativeLayout>
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/rating4"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal"
+                    android:visibility="gone"
+                    android:weightSum="1.0">
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/fill_rating_code4"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.50"
+                        android:gravity="center"
+                        android:textColor="@color/black" />
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.50"
+                        android:orientation="vertical">
+
+                        <RelativeLayout
+                            android:id="@+id/reviewsection4"
+                            android:layout_width="40dp"
+                            android:layout_height="15dp"
+                            android:layout_marginTop="5dp"
+                            android:background="@drawable/round_corner_reting"
+                            android:orientation="horizontal">
+
+                            <androidx.appcompat.widget.AppCompatImageView
+                                android:id="@+id/star4"
+                                android:layout_width="15dp"
+                                android:layout_height="15dp"
+                                android:padding="2dp"
+                                android:src="@drawable/stat_white" />
+
+                            <androidx.appcompat.widget.AppCompatTextView
+                                android:id="@+id/reviewtext4"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="2dp"
+                                android:layout_toEndOf="@+id/star4"
+                                android:textColor="@color/white"
+                                android:textSize="10sp" />
+                        </RelativeLayout>
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/rating5"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal"
+                    android:visibility="gone"
+                    android:weightSum="1.0">
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/fill_rating_code5"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.50"
+                        android:gravity="center"
+                        android:textColor="@color/black" />
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.50"
+                        android:orientation="vertical">
+
+                        <RelativeLayout
+                            android:id="@+id/reviewsection5"
+                            android:layout_width="40dp"
+                            android:layout_height="15dp"
+                            android:layout_marginTop="5dp"
+                            android:background="@drawable/round_corner_reting"
+                            android:orientation="horizontal">
+
+                            <androidx.appcompat.widget.AppCompatImageView
+                                android:id="@+id/star5"
+                                android:layout_width="15dp"
+                                android:layout_height="15dp"
+                                android:padding="2dp"
+                                android:src="@drawable/stat_white" />
+
+                            <androidx.appcompat.widget.AppCompatTextView
+                                android:id="@+id/reviewtext5"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="2dp"
+                                android:layout_toEndOf="@+id/star5"
+                                android:textColor="@color/white"
+                                android:textSize="10sp" />
+                        </RelativeLayout>
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+            <androidx.appcompat.widget.AppCompatTextView
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_gravity="center_horizontal"
+                android:background="@color/lighter_gray" />
+        </LinearLayout>
+        </layout>

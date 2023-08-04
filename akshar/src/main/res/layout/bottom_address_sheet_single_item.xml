@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/parentOfAddressSingleItem"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/pad_5dp">
+
+        <View
+            android:id="@+id/divider11"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="?android:attr/listDivider"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:layout_editor_absoluteX="1dp"
+            tools:layout_editor_absoluteY="16dp" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/deliveryAddressTV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/pad_5dp"
+            android:maxEms="20"
+            android:textColor="@color/color_777777"
+            android:textSize="@dimen/txt_14sp"
+            app:layout_constraintStart_toEndOf="@+id/addressRadioBtn"
+            app:layout_constraintTop_toTopOf="@+id/divider11" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/deliveryAddressMobileLabelTV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dimen_8dp"
+            android:text="@string/mobile_no_"
+            android:textColor="@color/black"
+            android:visibility="gone"
+            app:layout_constraintStart_toEndOf="@+id/addressRadioBtn"
+            app:layout_constraintTop_toBottomOf="@+id/deliveryAddressTV" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/deliveryAddressMobileTV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/pad_5dp"
+            android:textColor="@color/color_777777"
+            android:visibility="gone"
+            app:layout_constraintStart_toEndOf="@+id/deliveryAddressMobileLabelTV"
+            app:layout_constraintTop_toTopOf="@+id/deliveryAddressMobileLabelTV" />
+
+        <androidx.appcompat.widget.AppCompatRadioButton
+            android:id="@+id/addressRadioBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:buttonTint="@color/blue_variant_figma"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/deliveryAddressTV" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

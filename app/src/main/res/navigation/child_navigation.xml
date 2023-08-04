@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/child_navigation"
+    app:startDestination="@id/profileScreen">
+
+    <fragment
+        android:id="@+id/profileScreen"
+        android:name="com.pronted.presentation.profile.ProfileFragment"
+        android:label="@string/profile"
+        tools:layout="@layout/fragment_profile" />
+
+    <fragment
+        android:id="@+id/birthdays"
+        android:name="com.pronted.presentation.timeline.birthday.seeall.BirthDaysFragment"
+        android:label="@string/birthdays"
+        tools:layout="@layout/fragment_birthdays" />
+    <fragment
+        android:id="@+id/studentFeePayments"
+        android:name="com.pronted.presentation.feepayments.StudentFeeDetailsFragment"
+        android:label="@string/fee_amp_payment"
+        tools:layout="@layout/fragment_student_fee_details">
+        <action
+            android:id="@+id/action_fee_details_to_summary"
+            app:destination="@id/feeDetailsSummary"></action>
+    </fragment>
+
+    <fragment
+        android:id="@+id/feeDetailsSummary"
+        android:name="com.pronted.presentation.feepayments.FeeDetailsSummaryFragment"
+        android:label="@string/fee_details_summary"
+        tools:layout="@layout/fragment_fee_details_summary">
+        <action
+            android:id="@+id/action_fee_summary_to_payment"
+            app:destination="@id/proceedFeePayment"></action>
+    </fragment>
+
+    <fragment
+        android:id="@+id/proceedFeePayment"
+        android:name="com.pronted.presentation.feepayments.fees.ProceedFeePaymentFragment"
+        android:label="@string/fee_amp_payment"
+        tools:layout="@layout/fragment_proceed_fee_payment">
+        <argument
+            android:name="feeDetailModel"
+            android:defaultValue="@null"
+            app:argType="com.pronted.dto.feepayments.data.FeesDetailModel"
+            app:nullable="true" />
+        <argument
+            android:name="studentProfile"
+            android:defaultValue="@null"
+            app:argType="com.pronted.dto.student.StudentProfileResponse"
+            app:nullable="true" />
+    </fragment>
+    <fragment
+        android:id="@+id/proceedManualFeePayment"
+        android:name="com.pronted.presentation.feepayments.fees.ProceedManualFeePaymentFragment"
+        android:label="@string/fee_amp_payment"
+        tools:layout="@layout/fragment_manual_fee_payment" />
+
+    <fragment
+        android:id="@+id/paymentInvoiceFragment"
+        android:name="com.pronted.presentation.feepayments.fees.PaymentInvoiceFragment"
+        android:label="@string/invoice"
+        tools:layout="@layout/fragment_payment_invoice"
+        app:popUpTo="@+id/startScreenFragment"
+        app:popUpToInclusive="true"/>
+
+    <fragment
+        android:id="@+id/employeeProfileFragment"
+        android:name="com.pronted.presentation.employee.EmployeeProfileFragment"
+        android:label="@string/employee_profile"
+        tools:layout="@layout/fragment_employee_profile" />
+    <fragment
+        android:id="@+id/studentProfile"
+        android:name="com.pronted.presentation.profile.StudentProfileFragment"
+        android:label="@string/student_profile"
+        tools:layout="@layout/fragment_student_profile" />
+    <fragment
+        android:id="@+id/editStudentProfile"
+        android:name="com.pronted.presentation.profile.EditStudentProfileFragment"
+        android:label="@string/edit_profile"
+        tools:layout="@layout/fragment_edit_student_profile" />
+
+    <fragment
+        android:id="@+id/editEmployeeProfile"
+        android:name="com.pronted.presentation.employee.EditEmployeeProfileFragment"
+        android:label="@string/edit_profile"
+        tools:layout="@layout/fragment_edit_employee_profile" />
+
+    <fragment
+        android:id="@+id/parentNoticeboard"
+        android:name="com.pronted.presentation.noticeboard.ParentNoticeboardFragment"
+        android:label="@string/noticeboard"
+        tools:layout="@layout/fragment_parent_noticeboard" />
+
+    <fragment
+        android:id="@+id/createNotice"
+        android:name="com.pronted.presentation.noticeboard.CreateNoticeFragment"
+        android:label="@string/create_notice"
+        tools:layout="@layout/fragment_create_notice" />
+    <fragment
+        android:id="@+id/paymentHistoryDetails"
+        android:name="com.pronted.presentation.feepayments.PaymentHistoryDetailsFragment"
+        android:label="@string/payment_history"
+        tools:layout="@layout/fragment_payment_history_details" />
+
+    <fragment
+        android:id="@+id/addExamSchedule"
+        android:name="com.pronted.presentation.scheduleexam.AddExamScheduleFragment"
+        android:label="@string/create_exam_schedule"
+        tools:layout="@layout/fragment_add_exam_schedule" />
+</navigation>

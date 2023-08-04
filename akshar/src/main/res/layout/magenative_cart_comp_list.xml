@@ -1,0 +1,260 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto">
+
+
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="2dp"
+        android:focusable="false"
+        android:focusableInTouchMode="false"
+        card_view:cardBackgroundColor="@color/white"
+        card_view:cardUseCompatPadding="true">
+
+        <RelativeLayout
+            android:id="@+id/main"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <RelativeLayout
+                android:id="@+id/cart"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/back">
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/productImage"
+                    android:layout_width="120dp"
+                    android:layout_height="120dp"
+                    android:layout_centerVertical="true"
+                    android:layout_gravity="start|top"
+                    android:layout_marginEnd="10dp"
+                    android:clickable="false"
+                    android:focusable="false"
+                    android:focusableInTouchMode="false"
+                    android:scaleType="fitStart" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/productId"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toEndOf="@+id/productImage"
+                    android:visibility="gone" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/productName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/productId"
+                    android:layout_toEndOf="@+id/productImage"
+                    android:ellipsize="end"
+                    android:scrollHorizontally="true"
+                    android:textColor="@color/black"
+                    android:textSize="12sp" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/price"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/productName"
+                    android:layout_toEndOf="@+id/productImage"
+                    android:text="@string/subtotal"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/txt_12sp" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/quantitylabel"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/price"
+                    android:layout_toEndOf="@+id/productImage"
+                    android:text="@string/Quantity_"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/txt_12sp" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/productPrice"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/productName"
+                    android:layout_toEndOf="@+id/price"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/txt_12sp" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/productQuantity"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/productPrice"
+                    android:layout_toEndOf="@+id/quantitylabel"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/txt_12sp" />
+
+                <LinearLayout
+                    android:id="@+id/qtysection"
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/pad_30dp"
+                    android:layout_below="@+id/productQuantity"
+                    android:layout_marginTop="@dimen/pad_5dp"
+                    android:layout_toEndOf="@+id/productImage"
+                    android:orientation="horizontal">
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:id="@+id/decrese"
+                        android:layout_width="@dimen/pad_30dp"
+                        android:layout_height="match_parent"
+                        android:padding="5dp"
+                        android:src="@drawable/minusdsfsdf" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/Quantity"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginStart="15dp"
+                        android:layout_marginEnd="15dp"
+                        android:gravity="center"
+                        android:text="1"
+                        android:textColor="@color/black"
+                        android:textSize="20sp" />
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:id="@+id/increase"
+                        android:layout_width="@dimen/pad_30dp"
+                        android:layout_height="match_parent"
+                        android:padding="5dp"
+                        android:src="@drawable/dsakhkh" />
+
+                </LinearLayout>
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/itemid"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:visibility="gone" />
+
+                <LinearLayout
+                    android:id="@+id/budleoption"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/qtysection"
+                    android:layout_marginTop="@dimen/pad_5dp"
+                    android:layout_toEndOf="@+id/productImage"
+                    android:orientation="vertical"
+                    android:paddingTop="@dimen/pad_10dp"
+                    android:visibility="gone">
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/confioption"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/qtysection"
+                    android:layout_marginTop="@dimen/pad_5dp"
+                    android:layout_toEndOf="@+id/productImage"
+                    android:orientation="vertical"
+                    android:visibility="gone">
+
+                </LinearLayout>
+
+            </RelativeLayout>
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/errormsg"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/pad_10dp"
+                android:text="error"
+                android:gravity="center"
+                android:visibility="gone"
+                android:textAllCaps="true"
+
+                android:layout_alignParentStart="true"
+                android:layout_alignParentEnd="true"
+                android:orientation="horizontal"
+                android:layout_below="@+id/cart"
+                />
+            <LinearLayout
+                android:id="@+id/maineditsection"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_below="@+id/errormsg"
+                android:orientation="horizontal"
+                android:weightSum="1">
+
+                <RelativeLayout
+                    android:id="@+id/editsection"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_margin="4dp"
+                    android:layout_weight="0.5"
+                    android:gravity="center"
+                    android:background="@drawable/corner_two"
+                    android:orientation="horizontal">
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:id="@+id/img_edit"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:adjustViewBounds="true"
+                        android:padding="8dp"
+                        android:src="@drawable/ic_edit"
+                        android:tint="@color/black" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/MageNative_atc"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginStart="2dp"
+                        android:layout_toEndOf="@id/img_edit"
+                        android:text="@string/update"
+                        android:textColor="@color/black"
+                        android:textSize="15sp" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/deletesection"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_margin="4dp"
+                    android:layout_weight="0.5"
+                    android:gravity="center"
+                    android:background="@drawable/corner_two"
+                    android:orientation="horizontal">
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:id="@+id/img_del"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:adjustViewBounds="true"
+                        android:padding="8dp"
+                        android:tint="@color/black"
+                        android:src="@drawable/ic_delete" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/MageNative_atwl"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginStart="2dp"
+                        android:layout_toEndOf="@id/img_del"
+                        android:text="@string/delete"
+                        android:textColor="@color/black"
+                        android:textSize="15sp"
+                        />
+                </RelativeLayout>
+
+            </LinearLayout>
+
+        </RelativeLayout>
+
+    </androidx.cardview.widget.CardView>
+
+</layout>

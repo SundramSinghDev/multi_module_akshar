@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/home_navigation"
+    app:startDestination="@id/navigation_time_line">
+    <fragment
+        android:id="@+id/navigation_time_line"
+        android:name="com.pronted.presentation.timeline.SchoolTimelineFragment"
+        android:label="@string/dashboard"
+        tools:layout="@layout/fragment_school_timeline" />
+    <fragment
+        android:id="@+id/navigation_timetable"
+        android:name="com.pronted.presentation.timetable.SchoolTimetableFragment"
+        android:label="@string/time_table"
+        tools:layout="@layout/fragment_school_timetable" />
+    <fragment
+        android:id="@+id/navigation_attendance"
+        android:name="com.pronted.presentation.attendance.AttendanceFragment"
+        android:label="@string/attendance"
+        tools:layout="@layout/fragment_attendance" />
+    <fragment
+        android:id="@+id/navigation_noticeboard"
+        android:name="com.pronted.presentation.noticeboard.SchoolNoticeboardFragment"
+        android:label="@string/noticeboard"
+        tools:layout="@layout/fragment_school_noticeboard" />
+    <fragment
+        android:id="@+id/navigation_fee_payments"
+        android:name="com.pronted.presentation.feepayments.FeePaymentStudentsFragment"
+        android:label="@string/students"
+        tools:layout="@layout/fragment_fee_payment_students" />
+    <fragment
+        android:id="@+id/navigation_student_marks"
+        android:name="com.pronted.presentation.studentmarks.StudentMarksFragment"
+        android:label="@string/marks_report"
+        tools:layout="@layout/fragment_student_marks" />
+
+    <fragment
+        android:id="@+id/navigation_students"
+        android:name="com.pronted.presentation.profile.StudentsFragment"
+        android:label="@string/student_profile"
+        tools:layout="@layout/fragment_students" />
+
+    <fragment
+        android:id="@+id/navigation_employee_profile"
+        android:name="com.pronted.presentation.employee.EmployeesFragment"
+        android:label="@string/employee_profile"
+        tools:layout="@layout/fragment_employees" />
+
+    <fragment
+        android:id="@+id/navigation_schedule_exam"
+        android:name="com.pronted.presentation.scheduleexam.ScheduleExamFragment"
+        android:label="@string/schedule_exam"
+        tools:layout="@layout/fragment_schedule_exam" />
+
+    <fragment
+        android:id="@+id/navigation_message_center"
+        android:name="com.pronted.presentation.messagecentre.MessageCentreFragment"
+        android:label="@string/message_centre"
+        tools:layout="@layout/fragment_message_center" />
+
+</navigation>

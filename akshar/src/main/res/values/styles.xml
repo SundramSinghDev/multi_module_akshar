@@ -1,0 +1,269 @@
+<!--
+  ~ Copyright/**
+  ~          * CedCommerce
+  ~           *
+  ~           * NOTICE OF LICENSE
+  ~           *
+  ~           * This source file is subject to the End User License Agreement (EULA)
+  ~           * that is bundled with this package in the file LICENSE.txt.
+  ~           * It is also available through the world-wide-web at this URL:
+  ~           * http://cedcommerce.com/license-agreement.txt
+  ~           *
+  ~           * @category  Ced
+  ~           * @package   MageNative
+  ~           * @author    CedCommerce Core Team <connect@cedcommerce.com >
+  ~           * @copyright Copyright CEDCOMMERCE (http://cedcommerce.com/)
+  ~           * @license      http://cedcommerce.com/license-agreement.txt
+  ~           */
+  -->
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application  -->
+    <!-- <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">-->
+    <style name="AppTheme" parent="Theme.MaterialComponents.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="windowNoTitle">true</item>
+        <item name="windowActionBar">false</item>
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="windowActionBarOverlay">true</item>
+        <item name="android:windowActionBarOverlay">true</item>
+        <item name="windowActionModeOverlay">true</item>
+        <item name="android:windowLightStatusBar" tools:targetApi="m">true</item>
+        <item name="colorControlNormal">@color/txtapptheme_color</item>
+        <!--color of the menu overflow icon -->
+        <item name="android:textColorSecondary">@color/AppTheme</item>
+        <item name="colorPrimary">@color/AppTheme</item>
+        <item name="colorPrimaryDark">@color/status_bar_color</item>
+        <item name="colorAccent">@color/secondory_color</item>
+<!--        <item name="homeAsUpIndicator">@drawable/ic_baseline_arrow_back_24</item>-->
+        <item name="homeAsUpIndicator">@drawable/image_arrow_back_black</item>
+        <item name="navigationIcon">@drawable/drawer_icon_new</item>
+    </style>
+
+
+<!--    <style name="AppTheme.Green" parent="PayumoneyAppTheme">
+        <item name="colorPrimary">@color/AppTheme</item>
+        <item name="colorPrimaryDark">@color/secondory_color</item>
+        <item name="colorAccent">@color/AppTheme</item>
+        <item name="colorButtonNormal">@color/AppTheme</item>
+        <item name="alertDialogTheme">@style/MaterialDialog</item>
+        <item name="actionMenuTextColor">@color/black</item>
+    </style>-->
+
+    <!--  <item name="actionBarStyle">@style/ActionBar</item>-->
+    <!--
+            <style name="MyMaterialTheme.Base" parent="Theme.MaterialComponents.Light.NoActionBar">
+            <item name="windowNoTitle">true</item>
+            <item name="windowActionBar">false</item>
+            <item name="android:windowContentOverlay">@null</item>
+            <item name="android:windowNoTitle">true</item>
+            <item name="windowActionBarOverlay">true</item>
+            <item name="android:windowActionBarOverlay">true</item>
+            <item name="windowActionModeOverlay">true</item>
+            <item name="colorPrimary">@color/AppTheme</item>
+            <item name="colorPrimaryDark">@color/status_bar_color</item>
+            <item name="colorAccent">@color/status_bar_color</item>
+            <item name="colorControlNormal">@color/white</item>
+            &lt;!&ndash; color of the menu overflow icon &ndash;&gt;
+            <item name="android:textColorSecondary">@color/white</item>
+        </style>-->
+    <!--<style name="ActionButtonStyle" parent="Widget.AppCompat.ActionButton">
+        <item name="android:minWidth">0dip</item>
+        <item name="android:paddingStart">2dip</item>
+        <item name="android:paddingEnd">2dip</item>
+    </style>-->
+
+    <!-- <style name="ActionBar" parent="@style/Widget.AppCompat.ActionBar">
+         <item name="background">@android:color/holo_orange_dark</item>
+         <item name="android:icon">@mipmap/ic_launcher</item>
+         <item name="android:smallIcon">@mipmap/ic_launcher</item>
+     </style>
+ -->
+
+    <!--  <style name="MyTheme" parent="@android:style/Theme.Dialog">
+          <item name="android:alertDialogStyle">@style/CustomAlertDialogStyle</item>
+          <item name="android:textColorPrimary">#ffffff</item>
+      </style>-->
+
+    <!--  <style name="CustomAlertDialogStyle">
+              <item name="android:colorAccent">@color/AppTheme</item>
+              <item name="android:colorPrimary">@color/AppTheme</item>
+          <item name="android:bottomBright">@color/AppTheme</item>
+          <item name="android:bottomDark">@color/AppTheme</item>
+          <item name="android:radius">0dp</item>
+          <item name="android:bottomMedium">@color/AppTheme</item>
+          <item name="android:centerBright">@color/AppTheme</item>
+          <item name="android:centerDark">@color/AppTheme</item>
+          <item name="android:centerMedium">@color/AppTheme</item>
+          <item name="android:fullBright">@color/AppTheme</item>
+          <item name="android:fullDark">@color/AppTheme</item>
+          <item name="android:topBright">@color/AppTheme</item>
+          <item name="android:topDark">@color/AppTheme</item>
+      </style>-->
+
+    <!--  <style name="editext_graybg" parent="android:Widget.EditText">
+          <item name="android:background">@drawable/inputfield_design</item>
+          <item name="android:drawablePadding">@dimen/pad_10dp</item>
+          <item name="android:ems">10</item>
+          <item name="android:inputType">textEmailAddress</item>
+          <item name="android:paddingLeft">@dimen/pad_10dp</item>
+          <item name="android:paddingRight">@dimen/pad_10dp</item>
+          <item name="android:paddingTop">@dimen/pad_10dp</item>
+          <item name="android:paddingBottom">@dimen/pad_10dp</item>
+          <item name="android:textSize">@dimen/txt_16sp</item>
+
+      </style>-->
+
+    <style name="TransparentProgressDialog" parent="Base.Animation.AppCompat.Dialog">
+        <item name="android:windowFrame">@null</item>
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:windowIsFloating">true</item>
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="android:windowTitleStyle">@null</item>
+        <item name="android:windowAnimationStyle">@android:style/Animation.Dialog</item>
+        <item name="android:windowSoftInputMode">stateUnspecified|adjustPan</item>
+        <item name="android:backgroundDimEnabled">false</item>
+        <item name="android:background">@android:color/transparent</item>
+    </style>
+
+    <!--<style name="Custom" parent="android:Theme.DeviceDefault.Dialog">
+        <item name="DialogTitleAppearance">@android:style/TextAppearance.Medium</item>
+        <item name="DialogTitleText">Loading</item>
+        <item name="DialogSpotColor">@android:color/holo_orange_dark</item>
+        <item name="DialogSpotCount">8</item>
+    </style>-->
+
+    <style name="PauseDialog" parent="@android:style/Theme.Dialog">
+        <item name="android:windowTitleStyle">@style/PauseDialogTitle</item>
+        <item name="android:color">@color/onwhitetextcolor</item>
+        <item name="android:backgroundDimEnabled">true</item>
+
+    </style>
+
+    <style name="PauseDialogTitle" parent="@android:style/TextAppearance.DialogWindowTitle">
+        <item name="android:gravity">center_horizontal</item>
+        <item name="android:color">@color/onwhitetextcolor</item>
+        <item name="android:background">@color/onwhitetextcolor</item>
+        <item name="android:backgroundDimEnabled">true</item>
+    </style>
+
+    <!--  <style name="DialogWindowTitle">
+          <item name="android:maxLines">1</item>
+          <item name="android:scrollHorizontally">true</item>
+          <item name="android:textAppearance">@android:style/TextAppearance.DialogWindowTitle</item>
+      </style>-->
+
+    <style name="spinner_style">
+        <item name="android:background">@drawable/edittextborder</item>
+        <item name="android:layout_marginLeft">10dp</item>
+        <item name="android:layout_marginRight">10dp</item>
+        <item name="android:layout_marginBottom">10dp</item>
+        <item name="backgroundTint">@color/AppTheme</item>
+    </style>
+
+    <!-- <style name="AppTheme.NoActionBar">
+         <item name="windowActionBar">false</item>
+         <item name="windowNoTitle">true</item>
+     </style>
+
+     <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+
+     <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />-->
+
+
+    <!-- <style name="Customtheme" parent="Base.Animation.AppCompat.Dialog">
+         <item name="android:windowFrame">@null</item>
+         <item name="android:windowBackground">@android:color/transparent</item>
+         <item name="android:windowIsFloating">true</item>
+         <item name="android:windowContentOverlay">@null</item>
+         <item name="android:windowTitleStyle">@null</item>
+         <item name="android:windowAnimationStyle">@android:style/Animation.Dialog</item>
+         <item name="android:windowSoftInputMode">stateUnspecified|adjustPan</item>
+         <item name="android:backgroundDimEnabled">true</item>
+         <item name="android:background">@android:color/transparent</item>
+         <item name="DialogTitleAppearance">@android:style/TextAppearance.Medium</item>
+         <item name="DialogTitleText"></item>
+         <item name="DialogSpotColor">@color/spots_dialog_color</item>
+         <item name="DialogSpotCount">10</item>
+     </style>-->
+
+    <!--  <style name="MyMaterialTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+
+      <style name="MyMaterialTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />-->
+
+    <style name="RatingBar" parent="Widget.AppCompat.RatingBar.Small">
+        <item name="colorControlNormal">@color/starcolor</item>
+        <item name="colorControlActivated">@color/lighter_gray</item>
+        <item name="android:progressTint">@color/starcolor</item>
+    </style>
+
+    <style name="SingleChoiceRadioStyle">
+        <item name="colorControlNormal">@color/black</item>
+        <item name="colorControlActivated">@color/black</item>
+        <!--        <item name="colorControlActivated">@color/AppTheme</item>-->
+    </style>
+
+    <style name="SingleChoiceRadioStyleNew">
+        <item name="colorControlNormal">@color/black</item>
+        <item name="colorControlActivated">@color/black</item>
+        <item name="colorPrimary">@color/black</item>
+    </style>
+
+    <style name="LoginTextInputLayoutStyle" parent="Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+        <item name="boxStrokeColor">@color/color_8D8D8D</item>
+        <item name="boxStrokeWidth">1dp</item>
+    </style>
+
+    <style name="TextAppearance.AppTheme.TextInputLayout.HintTextAlt" parent="TextAppearance.MaterialComponents.Subtitle2">
+        <item name="android:textColor">@color/color_8D8D8D</item>
+    </style>
+
+    <style name="MaterialDialog">
+        <item name="colorPrimary">@color/secondory_color</item>
+    </style>
+
+    <style name="DatePickerButton" parent="ThemeOverlay.MaterialComponents.Dialog">
+        <item name="colorAccent">@color/onwhitetextcolor
+        </item>                   <!--header background-->
+        <item name="android:windowBackground">@color/white</item>     <!--calendar background-->
+        <item name="android:colorControlActivated">@color/onwhitetextcolor
+        </item> <!--selected day-->
+        <item name="android:textColorPrimary">@color/onwhitetextcolor
+        </item> <!--days of the month-->
+        <item name="android:textColorSecondary">@color/onwhitetextcolor
+        </item>    <!--days of the week-->
+        <item name="colorPrimary">@color/onwhitetextcolor</item>
+        <item name="colorPrimaryDark">@color/onwhitetextcolor</item>
+        <item name="android:textColor">@color/onwhitetextcolor</item>
+    </style>
+
+    <style name="CustomTextAppearanceTab" parent="TextAppearance.Design.Tab">
+        <item name="textAllCaps">false</item>
+        <item name="android:textAllCaps">false</item>
+    </style>
+
+    <style name="SheetDialog" parent="Theme.Design.Light.BottomSheetDialog">
+        <!--<item name="android:windowCloseOnTouchOutside">false</item>-->
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="android:colorBackground">@android:color/transparent</item>
+        <item name="android:backgroundDimEnabled">true</item>
+        <item name="android:backgroundDimAmount">0.3</item>
+        <item name="android:windowFrame">@null</item>
+        <item name="android:windowIsFloating">true</item>
+    </style>
+
+    <style name="CustomCardViewStyle" parent="@style/Widget.MaterialComponents.CardView">
+        <item name="shapeAppearanceOverlay">@style/ShapeAppearanceOverlay_card_custom_corners</item>
+    </style>
+
+
+    <style name="ShapeAppearanceOverlay_card_custom_corners" parent="">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSizeTopRight">20dp</item>
+        <item name="cornerSizeTopLeft">20dp</item>
+        <item name="cornerSizeBottomRight">0dp</item>
+        <item name="cornerSizeBottomLeft">0dp</item>
+    </style>
+
+</resources>

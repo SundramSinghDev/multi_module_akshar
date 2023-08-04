@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <variable
+            name="hasFeeHeads"
+            type="Boolean" />
+
+        <import type="android.view.View" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/cal_bg">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/cl_dues"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/_6sdp"
+            android:background="@color/white"
+            android:elevation="@dimen/_4sdp"
+            android:padding="@dimen/_6sdp"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tv_final_amount_label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/final_amount"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tv_final_amount"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_5sdp"
+                android:fontFamily="@font/open_sans_bold"
+                android:text="@string/rupee_symbol"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <View
+                android:id="@+id/divider_final"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_1sdp"
+                android:layout_marginTop="@dimen/_4sdp"
+                android:background="@color/bg_light_grey"
+                app:layout_constraintTop_toBottomOf="@+id/tv_final_amount_label" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tv_due_amount_label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_4sdp"
+                android:text="@string/due_amount"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/divider_final" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tv_due_amount"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_5sdp"
+                android:layout_marginTop="@dimen/_4sdp"
+                android:fontFamily="@font/open_sans_bold"
+                android:text="@string/rupee_symbol"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/divider_final" />
+
+            <View
+                android:id="@+id/divider_due"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_1sdp"
+                android:layout_marginTop="@dimen/_4sdp"
+                android:background="@color/bg_light_grey"
+                app:layout_constraintTop_toBottomOf="@+id/tv_due_amount" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tv_over_due_amount_label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_4sdp"
+                android:text="@string/over_due_amount"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/divider_due" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tv_over_due_amount"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_5sdp"
+                android:layout_marginTop="@dimen/_4sdp"
+                android:fontFamily="@font/open_sans_bold"
+                android:text="@string/rupee_symbol"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/divider_due" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rvFeeHeads"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_margin="@dimen/_10sdp"
+            android:visibility="@{hasFeeHeads ? View.VISIBLE : View.GONE}"
+            app:layout_constraintBottom_toTopOf="@+id/cl_proceed_pay"
+            app:layout_constraintTop_toBottomOf="@+id/cl_dues" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/layout_no_birthdays"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="@{hasFeeHeads ? View.GONE : View.VISIBLE}"
+            app:layout_constraintBottom_toBottomOf="@id/rvFeeHeads"
+            app:layout_constraintTop_toTopOf="@+id/rvFeeHeads">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/img_no_fee"
+                android:layout_width="@dimen/_50sdp"
+                android:layout_height="@dimen/_50sdp"
+                android:src="@drawable/emptynotice"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tv_no_fee_details"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/_5sdp"
+                android:fontFamily="@font/open_sans_medium"
+                android:gravity="center"
+                android:text="@string/fees_detail_not_available"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/img_no_fee" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/cl_proceed_pay"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/rect_top_rounded_background"
+            android:elevation="@dimen/_6sdp"
+            android:padding="@dimen/_10sdp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/rvFeeHeads">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tv_pay"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_8sdp"
+                android:layout_marginEnd="@dimen/_8sdp"
+                android:layout_marginBottom="@dimen/_6sdp"
+                android:background="@drawable/btn_rect_rounded_background"
+                android:fontFamily="@font/open_sans_bold"
+                android:gravity="center"
+                android:padding="@dimen/_6sdp"
+                android:text="@string/proceed_to_pay"
+                android:textColor="@color/white"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

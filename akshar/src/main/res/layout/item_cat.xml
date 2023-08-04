@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+    <data />
+
+    <RelativeLayout
+        android:id="@+id/maincat_section"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/json"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Garlic"
+            android:visibility="gone" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/cat_id"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Garlic"
+            android:visibility="gone" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_alignParentTop="true"
+            android:alpha="0.5"
+            android:background="@color/ebebebe"
+            android:visibility="gone" />
+
+        <RelativeLayout
+            android:id="@+id/maincatsection"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:orientation="vertical">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/cat_icon"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="10dp"
+                android:adjustViewBounds="true"/>
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/cat_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="15dp"
+                android:layout_toEndOf="@+id/cat_icon"
+                android:text="Garlic"
+                android:textAllCaps="true"
+                android:textColor="#000"
+                 />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/rotateimage"
+                android:layout_width="10dp"
+                android:layout_height="10dp"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:layout_marginEnd="15dp"
+                android:src="@drawable/ic_arrowdown" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:layout_width="match_parent"
+                android:layout_centerHorizontal="true"
+                android:layout_height="1dp"
+                android:layout_alignParentBottom="true"
+                android:alpha="0.5"
+                android:background="@color/ebebebe" />
+        </RelativeLayout>
+
+        <LinearLayout
+            android:id="@+id/subcats_section"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/maincatsection"
+            android:layout_marginStart="35dp"
+            android:orientation="vertical"
+            android:visibility="gone" />
+    </RelativeLayout>
+</layout>

@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/login_navigation"
+    app:startDestination="@+id/splashScreen">
+
+    <fragment
+        android:id="@+id/splashScreen"
+        android:name="com.pronted.presentation.authentication.SplashScreen"
+        tools:layout="@layout/fragment_splash_screen">
+        <action
+            android:id="@+id/action_splashScreen_loginWithPhoneNumber"
+            app:destination="@id/loginWithPhoneNumberScreen"
+            app:popUpTo="@id/splashScreen"
+            app:popUpToInclusive="true" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/loginWithPhoneNumberScreen"
+        android:name="com.pronted.presentation.authentication.LoginScreen"
+        tools:layout="@layout/fragment_login_with_phone_number">
+        <action
+            android:id="@+id/action_loginScreen_otpScreen"
+            app:destination="@id/otpScreen">
+            <argument
+                android:name="otpMessage"
+                app:argType="string" />
+        </action>
+    </fragment>
+
+    <fragment
+        android:id="@+id/otpScreen"
+        android:name="com.pronted.presentation.authentication.OtpScreen"
+        tools:layout="@layout/fragment_otp_screen" />
+</navigation>

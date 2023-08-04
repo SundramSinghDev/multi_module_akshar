@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="clickListeners"
+            type="com.akshar.store.ui.schoolorder.ui.SchoolListActivity" />
+    </data>
+
+    <androidx.coordinatorlayout.widget.CoordinatorLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <!--        <androidx.core.widget.NestedScrollView-->
+        <!--            android:layout_width="match_parent"-->
+        <!--            android:layout_height="match_parent">-->
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/white"
+            android:padding="@dimen/dimen_5dp"
+            tools:context=".ui.schoolorder.ui.SchoolListActivity">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/empty_msg"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:visibility="gone"
+                android:text="@string/products_not_available"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"/>
+
+            <LinearLayout
+                android:id="@+id/searchview_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:padding="5dp"
+                android:weightSum="1"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="@id/total_number_item"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <AutoCompleteTextView
+                    android:id="@+id/MageNative_editText_Search"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_marginStart="@dimen/dimen_5dp"
+                    android:layout_weight="0.9"
+                    android:background="@drawable/bg_with_efefef_stroke_e1e1e1_round_corner"
+                    android:drawableStart="@drawable/ic_search_small"
+                    android:drawablePadding="@dimen/dimen_8dp"
+                    android:drawableTint="#9C9C9C"
+                    android:dropDownWidth="match_parent"
+                    android:ellipsize="end"
+                    android:ems="10"
+                    android:fontFamily="@font/celias_regular"
+                    android:hint="@string/SearchYourProducts"
+                    android:imeOptions="actionSearch"
+                    android:inputType="textAutoComplete|textAutoCorrect"
+                    android:padding="8dp"
+                    android:scrollbarSize="@dimen/pad_10dp"
+                    android:scrollbarStyle="outsideOverlay"
+                    android:scrollbars="vertical"
+                    android:singleLine="true"
+                    android:textColor="@color/black"
+                    android:textSize="13sp"
+                    tools:ignore="UnusedAttribute,TouchTargetSizeCheck,TextContrastCheck" />
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/filter_iv"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:visibility="gone"
+                    android:layout_marginStart="@dimen/pad_5dp"
+                    android:layout_marginEnd="@dimen/pad_5dp"
+                    android:layout_weight="0.1"
+                    android:background="@drawable/bg_white_round_corner_with_storke"
+                    android:contentDescription="@string/app_name"
+                    android:onClick="@{clickListeners::onFilterButtonClicked}"
+                    android:padding="@dimen/pad_5dp"
+                    android:src="@drawable/filter_icon"
+                    android:tint="#757575" />
+
+            </LinearLayout>
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/total_number_item"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dimen_5dp"
+                android:layout_marginTop="@dimen/dimen_8dp"
+                android:layout_marginBottom="@dimen/dimen_8dp"
+                android:fontFamily="@font/celias_bold"
+                android:textAlignment="viewStart"
+                android:textColor="#191919"
+                android:textFontWeight="600"
+                android:textSize="@dimen/dimen_14sp"
+                android:textStyle="normal"
+                app:layout_constraintEnd_toEndOf="@id/searchview_layout"
+                app:layout_constraintStart_toStartOf="@id/searchview_layout"
+                app:layout_constraintTop_toBottomOf="@id/searchview_layout"
+                tools:ignore="UnusedAttribute" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/school_list_rv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingBottom="@dimen/dimen_70dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="@id/total_number_item"
+                app:layout_constraintTop_toBottomOf="@id/total_number_item" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+        <!--        </androidx.core.widget.NestedScrollView>-->
+
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>
+</layout>

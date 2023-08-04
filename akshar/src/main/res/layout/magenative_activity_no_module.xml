@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  ~ Copyright/**
+  ~          * CedCommerce
+  ~           *
+  ~           * NOTICE OF LICENSE
+  ~           *
+  ~           * This source file is subject to the End User License Agreement (EULA)
+  ~           * that is bundled with this package in the file LICENSE.txt.
+  ~           * It is also availab  le through the world-wide-web at this URL:
+  ~           * http://cedcommerce.com/license-agreement.txt
+  ~           *
+  ~           * @category  Ced
+  ~           * @package   MageNative
+  ~           * @author    CedCommerce Core Team <connect@cedcommerce.com >
+  ~           * @copyright Copyright CEDCOMMERCE (http://cedcommerce.com/)
+  ~           * @license      http://cedcommerce.com/license-agreement.txt
+  ~           */
+  -->
+
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <data/>
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_centerInParent="true"
+            android:layout_width="match_parent"
+            android:gravity="center"
+            android:padding="@dimen/pad_20dp"
+            android:layout_height="wrap_content"
+            android:fitsSystemWindows="true"
+            android:background="@color/white">
+            <androidx.appcompat.widget.AppCompatImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_margin="5dp"
+                android:src="@drawable/connection_error"/>
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/cantconnet"
+                android:textColor="@color/black"
+                android:textSize="14sp"
+                android:id="@+id/cart"
+                android:layout_above="@+id/conti"
+                android:gravity="center"
+                android:padding="10dp"
+                android:layout_centerHorizontal="true"/>
+            <androidx.appcompat.widget.AppCompatTextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/cantconnet"
+                android:textColor="@color/black"
+                android:textSize="11sp"
+                android:id="@+id/cart2"
+                android:layout_above="@+id/conti"
+                android:gravity="center"
+                android:maxLines="3"
+                android:ellipsize="end"
+                android:layout_marginBottom="10dp"
+                android:padding="10dp"
+                android:layout_centerHorizontal="true"/>
+            <androidx.appcompat.widget.AppCompatTextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:minHeight="40dp"
+                android:padding="@dimen/pad_10dp"
+                android:text="@string/pleaseTryagain"
+                android:fontFamily="@font/celias_regular"
+                android:textSize="12sp"
+                android:textAllCaps="true"
+                android:id="@+id/conti"
+                android:gravity="center"
+                android:layout_centerInParent="true"
+                android:layout_gravity="center"
+                android:layout_marginBottom="10dp"
+                android:textColor="@color/txtsecondory_color"
+                android:background="@drawable/secondary_box"
+                android:layout_marginTop="10dp"/>
+
+        </LinearLayout>
+</layout>

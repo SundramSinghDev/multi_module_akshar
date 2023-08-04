@@ -1,0 +1,217 @@
+plugins {
+    id 'com.android.application'
+    id 'org.jetbrains.kotlin.android'
+    id 'kotlin-kapt'
+    id 'kotlin-parcelize'
+    id 'androidx.navigation.safeargs'
+    id 'com.google.dagger.hilt.android'
+}
+
+android {
+    compileSdk 33
+
+    def env = { ->
+        def code = project.hasProperty('env') ? env : "dev"
+        return code
+    }
+    def code = 1
+    def major = 1
+    def minor = 0
+    def patch = 0
+    def suffix = ""
+    def app_name = "Pronted"
+    def url = ""
+    def auth_url = ""
+    def clientId = ""
+    def clientSecret = ""
+    def versionPropFile = file('version.properties')
+    if (versionPropFile.canRead()) {
+        Properties versionProps = new Properties()
+        versionProps.load(new FileInputStream(versionPropFile))
+        major = versionProps['major'].toInteger()
+        minor = versionProps['minor'].toInteger()
+        patch = versionProps['patch'].toInteger()
+        code = versionProps['code'].toInteger()
+    }
+    defaultConfig {
+        applicationId "com.pronted"
+        minSdk 26
+        targetSdk 32
+        versionCode code
+        versionName major + "." + minor + "." + patch
+        multiDexEnabled true
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+
+    buildTypes {
+        debug {
+            debuggable true
+            renderscriptDebuggable true
+            minifyEnabled false
+            shrinkResources false
+        }
+        release {
+            shrinkResources false
+            debuggable false
+            renderscriptDebuggable false
+            zipAlignEnabled true
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+    kotlinOptions {
+        jvmTarget = '1.8'
+    }
+    buildFeatures {
+        dataBinding true
+        viewBinding true
+    }
+    signingConfigs {
+        release {
+            storeFile file('../keystore/pronted_keystore')
+            storePassword 'pronted'
+            keyAlias = 'pronted'
+            keyPassword 'pronted'
+        }
+    }
+    flavorDimensions "pronted"
+    productFlavors {
+        if (env() == "dev" || env() == "all") {
+            def debugFile = file('dev.properties')
+            if (debugFile.canRead()) {
+                dev {
+                    dimension "pronted"
+                    Properties debugProps = new Properties()
+                    debugProps.load(new FileInputStream(debugFile))
+                    suffix = debugProps['suffix'].toString()
+                    app_name = debugProps['app.name'].toString()
+                    url = debugProps['web.url'].toString()
+                    auth_url = debugProps['web.auth_url'].toString()
+                    clientId = debugProps['client_id'].toString()
+                    clientSecret = debugProps['client_secret'].toString()
+                    versionNameSuffix suffix
+                    resValue "string", "app_name", app_name
+                    buildConfigField "String", "BASE_URL", url
+                    buildConfigField "String", "BASE_AUTH_URL", auth_url
+                    buildConfigField "String", "CLIENT_ID", clientId
+                    buildConfigField "String", "CLIENT_SECRET", clientSecret
+                }
+            }
+        }
+        if (env() == "prod" || env() == "all") {
+            def prodFile = file('prod.properties')
+            if (prodFile.canRead()) {
+                prod {
+                    dimension "pronted"
+                    Properties prodProps = new Properties()
+                    prodProps.load(new FileInputStream(prodFile))
+                    suffix = prodProps['suffix'].toString()
+                    app_name = prodProps['app.name'].toString()
+                    url = prodProps['web.url'].toString()
+                    auth_url = prodProps['web.auth_url'].toString()
+                    clientId = prodProps['client_id'].toString()
+                    clientSecret = prodProps['client_secret'].toString()
+                    versionNameSuffix suffix
+                    resValue "string", "app_name", app_name
+                    buildConfigField "String", "BASE_URL", url
+                    buildConfigField "String", "BASE_AUTH_URL", auth_url
+                    buildConfigField "String", "CLIENT_ID", clientId
+                    buildConfigField "String", "CLIENT_SECRET", clientSecret
+                }
+            }
+        }
+    }
+    applicationVariants.all { variant ->
+        variant.outputs.all { output ->
+            println("Version name: ${variant.versionName}")
+            outputFileName = "Pronted_${variant.versionName}_${variant.buildType.name}.apk"
+        }
+    }
+}
+
+dependencies {
+
+    implementation 'androidx.core:core-ktx:1.9.0'
+    implementation 'androidx.appcompat:appcompat:1.6.1'
+    implementation 'com.google.android.material:material:1.8.0'
+    implementation 'androidx.constraintlayout:constraintlayout:2.1.4'
+    implementation project(':base')
+    implementation project(':akshar')
+    implementation 'androidx.navigation:navigation-fragment-ktx:2.5.3'
+    implementation 'androidx.navigation:navigation-ui-ktx:2.5.3'
+
+//    implementation 'androidx.viewpager2:viewpager2:1.1.0-beta01'
+
+    //hilt for akshar module
+    implementation "com.google.dagger:hilt-android:2.44"
+    kapt "com.google.dagger:hilt-compiler:2.44"
+
+    //hilt for akshar module
+    implementation 'com.google.firebase:firebase-core:18.0.0'
+    implementation 'com.google.firebase:firebase-auth:20.0.0'   //Authentication
+    implementation 'com.google.firebase:firebase-messaging:21.0.0'  //Push-Notification
+    implementation 'com.google.firebase:firebase-analytics:18.0.0'   //Analytics
+
+    //multidex that helps to increase the limit of number of methods in project akshar
+    implementation 'androidx.multidex:multidex:2.0.1'
+
+    //koin dependency
+    implementation 'io.insert-koin:koin-android:3.2.2'
+
+    // For dp and sp
+    implementation 'com.intuit.ssp:ssp-android:1.1.0'
+    implementation 'com.intuit.sdp:sdp-android:1.1.0'
+
+    //retrofit
+    implementation 'com.squareup.retrofit2:retrofit:2.9.0'
+    implementation 'com.jakewharton.retrofit:retrofit2-kotlin-coroutines-adapter:0.9.2'
+
+    //okhttp
+    implementation("com.squareup.okhttp3:logging-interceptor:4.10.0")
+    implementation("com.squareup.okhttp3:okhttp:4.10.0")
+
+    //gson
+    implementation 'com.squareup.retrofit2:converter-gson:2.9.0'
+
+    //Calender View
+    implementation 'devs.mulham.horizontalcalendar:horizontalcalendar:1.3.4'
+    implementation 'com.github.shrikanth7698:Collapsible-Calendar-View-Android:v1.0.3'
+
+    //CircleImage
+    implementation 'de.hdodenhof:circleimageview:3.1.0'
+    implementation 'com.github.bumptech.glide:glide:4.13.2'
+
+    //PaperDB
+    implementation 'io.github.pilgr:paperdb:2.7.2'
+
+    //chart lib
+    implementation 'com.github.PhilJay:MPAndroidChart:v3.1.0'
+    implementation 'com.github.AnyChart:AnyChart-Android:1.1.2'
+
+    //room db
+    implementation "androidx.room:room-runtime:2.5.0"
+    kapt "androidx.room:room-compiler:2.5.0"
+    implementation 'io.reactivex.rxjava2:rxjava:2.2.16'
+    implementation 'io.reactivex.rxjava2:rxandroid:2.1.1'
+
+    //razor pay
+    implementation('com.razorpay:checkout:1.6.26')
+
+    //PR Downloader
+    implementation 'com.mindorks.android:prdownloader:0.6.0'
+
+    implementation 'com.github.barteksc:android-pdf-viewer:2.8.2'
+
+
+    implementation 'com.github.jkwiecien:EasyImage:2.0.4'
+    implementation 'com.isseiaoki:simplecropview:1.1.8'
+
+    implementation 'com.github.aitsuki:SwipeMenuRecyclerView:2.1.5'
+
+    testImplementation 'junit:junit:4.13.2'
+    androidTestImplementation 'androidx.test.ext:junit:1.1.5'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.5.1'
+}

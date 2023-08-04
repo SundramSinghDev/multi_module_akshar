@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+    <data/>
+
+    <RelativeLayout   android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scrollbars="none"
+        android:background="@color/white">
+        <androidx.appcompat.widget.AppCompatTextView
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:id="@+id/warning"
+            android:background="@color/AppTheme"
+            android:textColor="@color/white"
+            android:gravity="center"
+            android:textSize="12sp"
+            android:visibility="gone"
+
+            android:text="Do not press back button or refresh the page processing your order!"
+            />
+        <ScrollView
+            xmlns:android="http://schemas.android.com/apk/res/android"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scrollbars="none"
+            android:layout_below="@+id/warning"
+            android:background="@color/white">
+            <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/white">
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:adjustViewBounds="true"
+                    android:layout_marginTop="10dp"
+                    android:id="@+id/check"
+                    android:src="@drawable/check4"/>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:id="@+id/paymentmethod"
+                    android:layout_margin="10dp"
+                    android:layout_below="@+id/check">
+                </LinearLayout>
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:id="@+id/add"
+                    android:gravity="center"
+                    android:layout_margin="15dp"
+                    android:layout_below="@+id/paymentmethod"
+                    android:background="@color/AppTheme"
+                    android:textColor="@color/white"
+                    android:textAllCaps="true"
+                    android:visibility="gone"
+                    android:text="+ Add New "/>
+            </RelativeLayout>
+        </ScrollView>
+    </RelativeLayout>
+</layout>

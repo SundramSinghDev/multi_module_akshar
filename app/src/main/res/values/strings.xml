@@ -1,0 +1,282 @@
+<resources>
+    <string name="empty_mobile_number">Enter mobile number</string>
+    <string name="valid_mobile_number">Enter valid mobile number</string>
+    <string name="phone_number">Phone Number</string>
+
+    <string name="welcome_back_exclamation">Welcome Back!</string>
+    <string name="plus_91">+91</string>
+    <string name="str_continue">Continue</string>
+    <string name="enter_your_phone_number_to_login">Enter your phone number to login</string>
+    <string name="otp_sent_successfully">OTP sent successfully</string>
+    <string name="something_went_wrong_try_again">Something went wrong! Please try again.</string>
+    <string name="did_not_receive_the_code_resend_otp">Did not receive the code? <font color='#3395E5'>Resend OTP</font></string>
+    <string name="submit">Submit</string>
+    <string name="go_back">Go Back</string>
+    <string name="we_have_sent_you_sms_on">We have sent you an SMS on +91 %s with 6 digit verification code.</string>
+    <string name="select_school_child">Select School or Child</string>
+    <string name="select_child">Select Child</string>
+    <string name="select_school">Select School</string>
+    <string name="do_not_have_access_to_any_app">You do not have access to any Application.</string>
+    <string name="back">Back</string>
+    <string name="profile">Profile</string>
+    <string name="logout">Logout</string>
+    <string name="title_activity_child">ChildActivity</string>
+    <string name="employees">Employees</string>
+    <string name="students">Students</string>
+    <string name="title_notifications">Notifications</string>
+    <string name="dashboard">Dashboard</string>
+    <string name="time_line">Timeline</string>
+    <string name="attendance">Attendance</string>
+    <string name="noticeboard">Noticeboard</string>
+    <string name="fee_payments">Fee Payments</string>
+    <string name="more">More</string>
+    <string name="time_table">Timetable</string>
+    <string name="student_profile">Student Profile</string>
+    <string name="employee_profile">Employee Profile</string>
+    <string name="marks_report">Marks Report</string>
+    <string name="schedule_exam">Exam Schedule</string>
+    <string name="message_centre">Message Centre</string>
+    <string name="fee_details">Fee Details</string>
+    <string name="payment_history">Payment History</string>
+    <string name="payment_details">Payment Details</string>
+    <string name="today_time_line">Today\'s Timeline</string>
+    <string name="logout_alert">Are you sure you want to logout?</string>
+
+    <string name="time_table_not_found">Time table not found</string>
+    <string name="birthdays">Birthdays</string>
+    <string name="birthday_not_found">No Birthday found</string>
+    <string name="see_all">See All</string>
+    <string name="finance">Finance</string>
+    <string name="overall_fee_amount">Overall Fee Amount</string>
+    <string name="paid">Paid</string>
+    <string name="due">Due</string>
+    <string name="over_due">Over Due</string>
+
+    <string name="rupee_symbol">\u20B90</string>
+    <string name="rupee_symbol_format">\u20B9%s</string>
+    <string name="total_earning">Total Earning</string>
+    <string name="total_collection">Total Collection</string>
+    <string name="collection">Collection</string>
+    <string name="expenses">Expenses</string>
+    <string name="class_section">class I section A</string>
+    <string name="home_work">Homework</string>
+    <string name="test_name">Test Name</string>
+
+    //Birthday filters
+    <string name="today">Today</string>
+    <string name="tomorrow">Tomorrow</string>
+    <string name="this_week">This Week</string>
+
+    //collection filters
+    <string name="this_year">This Year</string>
+    <string name="this_month">This Month</string>
+    <string name="yesterday">Yesterday</string>
+    <string name="by_fee_head">By Fee Head</string>
+    <string name="by_payment_method">By Payment Method</string>
+    <string name="by_category">By Category</string>
+    <string name="no_data_found">No Data found</string>
+
+
+    <string name="present">Present</string>
+    <string name="absent">Absent</string>
+    <string name="on_late">On late</string>
+    <string name="attendance_status">Today - %s</string>
+    <string name="from_to_date">%s - %s</string>
+    <string name="academic_year">Academic year: %s</string>
+    <string name="academic_year_label">Academic year:</string>
+    <string name="invoice_format">Invoice: %s</string>
+    <string name="payment_mode_format">Mode: %s</string>
+    <string name="empty">--</string>
+
+    <string name="fee_amp_payment"><![CDATA[Fees & Payments]]></string>
+    <string name="fees_detail_not_available">Fees detail not available</string>
+    <string name="no_pending_fee_dues">No pending Fee dues found</string>
+    <string name="payment_history_not_available">Payment history not available</string>
+    <string name="final_amount">Final Amount</string>
+    <string name="actual_amount">Actual Amount</string>
+    <string name="total_amount">Total Amount</string>
+    <string name="due_amount">Due Amount</string>
+    <string name="over_due_amount">Over Due Amount</string>
+    <string name="concession">Concession</string>
+    <string name="fee_details_summary">Fee Details Summary</string>
+    <string name="due_date">Due Date:</string>
+    <string name="make_pay">Make Payment</string>
+    <string name="proceed_to_pay">Proceed to Pay</string>
+    <string name="pay_due_amount">Due (\u20B9%s)</string>
+    <string name="error_select_valid_amount">Please select a valid amount</string>
+    <string name="payment_success">Payment Successful</string>
+    <string name="payment_failed">Payment Failed</string>
+    <string name="download_receipt">Download Receipt</string>
+    <string name="select_class">Select Class</string>
+    <string name="no_students">No Students</string>
+    <string name="payment_failed_error">Your Transaction has failed due to some error. Please try again.</string>
+    <string name="choose_class_and_section">Choose class and section</string>
+    <string name="please_wait_untill_we_process_data">Please wait until we process data</string>
+    <string name="class_section_format">%s %s</string>
+    <string name="payment_date">Payment Date</string>
+    <string name="received_by">Received By</string>
+    <string name="search_here">Search here</string>
+    <string name="emp_id">Employee Id</string>
+    <string name="name">Name</string>
+    <string name="department">Department</string>
+    <string name="payment_date_is_required">Payment date is required</string>
+    <string name="add_receiver_details">Kindly add receiver details</string>
+    <string name="payment_method_required">Payment Method is required</string>
+    <string name="select_bank_account">please add bank account</string>
+    <string name="payment_method">Payment Method</string>
+    <string name="select_bank">Select bank</string>
+    <string name="select_payment_method">Select payment method</string>
+    <string name="enter_reference_number">Please enter payment reference number</string>
+    <string name="enter_cheque_number">Please enter cheque number</string>
+    <string name="enter_transaction_id">Please enter transaction ID</string>
+    <string name="transaction_id">Transaction ID</string>
+    <string name="payment_reference_number">Reference Number</string>
+    <string name="name_of_bank">Name of Bank</string>
+    <string name="remarks">Remarks</string>
+    <string name="fee_receipt_template">Fee Receipt Template</string>
+    <string name="save">Save</string>
+    <string name="check_number">Check Number</string>
+    <string name="select_fee_receipt_template">Please Select Fee Receipt Template</string>
+    <string name="payment_save_successfully">Payment saved Successfully</string>
+    <string name="invoice">Invoice</string>
+    <string name="enter_details">Enter Details</string>
+    <string name="enter_email">Enter email</string>
+    <string name="valid_email">Enter valid email</string>
+    <string name="email">Email</string>
+    <string name="no_employees">No Employees Found</string>
+    <string name="view_profile">View Profile</string>
+    <string name="edit">Edit</string>
+    <string name="format_emp_id">Employee Id:</string>
+    <string name="format_gender">Gender:</string>
+    <string name="format_designation">Designation:</string>
+    <string name="format_dept">Department:</string>
+    <string name="format_blood_group">Blood Group:</string>
+    <string name="format_roll_no">Roll number:</string>
+    <string name="format_dob">Date of Birth:</string>
+    <string name="format_relation">Relation:</string>
+    <string name="relation">Relation</string>
+    <string name="format_admission_number">Admission Number :</string>
+    <string name="parent_details">Parent Details</string>
+    <string name="format_relation_ship">RelationShip : </string>
+    <string name="format_email">Email:</string>
+    <string name="format_mobile">Mobile No:</string>
+    <string name="format_name">Name:</string>
+    <string name="contact_details">Contact Details</string>
+    <string name="address">Address</string>
+    <string name="next">Next</string>
+    <string name="previous">Previous</string>
+    <string name="edit_profile">Edit Profile</string>
+    <string name="parent_mobile_required">Parent Mobile number is required</string>
+    <string name="first_name_required">First Name is required</string>
+    <string name="last_name_required">Last Name is required</string>
+    <string name="student_gender_required">Gender is required</string>
+    <string name="parent_name_required">Parent name is required</string>
+    <string name="dateofbirth_is_required">Date of birth is required</string>
+    <string name="first_name">First Name</string>
+    <string name="last_name">Last Name</string>
+    <string name="gender">Gender</string>
+    <string name="male">Male</string>
+    <string name="female">Female</string>
+    <string name="blood_group">Blood Group</string>
+    <string name="admission_no">Admission Number</string>
+    <string name="roll_no">Roll Number</string>
+    <string name="date_of_birth">Date of Birth</string>
+    <string name="parent_name">Parent Name</string>
+    <string name="house_no">House Number</string>
+    <string name="street">Street</string>
+    <string name="city">City</string>
+    <string name="district">District</string>
+    <string name="state">State</string>
+    <string name="postal_code">Postal Code</string>
+    <string name="country">Country</string>
+
+    <string name="select_an_action">Select an Action</string>
+    <string name="pick_image">Pick Image</string>
+    <string name="launch_camera">Launch Camera</string>
+    <string name="remove_image">Remove Image</string>
+    <string name="permission_required">Permission Required</string>
+    <string name="location_required_to_find_stores">Location permission is required to find stores near you</string>
+    <string name="turn_on_permissions_at_setting"><![CDATA[Please turn on permissions at\n[Setting] > [Permission]]]></string>
+    <string name="settings">Settings</string>
+    <string name="request">Request</string>
+    <string name="cancel">Cancel</string>
+
+    <string name="camera_for_picture">Camera permission is required to take a picture.</string>
+    <string name="storage_for_picture">Storage Permission is required to save a picture.</string>
+    <string name="storage_for_saving">Storage Permission is required to save a profile picture.</string>
+    <string name="img_cover">Cover image</string>
+    <string name="failed_try_again">Failed. Try again.</string>
+
+    <string name="profile_picture_crop_size_too_small">Profile Picture is too small. Try again by selecting larger area.</string>
+
+    <string name="image_crop">Crop Image</string>
+    <string name="emp_id_required">EmployeeId is required</string>
+    <string name="employee_id">Employee Id</string>
+    <string name="employee_details">Employee Details</string>
+    <string name="designation">Designation</string>
+
+
+    <string name="timetable_not_found">No Timetable found</string>
+    <string name="my_time_table">My Timetable</string>
+    <string name="class_time_table">Class Timetable</string>
+    <string name="please_select_class">Please select class and section</string>
+
+
+    <string name="notice_board">Notice Board</string>
+    <string name="no_notice_found">Notice board is empty.</string>
+    <string name="active">Active</string>
+    <string name="expired">Expired</string>
+    <string name="upcoming">Upcoming</string>
+    <string name="delete">Delete</string>
+    <string name="create_notice">Create Notice</string>
+    <string name="edit_notice">Edit Notice</string>
+    <string name="target_audience">Target Audience</string>
+    <string name="parents">Parents</string>
+    <string name="title">Title</string>
+    <string name="description">Description</string>
+    <string name="start_date">Start Date</string>
+    <string name="end_date">End Date</string>
+    <string name="title_required">Title is required</string>
+    <string name="desc_required">Description is required</string>
+    <string name="start_date_required">Start date is required</string>
+    <string name="end_date_required">End date is required</string>
+    <string name="print_invoice">Print Invoice</string>
+    <string name="fee_terms">Fee terms</string>
+    <string name="amount_paid">Amount Paid</string>
+    <string name="audience_check_error">Please select at least one value from above options Parents or Employee</string>
+    <string name="verified">Verified</string>
+    <string name="not_verified">Not Verified</string>
+
+    //Tabs titles
+    <array name="tab_fee_payments">
+        <item>@string/fee_details</item>
+        <item>@string/payment_history</item>
+    </array>
+
+    // Exam schedule
+    <string name="select_exam">Select Exam</string>
+    <string name="exam_schedule_is_not_available">Exam Schedule is not available</string>
+    <string name="format_mins">%s mins</string>
+    <string name="select_class_section">Select Class &amp; Section</string>
+    <string name="exam_name">Exam Name</string>
+    <string name="start_time">Start Time</string>
+    <string name="duration">Duration</string>
+    <string name="btn_schedule_exam">Schedule Exam</string>
+    <string name="create_exam_schedule">Create Exam Schedule</string>
+    <string name="choose_exam">Choose Exam</string>
+    <string name="update_exam_schedule">Update Exam Schedule</string>
+    <string name="update_schedule">Update Schedule</string>
+    
+    //Attendance
+    <string name="select_shift">Select Shift</string>
+    <string name="firstname_lastname_format">%s %s</string>
+    <string name="late">Late</string>
+    <string name="leave">Leave</string>
+    <string name="holiday">Holiday</string>
+    <string name="week_off">Week-Off</string>
+    <string name="save_attendance">Save Attendance</string>
+    <string name="mark_as_all">Mark As All</string>
+    <string name="attendance_saved_successfully">Attendance Saved Successfully</string>
+    <string name="student_attendance">Student Attendance</string>
+    <string name="select_profile_type">Select Profile Type</string>
+</resources>

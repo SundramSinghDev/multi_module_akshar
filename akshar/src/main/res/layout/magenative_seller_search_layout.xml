@@ -1,0 +1,199 @@
+<!--
+  ~ Copyright/**
+  ~          * CedCommerce
+  ~           *
+  ~           * NOTICE OF LICENSE
+  ~           *
+  ~           * This source file is subject to the End User License Agreement (EULA)
+  ~           * that is bundled with this package in the file LICENSE.txt.
+  ~           * It is also available through the world-wide-web at this URL:
+  ~           * http://cedcommerce.com/license-agreement.txt
+  ~           *
+  ~           * @category  Ced
+  ~           * @package   MageNative
+  ~           * @author    CedCommerce Core Team <connect@cedcommerce.com >
+  ~           * @copyright Copyright CEDCOMMERCE (http://cedcommerce.com/)
+  ~           * @license      http://cedcommerce.com/license-agreement.txt
+  ~           */
+  -->
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <data/>
+
+    <ScrollView   android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true"
+        android:background="@color/white"
+        android:scrollbars="none">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/logo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:padding="@dimen/pad_10dp"
+                android:src="@mipmap/ic_launcher" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/magenative_seacrhvendor"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/logo"
+                android:layout_centerHorizontal="true"
+                android:layout_marginBottom="15dp"
+                android:gravity="center_horizontal"
+                android:padding="@dimen/pad_10dp"
+                android:text="@string/searchvendors"
+                android:textSize="22sp"
+
+                android:textColor="@color/black"/>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/country_layout"
+                style="@style/LoginTextInputLayoutStyle"
+app:hintTextColor="@color/user_icon_default_gray"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                android:layout_below="@+id/magenative_seacrhvendor"
+                android:hint="@string/Countrysearch"
+                android:layout_margin="@dimen/pad_10dp">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/magenative_country"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:editable="false"
+                    android:padding="8dp"
+                    android:textSize="18sp" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/state_layout"
+                style="@style/LoginTextInputLayoutStyle"
+app:hintTextColor="@color/user_icon_default_gray"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                android:layout_below="@+id/country_layout"
+                    android:hint="@string/statesearch"
+                android:layout_margin="@dimen/pad_10dp">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/magenative_state"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:imeOptions="actionNext"
+                    android:inputType="textCapWords"
+                    android:padding="8dp"
+                    android:textSize="18sp"/>
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/state_dropdown_layout"
+                android:visibility="gone"
+                style="@style/LoginTextInputLayoutStyle"
+app:hintTextColor="@color/user_icon_default_gray"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                android:layout_below="@+id/state_layout"
+                android:hint="@string/statesearch"
+                android:layout_margin="@dimen/pad_10dp">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/magenative_dropdown_state"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:imeOptions="actionNext"
+                    android:inputType="textCapWords"
+                    android:editable="false"
+                    android:padding="8dp"
+                    android:textSize="18sp"/>
+            </com.google.android.material.textfield.TextInputLayout>
+
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/city_layout"
+                style="@style/LoginTextInputLayoutStyle"
+app:hintTextColor="@color/user_icon_default_gray"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                android:layout_below="@+id/state_dropdown_layout"
+                android:hint="@string/citysearch"
+                android:layout_margin="@dimen/pad_10dp">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/magenative_city"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:imeOptions="actionNext"
+                    android:inputType="textCapWords"
+                    android:padding="8dp"
+                    android:textSize="18sp"/>
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/zip_layout"
+                style="@style/LoginTextInputLayoutStyle"
+app:hintTextColor="@color/user_icon_default_gray"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                android:layout_below="@+id/city_layout"
+                android:hint="@string/zipsearch"
+                android:layout_margin="@dimen/pad_10dp">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/magenative_zip"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_below="@+id/city_layout"
+                    android:imeOptions="actionNext"
+                    android:inputType="number"
+                    android:padding="8dp"
+                    android:textSize="18sp"/>
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/vendorname_layout"
+                style="@style/LoginTextInputLayoutStyle"
+app:hintTextColor="@color/user_icon_default_gray"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                android:layout_below="@+id/zip_layout"
+                android:hint="@string/vendornamesearch"
+                android:layout_margin="@dimen/pad_10dp">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/magenative_vendorname"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:imeOptions="actionDone"
+                    android:inputType="textCapWords"
+                    android:padding="8dp"
+                    android:textSize="18sp"/>
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/magenative_submit"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                android:layout_below="@+id/vendorname_layout"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="10dp"
+                android:layout_marginTop="15dp"
+                android:text="@string/submit"
+                android:background="@drawable/buttonbackground"
+                android:textColor="@color/txtapptheme_color"
+                android:textSize="16sp"
+                 />
+
+        </RelativeLayout>
+    </ScrollView>
+</layout>

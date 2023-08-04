@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout  xmlns:android="http://schemas.android.com/apk/res/android">
+    <data/>
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:background="@color/white"
+        android:layout_height="match_parent">
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scrollbars="none">
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+                <RadioGroup
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_margin="10dp">
+                    <RadioButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/Guest"
+                        android:layout_margin="10dp"
+                        android:buttonTint="@color/user_icon_default_gray"
+                        android:text="@string/Proceed_as_Guest"/>
+                    <RadioButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/User"
+                        android:layout_margin="10dp"
+                        android:buttonTint="@color/user_icon_default_gray"
+                        android:text="@string/Proceed_as_User"/>
+                </RadioGroup>
+            </RelativeLayout>
+        </ScrollView>
+    </LinearLayout>
+</layout>

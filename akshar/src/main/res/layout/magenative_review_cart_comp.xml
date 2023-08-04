@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?><!--
+  ~ Copyright/**
+  ~          * CedCommerce
+  ~           *
+  ~           * NOTICE OF LICENSE
+  ~           *
+  ~           * This source file is subject to the End User License Agreement (EULA)
+  ~           * that is bundled with this package in the file LICENSE.txt.
+  ~           * It is also available through the world-wide-web at this URL:
+  ~           * http://cedcommerce.com/license-agreement.txt
+  ~           *
+  ~           * @category  Ced
+  ~           * @package   MageNative
+  ~           * @author    CedCommerce Core Team <connect@cedcommerce.com >
+  ~           * @copyright Copyright CEDCOMMERCE (http://cedcommerce.com/)
+  ~           * @license      http://cedcommerce.com/license-agreement.txt
+  ~           */
+  -->
+
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/MageNative_view"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="8dp"
+    android:background="@color/white"
+    card_view:cardUseCompatPadding="true">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/back">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/MageNative_productImage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="start|top"
+
+            android:background="@drawable/back" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/MageNative_productId"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toEndOf="@+id/MageNative_productImage"
+            android:paddingStart="10dp"
+            android:visibility="invisible" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/MageNative_productName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/MageNative_productId"
+            android:layout_toEndOf="@+id/MageNative_productImage"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:paddingStart="10dp"
+            android:scrollHorizontally="true" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/MageNative_price"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/MageNative_productName"
+            android:layout_toEndOf="@+id/MageNative_productImage"
+            android:paddingStart="9dp"
+            android:text="@string/subtotal" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/MageNative_productPrice"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/MageNative_productName"
+            android:layout_toEndOf="@+id/MageNative_price"
+            android:paddingStart="5dp" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/MageNative_quantitytag"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/MageNative_productPrice"
+            android:layout_toEndOf="@+id/MageNative_productImage"
+            android:paddingStart="9dp"
+            android:text="@string/orderquantity" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/MageNative_Quantity"
+            android:layout_width="wrap_content"
+
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/MageNative_productPrice"
+            android:layout_toEndOf="@+id/MageNative_quantitytag"
+            android:paddingStart="5dp" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/MageNative_ITEMID"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="invisible" />
+    </RelativeLayout>
+</androidx.cardview.widget.CardView>

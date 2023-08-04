@@ -1,0 +1,255 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:elevation="3dp"
+        android:focusable="false"
+        android:focusableInTouchMode="false"
+        card_view:cardBackgroundColor="@color/white"
+        card_view:cardCornerRadius="5dp"
+        card_view:cardUseCompatPadding="false">
+
+        <RelativeLayout
+            android:id="@+id/main"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/dimen_5dp">
+
+            <RelativeLayout
+                android:id="@+id/cart"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingStart="@dimen/pad_5dp"
+                android:paddingTop="@dimen/dimen_8dp"
+                android:paddingEnd="@dimen/pad_5dp"
+                android:paddingBottom="@dimen/dimen_8dp">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/product_image_and_move_to_wishlist_view"
+                    android:layout_width="80dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/pad_5dp"
+                    android:layout_marginEnd="@dimen/pad_5dp">
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:id="@+id/productImage"
+                        android:layout_width="65dp"
+                        android:layout_height="@dimen/dimen_65dp"
+                        android:layout_centerVertical="true"
+                        android:layout_gravity="start|top"
+                        android:background="@drawable/coupon_view_bg_new"
+                        android:clickable="false"
+                        android:contentDescription="@string/app_name"
+                        android:focusable="false"
+                        android:focusableInTouchMode="false"
+                        android:padding="@dimen/dimen_8dp"
+                        android:scaleX="1"
+                        android:src="@drawable/placeholder"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        tools:ignore="ImageContrastCheck" />
+
+                    <!--                    <androidx.appcompat.widget.AppCompatTextView-->
+                    <!--                        android:id="@+id/move_to_wish_list"-->
+                    <!--                        android:layout_width="0dp"-->
+                    <!--                        android:layout_height="wrap_content"-->
+                    <!--                        android:background="@color/static_accent_color"-->
+                    <!--                        android:padding="@dimen/pad_5dp"-->
+                    <!--                        android:text="@string/move_to_wishlist"-->
+                    <!--                        android:textAlignment="center"-->
+                    <!--                        android:textColor="@color/static_white"-->
+                    <!--                        android:textSize="12sp"-->
+                    <!--                        app:layout_constraintBottom_toBottomOf="parent"-->
+                    <!--                        app:layout_constraintEnd_toEndOf="@id/productImage"-->
+                    <!--                        app:layout_constraintStart_toStartOf="@id/productImage"-->
+                    <!--                        app:layout_constraintTop_toBottomOf="@id/productImage" />-->
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/productId"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toEndOf="@+id/product_image_and_move_to_wishlist_view"
+                    android:visibility="gone" />
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/product_name_delete_view"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/productId"
+                    android:layout_toEndOf="@+id/product_image_and_move_to_wishlist_view">
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/productName"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:ellipsize="end"
+                        android:gravity="center_vertical"
+                        android:scrollHorizontally="true"
+                        android:text="@string/app_name"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/txt_12sp"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintWidth_percent="0.8" />
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:id="@+id/deletesection"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:contentDescription="@string/app_name"
+                        android:src="@drawable/ic_delete_new"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="@id/productName"
+                        app:layout_constraintWidth_percent="0.1"
+                        tools:ignore="ImageContrastCheck" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/price"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/product_name_delete_view"
+                    android:layout_toEndOf="@+id/product_image_and_move_to_wishlist_view"
+                    android:text="@string/subtotal"
+                    android:textColor="@color/color_gray_717171"
+                    android:textSize="12sp" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/quantitylabel"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/price"
+                    android:layout_toEndOf="@+id/product_image_and_move_to_wishlist_view"
+                    android:text="@string/Quantity_"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/txt_12sp"
+                    android:visibility="gone" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/productPrice"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/product_name_delete_view"
+                    android:layout_toEndOf="@+id/price"
+                    android:textColor="@color/color_gray_717171"
+                    android:textSize="@dimen/txt_12sp" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/productQuantity"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/productPrice"
+                    android:layout_toEndOf="@+id/quantitylabel"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/txt_12sp"
+                    android:visibility="gone" />
+
+                <LinearLayout
+                    android:id="@+id/qtysection"
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/pad_30dp"
+                    android:layout_below="@+id/productQuantity"
+                    android:layout_marginTop="@dimen/pad_5dp"
+                    android:layout_toEndOf="@+id/product_image_and_move_to_wishlist_view"
+                    android:orientation="horizontal">
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:id="@+id/decrese"
+                        android:layout_width="@dimen/pad_30dp"
+                        android:layout_height="match_parent"
+                        android:contentDescription="@string/app_name"
+                        android:padding="5dp"
+                        android:src="@drawable/ic_minus_new"
+                        app:tint="@color/blue_variant_figma"
+                        tools:ignore="ImageContrastCheck" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/Quantity"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginStart="15dp"
+                        android:layout_marginEnd="15dp"
+                        android:gravity="center"
+                        android:text="@string/_1"
+                        android:textColor="@color/black"
+                        android:textSize="20sp" />
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:id="@+id/increase"
+                        android:layout_width="@dimen/pad_30dp"
+                        android:layout_height="match_parent"
+                        android:contentDescription="@string/app_name"
+                        android:padding="5dp"
+                        android:src="@drawable/ic_add_new"
+                        app:tint="@color/blue_variant_figma"
+                        tools:ignore="ImageContrastCheck" />
+
+                </LinearLayout>
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/itemid"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:visibility="gone" />
+
+                <LinearLayout
+                    android:id="@+id/budleoption"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/qtysection"
+                    android:layout_marginTop="@dimen/pad_5dp"
+                    android:layout_toEndOf="@+id/product_image_and_move_to_wishlist_view"
+                    android:orientation="vertical"
+                    android:paddingTop="@dimen/pad_10dp"
+                    android:visibility="gone" />
+
+                <LinearLayout
+                    android:id="@+id/confioption"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/qtysection"
+                    android:layout_marginTop="@dimen/pad_5dp"
+                    android:layout_toEndOf="@+id/product_image_and_move_to_wishlist_view"
+                    android:orientation="vertical"
+                    android:visibility="gone" />
+
+            </RelativeLayout>
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/errormsg"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/cart"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentEnd="true"
+                android:gravity="center"
+                android:padding="@dimen/pad_10dp"
+                android:text="@string/error"
+                android:textAllCaps="true"
+                android:visibility="gone" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/MageNative_line"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_alignParentBottom="true"
+                android:layout_gravity="bottom"
+                android:layout_marginTop="@dimen/dimen_2dp"
+                android:background="@color/color_gray_DBDBDB"
+                app:layout_constraintTop_toTopOf="parent" />
+
+        </RelativeLayout>
+
+    </androidx.cardview.widget.CardView>
+
+</layout>

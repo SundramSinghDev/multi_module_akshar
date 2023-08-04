@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  ~ Copyright/**
+  ~          * CedCommerce
+  ~           *
+  ~           * NOTICE OF LICENSE
+  ~           *
+  ~           * This source file is subject to the End User License Agreement (EULA)
+  ~           * that is bundled with this package in the file LICENSE.txt.
+  ~           * It is also available through the world-wide-web at this URL:
+  ~           * http://cedcommerce.com/license-agreement.txt
+  ~           *
+  ~           * @category  Ced
+  ~           * @package   MageNative
+  ~           * @author    CedCommerce Core Team <connect@cedcommerce.com >
+  ~           * @copyright Copyright CEDCOMMERCE (http://cedcommerce.com/)
+  ~           * @license      http://cedcommerce.com/license-agreement.txt
+  ~           */
+  -->
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+    <data/>
+
+    <RelativeLayout  android:orientation="vertical" android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white">
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/nodownloads"
+            android:textColor="@color/black"
+            android:textSize="12sp"
+            android:id="@+id/cart"
+            android:fontFamily="@font/celias_regular"
+
+            android:layout_above="@+id/conti"
+            android:gravity="center"
+            android:layout_marginBottom="10dp"
+            android:padding="10dp"
+            android:layout_centerHorizontal="true"/>
+        <androidx.appcompat.widget.AppCompatTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:minHeight="40dp"
+            android:text="@string/continueshopping"
+            android:textColor="@color/txtsecondory_color"
+            android:background="@drawable/secondary_box"
+            android:textSize="12sp"
+            android:padding="@dimen/pad_10dp"
+            android:textAllCaps="true"
+            android:fontFamily="@font/celias_regular"
+            android:id="@+id/conti"
+            android:gravity="center"
+            android:layout_centerInParent="true"
+            android:layout_marginTop="10dp"/>
+
+    </RelativeLayout>
+</layout>

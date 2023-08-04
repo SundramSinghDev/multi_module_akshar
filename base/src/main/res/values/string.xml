@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="permission_required">Permission Required</string>
+    <string name="location_required_to_find_stores">Location permission is required to find stores near you</string>
+    <string name="turn_on_permissions_at_setting"><![CDATA[Please turn on permissions at\n[Setting] > [Permission]]]></string>
+    <string name="settings">Settings</string>
+    <string name="request">Request</string>
+    <string name="cancel">Cancel</string>
+</resources>

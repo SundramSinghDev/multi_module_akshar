@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?><!--
+  ~ Copyright/**
+  ~          * CedCommerce
+  ~           *
+  ~           * NOTICE OF LICENSE
+  ~           *
+  ~           * This source file is subject to the End User License Agreement (EULA)
+  ~           * that is bundled with this package in the file LICENSE.txt.
+  ~           * It is also available through the world-wide-web at this URL:
+  ~           * http://cedcommerce.com/license-agreement.txt
+  ~           *
+  ~           * @category  Ced
+  ~           * @package   MageNative
+  ~           * @author    CedCommerce Core Team <connect@cedcommerce.com >
+  ~           * @copyright Copyright CEDCOMMERCE (http://cedcommerce.com/)
+  ~           * @license      http://cedcommerce.com/license-agreement.txt
+  ~           */
+  -->
+
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:paddingTop="@dimen/pad_2dp"
+    android:focusable="true"
+    android:clickable="true">
+    <RelativeLayout
+        android:id="@+id/main"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal">
+        <!--        android:src="@drawable/ic_cart_pp"-->
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/MageNative_hotlist_bell"
+            android:layout_width="@dimen/pad_35dp"
+            android:layout_height="@dimen/pad_25dp"
+            android:layout_centerInParent="true"
+            android:contentDescription="@string/app_name"
+            android:src="@drawable/cart" />
+    </RelativeLayout>
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/MageNative_hotlist_hot"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:text="@string/_0"
+        android:padding="1dp"
+        android:layout_marginEnd="@dimen/pad_2dp"
+        android:background="@drawable/ic_circle"
+        android:gravity="center"
+        android:layout_gravity="top|end"
+        android:textColor="@color/white"
+        android:textSize="@dimen/txt_8sp" />
+
+</FrameLayout>

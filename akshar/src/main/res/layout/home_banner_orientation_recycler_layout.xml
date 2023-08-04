@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <data/>
+    <androidx.cardview.widget.CardView
+        android:layout_width="wrap_content"
+        android:id="@+id/card1"
+        android:background="@color/gray_light"
+        android:layout_gravity="center|start|top"
+        app:cardCornerRadius="@dimen/pad_5dp"
+        android:layout_margin="@dimen/pad_2dp"
+        android:layout_height="wrap_content">
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/image1"
+            android:layout_width="wrap_content"
+            android:minHeight="170dp"
+            android:layout_gravity="center"
+            android:layout_height="wrap_content"
+            android:contentDescription="@string/image"
+            android:scaleType="centerCrop" />
+    </androidx.cardview.widget.CardView>
+</layout>

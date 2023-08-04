@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  ~ Copyright/**
+  ~          * CedCommerce
+  ~           *
+  ~           * NOTICE OF LICENSE
+  ~           *
+  ~           * This source file is subject to the End User License Agreement (EULA)
+  ~           * that is bundled with this package in the file LICENSE.txt.
+  ~           * It is also available through the world-wide-web at this URL:
+  ~           * http://cedcommerce.com/license-agreement.txt
+  ~           *
+  ~           * @category  Ced
+  ~           * @package   MageNative
+  ~           * @author    CedCommerce Core Team <connect@cedcommerce.com >
+  ~           * @copyright Copyright CEDCOMMERCE (http://cedcommerce.com/)
+  ~           * @license      http://cedcommerce.com/license-agreement.txt
+  ~           */
+  -->
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <data/>
+
+    <RelativeLayout
+        android:layout_height="match_parent"
+        android:layout_width="match_parent">
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/msg"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:padding="@dimen/pad_10dp"
+            android:text="msg"
+            android:visibility="gone"
+            android:textColor="@color/black"
+            android:textSize="@dimen/txt_15sp"
+            android:layout_centerInParent="true"
+            android:drawablePadding="@dimen/pad_5dp" />
+        <ListView
+            android:id="@+id/MageNative_downloadslist"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:color="@color/main_color_gray_lt"
+            android:divider="@null" />
+    </RelativeLayout>
+</layout>

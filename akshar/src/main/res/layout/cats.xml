@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        android:scrollbars="none">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/shop_cat"
+                android:layout_width="match_parent"
+                android:fontFamily="@font/celias_bold"
+                android:layout_height="wrap_content"
+                android:minHeight="40dp"
+                android:visibility="gone"
+                android:background="@color/AppTheme"
+                android:gravity="center"
+                android:text="@string/shop_cat"
+                android:textAllCaps="true"
+                android:textColor="@color/txtapptheme_color"
+                 />
+
+            <LinearLayout
+                android:id="@+id/MageNative_catsection"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/shop_cat"
+                android:layout_margin="5dp"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentEnd="true"
+                android:background="@color/white"
+                android:orientation="vertical" />
+        </RelativeLayout>
+    </ScrollView>
+
+</layout>

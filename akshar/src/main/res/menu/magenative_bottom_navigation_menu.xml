@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <!--    android:icon="@drawable/home_bottom"-->
+    <item
+        android:id="@+id/action_home"
+        android:enabled="true"
+        android:icon="@drawable/home_new"
+        android:title="@string/home"
+        app:showAsAction="ifRoom" />
+
+    <item
+        android:id="@+id/action_my_school"
+        android:enabled="true"
+        android:icon="@drawable/school_icon_gray"
+        android:title="@string/my_schools"
+        app:showAsAction="ifRoom" />
+
+    <item
+        android:id="@+id/action_category"
+        android:enabled="true"
+        android:icon="@drawable/category_gray"
+        android:title="@string/Category"
+        app:showAsAction="ifRoom" />
+
+    <!--    <item-->
+    <!--        android:id="@+id/my_cart"-->
+    <!--        android:title="Cart"-->
+    <!--        android:icon="@drawable/cart_bottom"-->
+    <!--        android:enabled="true"-->
+    <!--        android:visible="false"-->
+    <!--        app:showAsAction="always"/>-->
+    <!--    <item-->
+    <!--        android:id="@+id/my_wishlist"-->
+    <!--        android:enabled="true"-->
+    <!--        android:visible="false"-->
+    <!--        android:icon="@drawable/wishlike"-->
+    <!--        android:title="Wishlist"-->
+    <!--        app:showAsAction="ifRoom" />-->
+
+    <!--    android:icon="@drawable/account_bottom"-->
+    <item
+        android:id="@+id/my_account"
+        android:enabled="true"
+        android:icon="@drawable/user_icon"
+        android:iconTint="@color/color_gray_717171"
+        android:title="@string/account"
+        app:showAsAction="ifRoom"
+        tools:targetApi="o" />
+</menu>

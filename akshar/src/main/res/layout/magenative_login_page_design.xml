@@ -1,0 +1,491 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+    </data>
+
+    <androidx.coordinatorlayout.widget.CoordinatorLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:fillViewport="true"
+            android:scrollbars="none">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/header_view"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:minHeight="@dimen/dimen_271dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:layout_width="0dp"
+                        android:layout_height="0dp"
+                        android:scaleType="fitXY"
+                        android:src="@drawable/login_header_bg"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:layout_width="0dp"
+                        android:layout_height="0dp"
+                        android:alpha="0.5"
+                        android:elevation="@dimen/dimen_1dp"
+                        android:scaleType="fitXY"
+                        android:src="@drawable/dark_bg_login"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:id="@+id/header_image"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="@dimen/dimen_5dp"
+                        android:contentDescription="@string/app_name"
+                        android:elevation="@dimen/dimen_2dp"
+                        android:padding="@dimen/dimen_4dp"
+                        android:src="@drawable/sign_page_header"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/item_title"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/dimen_15dp"
+                        android:layout_marginTop="@dimen/pad_5dp"
+                        android:elevation="@dimen/dimen_8dp"
+                        android:gravity="center"
+                        android:text="@string/welcome_to_akshar_s_school_store"
+                        android:textAlignment="center"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Title"
+                        android:textColor="@color/white"
+                        android:textFontWeight="400"
+                        android:textSize="@dimen/dimen_16sp"
+                        android:textStyle="normal"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/header_image"
+                        tools:ignore="UnusedAttribute" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <com.google.android.material.card.MaterialCardView
+                    android:id="@+id/main_view"
+                    style="@style/CustomCardViewStyle"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="-30dp">
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:paddingStart="@dimen/pad_10dp"
+                        android:paddingEnd="@dimen/pad_10dp">
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/sign_in_txt"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/dimen_15dp"
+                            android:elevation="@dimen/dimen_8dp"
+                            android:gravity="center"
+                            android:text="@string/SignIn"
+                            android:textAlignment="center"
+                            android:textAppearance="@style/TextAppearance.AppCompat.Title"
+                            android:textColor="@color/black"
+                            android:textFontWeight="600"
+                            android:textSize="@dimen/dimen_16sp"
+                            android:textStyle="bold"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent"
+                            tools:ignore="UnusedAttribute" />
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/sign_in_txt_two"
+                            android:layout_width="300dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/dimen_15dp"
+                            android:gravity="center"
+                            android:text="@string/you_can_sign_in_with_your_mobile_number_or_email_id"
+                            android:textAlignment="center"
+                            android:textColor="@color/color_gray_717171"
+                            android:textFontWeight="400"
+                            android:textSize="@dimen/dimen_16sp"
+                            android:textStyle="normal"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/sign_in_txt"
+                            tools:ignore="UnusedAttribute" />
+
+
+                        <LinearLayout
+                            android:id="@+id/parentOfLoginMode"
+                            android:layout_width="0dp"
+                            android:layout_height="@dimen/dimen_40dp"
+                            android:layout_marginTop="@dimen/dimen_18dp"
+                            android:background="@drawable/bg_with_with_high_corner"
+                            android:orientation="horizontal"
+                            android:weightSum="1"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/sign_in_txt_two">
+
+                            <androidx.appcompat.widget.AppCompatButton
+                                android:id="@+id/loginWithMobile"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="@dimen/dimen_10dp"
+                                android:layout_weight="0.5"
+                                android:tag="mobile"
+                                android:background="@drawable/tab_selected"
+                                android:text="@string/using_mobile"
+                                android:textAllCaps="false"
+                                android:textColor="@color/white"
+                                tools:ignore="TouchTargetSizeCheck" />
+
+                            <androidx.appcompat.widget.AppCompatButton
+                                android:id="@+id/loginWithEmail"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_marginEnd="@dimen/dimen_10dp"
+                                android:layout_weight="0.5"
+                                android:background="@color/transparent"
+                                android:tag="email"
+                                android:text="@string/using_email"
+                                android:textAllCaps="false"
+                                android:textColor="@color/black"
+                                tools:ignore="TextContrastCheck,TouchTargetSizeCheck" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/input_view_parent"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:padding="@dimen/pad_15dp"
+                            app:layout_constraintEnd_toEndOf="@+id/parentOfLoginMode"
+                            app:layout_constraintStart_toStartOf="@+id/parentOfLoginMode"
+                            app:layout_constraintTop_toBottomOf="@+id/parentOfLoginMode">
+                            <!--login with email layout-->
+                            <LinearLayout
+                                android:id="@+id/loginWithEmailLayout"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical"
+                                android:visibility="gone">
+
+                                <com.google.android.material.textfield.TextInputLayout
+                                    style="@style/LoginTextInputLayoutStyle"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="@dimen/dimen_50dp"
+                                    android:hint="@string/Username"
+                                    android:textColorHint="@color/color_8D8D8D"
+                                    app:hintTextColor="@color/color_8D8D8D">
+
+                                    <com.google.android.material.textfield.TextInputEditText
+                                        android:id="@+id/edt_userName"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent"
+                                        android:backgroundTint="@color/main_color_gray"
+                                        android:fontFamily="@font/celias_regular"
+                                        android:imeOptions="actionNext"
+                                        android:inputType="textEmailAddress"
+                                        android:padding="8dp"
+                                        android:singleLine="true"
+                                        android:textColor="@color/black"
+                                        android:textSize="17sp"
+                                        tools:ignore="TooDeepLayout,TextContrastCheck,TouchTargetSizeCheck" />
+
+                                </com.google.android.material.textfield.TextInputLayout>
+
+
+                                <com.google.android.material.textfield.TextInputLayout
+                                    style="@style/LoginTextInputLayoutStyle"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="@dimen/dimen_50dp"
+                                    android:layout_marginTop="20dp"
+                                    android:hint="@string/Password"
+                                    android:textColorHint="@color/color_8D8D8D"
+                                    app:hintTextColor="@color/color_8D8D8D"
+                                    app:passwordToggleEnabled="true"
+                                    app:passwordToggleTint="@color/color_8D8D8D">
+
+                                    <com.google.android.material.textfield.TextInputEditText
+                                        android:id="@+id/edt_password"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent"
+                                        android:backgroundTint="@color/main_color_gray"
+                                        android:fontFamily="@font/celias_regular"
+                                        android:inputType="textPassword"
+                                        android:padding="8dp"
+                                        android:singleLine="true"
+                                        android:textColor="@color/black"
+                                        android:textSize="17sp"
+                                        tools:ignore="Deprecated,TextContrastCheck,TouchTargetSizeCheck" />
+
+                                </com.google.android.material.textfield.TextInputLayout>
+
+                                <androidx.appcompat.widget.AppCompatTextView
+                                    android:id="@+id/txt_forgot_pass"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center_horizontal"
+                                    android:layout_marginTop="15dp"
+                                    android:fontFamily="@font/celias_regular"
+                                    android:gravity="end"
+                                    android:text="@string/ForgotPassword"
+                                    android:textColor="@color/blue_variant_figma"
+                                    android:textSize="@dimen/txt_subheading13"
+                                    android:textStyle="bold"
+                                    tools:ignore="TextContrastCheck" />
+
+                                <androidx.appcompat.widget.AppCompatButton
+                                    android:id="@+id/btn_login"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="@dimen/dimen_40dp"
+                                    android:layout_marginTop="30dp"
+                                    android:background="@drawable/buttonbackground"
+                                    android:backgroundTint="@color/blue_variant_figma"
+                                    android:text="@string/sign_in_with_email"
+                                    android:textAllCaps="false"
+                                    android:textColor="@color/white"
+                                    android:textSize="@dimen/txt_subheading15"
+                                    tools:ignore="TextContrastCheck,DuplicateSpeakableTextCheck,TouchTargetSizeCheck" />
+                            </LinearLayout>
+                            <!--login with email end-->
+
+                            <!--                    login with mobile start-->
+                            <LinearLayout
+                                android:id="@+id/loginWithMobileLayout"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical"
+                                android:visibility="visible">
+
+                                <androidx.appcompat.widget.AppCompatTextView
+                                    android:id="@+id/MageNative_headingmobile"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="@string/mobile_number"
+                                    android:textAllCaps="true"
+                                    android:textColor="#000"
+                                    android:textSize="15sp"
+                                    android:visibility="gone" />
+
+                                <com.google.android.material.textfield.TextInputLayout
+                                    style="@style/LoginTextInputLayoutStyle"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="@dimen/dimen_50dp"
+                                    android:hint="@string/mobile_number"
+                                    android:textColorHint="@color/color_8D8D8D"
+                                    app:hintTextColor="@color/color_8D8D8D">
+
+                                    <com.google.android.material.textfield.TextInputEditText
+                                        android:id="@+id/edt_mobile"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent"
+                                        android:backgroundTint="@color/main_color_gray"
+                                        android:fontFamily="@font/celias_regular"
+                                        android:imeOptions="actionNext"
+                                        android:inputType="phone"
+                                        android:padding="8dp"
+                                        android:singleLine="true"
+                                        android:textColor="@color/black"
+                                        android:textSize="17sp" />
+
+                                </com.google.android.material.textfield.TextInputLayout>
+
+                                <androidx.appcompat.widget.AppCompatButton
+                                    android:id="@+id/btn_send_otp"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="@dimen/dimen_40dp"
+                                    android:layout_marginTop="30dp"
+                                    android:background="@drawable/buttonbackground"
+                                    android:backgroundTint="@color/blue_variant_figma"
+                                    android:text="@string/sign_in_with_otp"
+                                    android:textAllCaps="false"
+                                    android:textColor="@color/white"
+                                    android:textSize="@dimen/txt_subheading15" />
+                            </LinearLayout>
+                            <!--                    login with mobile end-->
+
+                            <LinearLayout
+                                android:id="@+id/or_section"
+                                android:layout_width="match_parent"
+                                android:layout_height="0dp"
+                                android:layout_marginTop="35dp"
+                                android:layout_weight="2.5"
+                                android:visibility="gone">
+
+                                <androidx.appcompat.widget.AppCompatTextView
+                                    android:layout_width="0dp"
+                                    android:layout_height="0.5dp"
+                                    android:layout_gravity="center_vertical"
+                                    android:layout_weight="1"
+                                    android:background="#D7D7D7"
+                                    tools:ignore="NestedWeights" />
+
+                                <androidx.appcompat.widget.AppCompatTextView
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center_vertical"
+                                    android:layout_weight=".5"
+                                    android:gravity="center"
+                                    android:text="@string/OR"
+                                    android:textColor="#000"
+                                    android:textSize="15sp" />
+
+                                <androidx.appcompat.widget.AppCompatTextView
+                                    android:layout_width="0dp"
+                                    android:layout_height="0.5dp"
+                                    android:layout_gravity="center_vertical"
+                                    android:layout_weight="1"
+                                    android:background="#D7D7D7" />
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:id="@+id/layout_google_login"
+                                android:layout_width="match_parent"
+                                android:layout_height="?attr/actionBarSize"
+                                android:layout_marginTop="45dp"
+                                android:background="@drawable/googleselector"
+                                android:orientation="horizontal"
+                                android:visibility="gone">
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:layout_gravity="center"
+                                    android:gravity="center"
+                                    android:orientation="horizontal"
+                                    tools:ignore="UseCompoundDrawables">
+
+                                    <androidx.appcompat.widget.AppCompatImageView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:contentDescription="@string/app_name"
+                                        android:src="@drawable/signingoogle" />
+
+                                    <androidx.appcompat.widget.AppCompatTextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginStart="10dp"
+                                        android:fontFamily="@font/celias_regular"
+                                        android:text="@string/signupforgoogle"
+                                        android:textAllCaps="true"
+                                        android:textColor="@color/white"
+                                        android:textSize="15sp" />
+                                </LinearLayout>
+
+                                <com.google.android.gms.common.SignInButton
+                                    android:id="@+id/google_signIn_btn"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:visibility="gone" />
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:id="@+id/layout_fb_login"
+                                android:layout_width="match_parent"
+                                android:layout_height="?attr/actionBarSize"
+                                android:layout_marginTop="15dp"
+                                android:layout_marginBottom="10dp"
+                                android:background="@drawable/fbselector"
+                                android:orientation="horizontal"
+                                android:visibility="gone">
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:layout_gravity="center"
+                                    android:layout_marginStart="13dp"
+                                    android:gravity="center"
+                                    android:orientation="horizontal"
+                                    tools:ignore="UseCompoundDrawables">
+
+                                    <androidx.appcompat.widget.AppCompatImageView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:contentDescription="@string/app_name"
+                                        android:src="@drawable/facebook" />
+
+                                    <androidx.appcompat.widget.AppCompatTextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginStart="10dp"
+                                        android:fontFamily="@font/celias_regular"
+                                        android:text="@string/signupforfacebook"
+                                        android:textAllCaps="true"
+                                        android:textColor="@color/white"
+                                        android:textSize="15sp" />
+                                </LinearLayout>
+
+                                <com.facebook.login.widget.LoginButton
+                                    android:id="@+id/fb_login_btn"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:visibility="gone" />
+                            </LinearLayout>
+
+                        </LinearLayout>
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/txt_sign_up"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_horizontal"
+                            android:layout_marginTop="15dp"
+                            android:background="@drawable/dummyselctor"
+                            android:fontFamily="@font/celias_regular"
+                            android:gravity="center"
+                            android:padding="@dimen/pad_5dp"
+                            android:text="@string/don_t_have_an_account_sign_up"
+                            android:textAllCaps="false"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/txt_subheading13"
+                            android:textStyle="bold"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/input_view_parent" />
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                </com.google.android.material.card.MaterialCardView>
+
+            </LinearLayout>
+
+        </ScrollView>
+
+        <View
+            android:id="@+id/view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#99000000"
+            android:visibility="gone" />
+
+        <include
+            android:id="@+id/forgot_pass_layout"
+            layout="@layout/magenative_forgotpass_page" />
+
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>
+</layout>

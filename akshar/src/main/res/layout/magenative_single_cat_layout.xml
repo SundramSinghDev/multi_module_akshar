@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  ~ Copyright/**
+  ~          * CedCommerce
+  ~           *
+  ~           * NOTICE OF LICENSE
+  ~           *
+  ~           * This source file is subject to the End User License Agreement (EULA)
+  ~           * that is bundled with this package in the file LICENSE.txt.
+  ~           * It is also available through the world-wide-web at this URL:
+  ~           * http://cedcommerce.com/license-agreement.txt
+  ~           *
+  ~           * @category  Ced
+  ~           * @package   MageNative
+  ~           * @author    CedCommerce Core Team <connect@cedcommerce.com >
+  ~           * @copyright Copyright CEDCOMMERCE (http://cedcommerce.com/)
+  ~           * @license      http://cedcommerce.com/license-agreement.txt
+  ~           */
+  -->
+
+<com.balysv.materialripple.MaterialRippleLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="#ffffff"
+    app:mrl_rippleOverlay="true"
+    app:mrl_rippleColor="#000"
+    app:mrl_rippleAlpha="0.2"
+    app:mrl_rippleDelayClick="false"
+    app:mrl_rippleHover="true"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+
+    >
+    <androidx.appcompat.widget.AppCompatTextView
+        android:layout_width="0.5dp"
+        android:layout_height="match_parent"
+        android:background="#dcdcdc"
+        android:id="@+id/MageNative_startsideline"
+        android:alpha="0.3"
+        android:visibility="gone"
+        />
+    <LinearLayout
+        android:layout_width="110dp"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:background="@color/white"
+        >
+        <androidx.appcompat.widget.AppCompatTextView
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:background="#dcdcdc"
+            android:alpha="0.3"
+            android:id="@+id/MageNative_uplineline"
+            android:visibility="gone"
+            />
+        <androidx.appcompat.widget.AppCompatTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/MageNative_subcatid"
+            android:visibility="gone"/>
+        <de.hdodenhof.circleimageview.CircleImageView
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/MageNative_imagecat"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            app:civ_border_width="0.5dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="5dp"
+            app:civ_border_color="#ebebeb"/>
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/MageNative_subcat"
+            android:textSize="11sp"
+            android:textColor="#878787"
+            android:layout_gravity="center"
+            android:layout_marginTop="10dp"
+            android:maxLines="1"
+            android:ellipsize="end"
+            android:gravity="center"
+            android:layout_marginBottom="8dp"
+            />
+        <androidx.appcompat.widget.AppCompatTextView
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:background="#dcdcdc"
+            android:alpha="0.3"
+            android:id="@+id/MageNative_belowline"
+            />
+    </LinearLayout>
+    <androidx.appcompat.widget.AppCompatTextView
+        android:layout_width="0.5dp"
+        android:layout_height="match_parent"
+        android:background="#dcdcdc"
+        android:alpha="0.3"
+        android:id="@+id/MageNative_sideline"
+        />
+</LinearLayout>
+</com.balysv.materialripple.MaterialRippleLayout>

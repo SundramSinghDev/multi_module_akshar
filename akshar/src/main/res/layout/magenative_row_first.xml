@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  ~ Copyright/**
+  ~          * CedCommerce
+  ~           *
+  ~           * NOTICE OF LICENSE
+  ~           *
+  ~           * This source file is subject to the End User License Agreement (EULA)
+  ~           * that is bundled with this package in the file LICENSE.txt.
+  ~           * It is also available through the world-wide-web at this URL:
+  ~           * http://cedcommerce.com/license-agreement.txt
+  ~           *
+  ~           * @category  Ced
+  ~           * @package   MageNative
+  ~           * @author    CedCommerce Core Team <connect@cedcommerce.com >
+  ~           * @copyright Copyright CEDCOMMERCE (http://cedcommerce.com/)
+  ~           * @license      http://cedcommerce.com/license-agreement.txt
+  ~           */
+  -->
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="#EBEBEB"
+    android:orientation="horizontal">
+    <androidx.cardview.widget.CardView
+
+        android:layout_width="130dp"
+        android:layout_height="wrap_content"
+        card_view:cardUseCompatPadding="true"
+
+        android:id="@+id/MageNative_view"
+        android:background="#EBEBEB"
+
+        >
+
+    <RelativeLayout
+        android:id="@+id/MageNative_linearFirst"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+
+        android:padding="15dp"
+        android:background="#EBEBEB">
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/MageNative_textViewName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_marginStart="10dp"
+
+
+            android:textColor="#444444"
+            android:textSize="16sp"
+           />
+
+
+    </RelativeLayout>
+    </androidx.cardview.widget.CardView>
+
+    <LinearLayout
+        android:id="@+id/MageNative_linear_scroll"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        />
+
+
+</LinearLayout>
+ 

@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  ~ Copyright/**
+  ~          * CedCommerce
+  ~           *
+  ~           * NOTICE OF LICENSE
+  ~           *
+  ~           * This source file is subject to the End User License Agreement (EULA)
+  ~           * that is bundled with this package in the file LICENSE.txt.
+  ~           * It is also available through the world-wide-web at this URL:
+  ~           * http://cedcommerce.com/license-agreement.txt
+  ~           *
+  ~           * @category  Ced
+  ~           * @package   MageNative
+  ~           * @author    CedCommerce Core Team <connect@cedcommerce.com >
+  ~           * @copyright Copyright CEDCOMMERCE (http://cedcommerce.com/)
+  ~           * @license      http://cedcommerce.com/license-agreement.txt
+  ~           */
+  -->
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/gray_light"
+    >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:id="@+id/MageNative_linearLayout3">
+           <androidx.appcompat.widget.AppCompatButton
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingStart="@dimen/pad_10dp"
+                android:text="@string/MyAddresses"
+                android:id="@+id/MageNative_txt_addressbook_button"
+                android:textAllCaps="false"
+                android:gravity="start|center"
+                android:background="@drawable/buttonbackground"
+                android:textColor="@color/txtapptheme_color"
+                />
+        <androidx.appcompat.widget.AppCompatTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/AddAddress"
+            android:textColor="@color/black"
+            android:textSize="@dimen/txt_15sp"
+            android:gravity="end"
+            android:clickable="true"
+            android:drawablePadding="@dimen/pad_5dp"
+            android:drawableEnd="@drawable/add"
+            android:background="@color/gray_light"
+            android:padding="15dp"
+            android:id="@+id/MageNative_addAddress"
+            android:layout_gravity="end" />
+
+    </LinearLayout>
+
+    <ListView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/MageNative_Addresslist"
+        android:choiceMode="singleChoice"
+        android:layout_below="@+id/MageNative_linearLayout3"
+        android:layout_centerHorizontal="true"
+        android:listSelector="@drawable/big_card"
+        />
+
+    <androidx.appcompat.widget.AppCompatImageView xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_centerInParent="true"
+        android:src="@drawable/loader_bg1"
+        android:id="@+id/MageNative_backloader"
+        android:visibility="invisible"
+        />
+
+</RelativeLayout>

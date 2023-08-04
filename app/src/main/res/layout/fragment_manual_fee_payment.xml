@@ -1,0 +1,277 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <variable
+            name="paymentModel"
+            type="com.pronted.presentation.feepayments.fees.ManualPaymentModel" />
+    </data>
+
+    <androidx.coordinatorlayout.widget.CoordinatorLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/cal_bg"
+                android:paddingStart="@dimen/_6sdp"
+                android:paddingTop="@dimen/_6sdp">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tv_academic_year_label"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/open_sans_regular"
+                    android:padding="@dimen/_5sdp"
+                    android:text="@string/academic_year_label"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tv_academic_year"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/open_sans_bold"
+                    android:padding="@dimen/_5sdp"
+                    android:text="2023"
+                    app:layout_constraintStart_toEndOf="@+id/tv_academic_year_label"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tv_total_amount_label"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/open_sans_regular"
+                    android:padding="@dimen/_5sdp"
+                    android:text="@string/total_amount"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/tv_academic_year_label" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tv_amount"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/open_sans_bold"
+                    android:padding="@dimen/_5sdp"
+                    android:text="2023"
+                    app:layout_constraintStart_toEndOf="@+id/tv_total_amount_label"
+                    app:layout_constraintTop_toBottomOf="@+id/tv_academic_year_label" />
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/cl_payment_form"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_margin="@dimen/_8sdp"
+                    android:background="@drawable/rect_rounded_white_background"
+                    android:elevation="@dimen/_4sdp"
+                    android:padding="@dimen/_8sdp"
+                    app:layout_constraintTop_toBottomOf="@+id/tv_total_amount_label">
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/date_layout"
+                        style="@style/StyleExpertTILDense"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="@string/payment_date"
+                        app:endIconDrawable="@drawable/ic_baseline_calendar_month_24"
+                        app:endIconMode="custom"
+                        app:error="@{paymentModel.paymentDateError}"
+                        app:errorEnabled="@{paymentModel.paymentDateError.length != 0}"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/payment_date"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:inputType="date"
+                            android:singleLine="true"
+                            android:text="@={paymentModel.paymentDate}" />
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/received_by_layout"
+                        style="@style/StyleExpertTILDense"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_6sdp"
+                        android:hint="@string/received_by"
+                        app:endIconMode="custom"
+                        app:error="@{paymentModel.receivedByError}"
+                        app:errorEnabled="@{paymentModel.receivedByError.length != 0}"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/date_layout">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/received_by"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:inputType="none"
+                            android:singleLine="true"
+                            android:text="@={paymentModel.receivedBy}" />
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/payment_method_layout"
+                        style="@style/StyleExpertTILDense"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_6sdp"
+                        android:hint="@string/payment_method"
+                        app:endIconMode="custom"
+                        app:error="@{paymentModel.paymentMethodError}"
+                        app:errorEnabled="@{paymentModel.paymentMethodError.length != 0}"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/received_by_layout">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/payment_method"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:inputType="none"
+                            android:singleLine="true"
+                            android:text="@={paymentModel.paymentMethod}" />
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/payment_ref_num_layout"
+                        style="@style/StyleExpertTILDense"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_6sdp"
+                        android:hint="@string/payment_reference_number"
+                        app:endIconMode="custom"
+                        app:error="@{paymentModel.payRefNumError}"
+                        app:errorEnabled="@{paymentModel.payRefNumError.length != 0}"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/payment_method_layout">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/payment_reference_id"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:inputType="text"
+                            android:singleLine="true"
+                            android:text="@={paymentModel.payRefNum}" />
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/remarks_layout"
+                        style="@style/StyleExpertTILDense"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_6sdp"
+                        android:hint="@string/remarks"
+                        app:endIconMode="custom"
+                        app:error="@{paymentModel.remarksError}"
+                        app:errorEnabled="@{paymentModel.remarksError.length != 0}"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/payment_ref_num_layout">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/remarks"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:inputType="text"
+                            android:singleLine="true"
+                            android:text="@={paymentModel.remarks}" />
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/bank_layout"
+                        style="@style/StyleExpertTILDense"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_6sdp"
+                        android:hint="@string/name_of_bank"
+                        app:endIconMode="custom"
+                        app:error="@{paymentModel.nameOfBankError}"
+                        app:errorEnabled="@{paymentModel.nameOfBankError.length != 0}"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/remarks_layout">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/bank"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:inputType="none"
+                            android:singleLine="true"
+                            android:text="@={paymentModel.nameOfBank}" />
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/fee_receipt_layout"
+                        style="@style/StyleExpertTILDense"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_6sdp"
+                        android:hint="@string/fee_receipt_template"
+                        app:endIconMode="custom"
+                        app:error="@{paymentModel.feeReceiptError}"
+                        app:errorEnabled="@{paymentModel.feeReceiptError.length != 0}"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/bank_layout">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/fee_receipt"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:inputType="none"
+                            android:singleLine="true"
+                            android:text="@={paymentModel.feeReceipt}" />
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_4sdp"
+                    android:layout_marginTop="@dimen/_4sdp"
+                    app:layout_constraintTop_toBottomOf="@+id/cl_payment_form" />
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </androidx.core.widget.NestedScrollView>
+
+        <!--<View
+            android:id="@+id/shadow"
+            android:layout_width="match_parent"
+            android:layout_height="3dp"
+            android:background="@drawable/shape_gradient_top_shadow"
+            app:layout_anchor="@id/cl_proceed_pay" />-->
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/cl_proceed_pay"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/rect_top_rounded_background"
+            android:elevation="@dimen/_6sdp"
+            android:padding="@dimen/_10sdp"
+            android:layout_gravity="bottom">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/save_payment"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_8sdp"
+                android:layout_marginEnd="@dimen/_8sdp"
+                android:layout_marginBottom="@dimen/_6sdp"
+                android:background="@drawable/btn_rect_rounded_background"
+                android:fontFamily="@font/open_sans_bold"
+                android:gravity="center"
+                android:padding="@dimen/_6sdp"
+                android:text="@string/save"
+                android:textColor="@color/white"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>
+</layout>

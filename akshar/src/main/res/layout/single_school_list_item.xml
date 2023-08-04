@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <variable
+            name="bindData"
+            type="com.akshar.store.ui.schoolorder.model.School" />
+
+        <variable
+            name="clickListeners"
+            type="com.akshar.store.ui.schoolorder.adapter.SchoolListAdapter" />
+    </data>
+
+    <!--    android:onClick="@{clickListeners.onItemClick}"-->
+    <androidx.cardview.widget.CardView
+        android:id="@+id/single_school_item_parent"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/dimen_5dp"
+        android:layout_marginTop="@dimen/dimen_5dp"
+        android:layout_marginEnd="@dimen/dimen_5dp"
+        android:layout_marginBottom="@dimen/dimen_5dp"
+        android:background="@drawable/cardcorner"
+        android:onClick="@{(view)->clickListeners.onItemClick(view,bindData)}"
+        app:cardBackgroundColor="@color/white"
+        app:cardCornerRadius="@dimen/pad_5dp"
+        app:cardElevation="1dp">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="@dimen/dimen_8dp"
+            android:orientation="vertical">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/item_image"
+                imgViewSrc="@{bindData.logoPic}"
+                android:layout_width="64dp"
+                android:layout_height="64dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/item_title"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dimen_15dp"
+                android:layout_marginTop="@dimen/pad_5dp"
+                android:gravity="center_vertical"
+                setText="@{bindData.shopTitle}"
+                android:textAlignment="viewStart"
+                android:textColor="#191919"
+                android:textFontWeight="500"
+                android:textStyle="normal"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@id/item_image"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/locality"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dimen_8dp"
+                android:drawableStart="@drawable/location_icon"
+                android:drawablePadding="@dimen/dimen_2dp"
+                android:gravity="center_vertical"
+                setText="@{bindData.companyLocality}"
+                android:textAlignment="viewStart"
+                android:textColor="#E55530"
+                android:textSize="@dimen/dimen_12sp"
+                android:textStyle="normal"
+                android:visibility="@{bindData.companyLocality.length()>0?0:2}"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="@id/item_title"
+                app:layout_constraintTop_toBottomOf="@id/item_title" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/seller_id"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                setText="@{bindData.sellerId}"
+                android:visibility="gone"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/sub_seller_id"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                setText="@{bindData.sub_seller_id}"
+                android:visibility="gone"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.cardview.widget.CardView>
+</layout>

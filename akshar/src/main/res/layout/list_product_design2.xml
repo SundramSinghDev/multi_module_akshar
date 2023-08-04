@@ -1,0 +1,207 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  ~ Copyright/**
+  ~          * CedCommerce
+  ~           *
+  ~           * NOTICE OF LICENSE
+  ~           *
+  ~           * This source file is subject to the End User License Agreement (EULA)
+  ~           * that is bundled with this package in the file LICENSE.txt.
+  ~           * It is also available through the world-wide-web at this URL:
+  ~           * http://cedcommerce.com/license-agreement.txt
+  ~           *
+  ~           * @category  Ced
+  ~           * @package   MageNative
+  ~           * @author    CedCommerce Core Team <connect@cedcommerce.com >
+  ~           * @copyright Copyright CEDCOMMERCE (http://cedcommerce.com/)
+  ~           * @license      http://cedcommerce.com/license-agreement.txt
+  ~           */
+  -->
+
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/gray_light"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:layout_margin="3dp"
+        xmlns:android="http://schemas.android.com/apk/res/android">
+        <androidx.appcompat.widget.AppCompatImageView
+            android:layout_height="130dp"
+            android:layout_width="130dp"
+            android:id="@+id/MageNative_productImage1"
+            android:background="@color/white"
+            android:adjustViewBounds="true"
+            android:layout_margin="5dp"
+            />
+        <androidx.appcompat.widget.AppCompatImageView
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:id="@+id/MageNative_wishlist1"
+            android:src="@drawable/wishlike"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentTop="true"
+            android:padding="5dp"
+            android:background="@color/white"/>
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/MageNative_productId1"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:visibility="gone"
+            />
+        <androidx.appcompat.widget.AppCompatTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/MageNative_wishlistid1"
+            android:visibility="gone"/>
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/MageNative_productName1"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:maxLines="2"
+            android:ellipsize="end"
+            android:textSize="14sp"
+            android:textColor="#000"
+            android:layout_toEndOf="@+id/MageNative_productImage1"
+            android:layout_toStartOf="@+id/MageNative_wishlist1"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="5dp"
+
+            />
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/MageNative_productspecailPrice1"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:layout_below="@+id/MageNative_productName1"
+            android:maxLines="1"
+            android:ellipsize="end"
+            android:textSize="15sp"
+            android:textColor="@color/red"
+            android:visibility="gone"
+            android:layout_toEndOf="@+id/MageNative_productImage1"
+            android:layout_marginTop="2dp"
+            android:layout_marginBottom="1dp"
+            />
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="5dp"
+            android:layout_toEndOf="@+id/MageNative_productspecailPrice1"
+            android:id="@+id/specialpricesection"
+            android:layout_below="@+id/MageNative_productName1">
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/MageNative_productPrice1"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:layout_below="@+id/MageNative_productName"
+                android:maxLines="1"
+                android:ellipsize="end"
+                android:textSize="13sp"
+                android:textColor="@color/bd"
+                android:layout_marginTop="2dp"
+
+
+                />
+            <androidx.appcompat.widget.AppCompatTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/offertext"
+                android:layout_toEndOf="@+id/MageNative_productPrice1"
+                android:layout_marginStart="5dp"
+                android:textSize="13sp"
+                android:textColor="#BDBDBD"
+                android:layout_marginTop="2dp"
+                />
+        </RelativeLayout>
+        <androidx.appcompat.widget.AppCompatTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/Viewdetails"
+            android:id="@+id/viewdetails"
+            android:textColor="@color/secondory_color"
+            android:layout_gravity="center_horizontal"
+            android:layout_below="@+id/specialpricesection"
+            android:textAllCaps="true"
+            android:layout_toEndOf="@+id/MageNative_productImage1"
+
+            android:visibility="gone"
+            android:layout_marginTop="5dp"
+            android:textSize="13sp"/>
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:orientation="horizontal"
+            android:layout_below="@+id/viewdetails"
+            android:layout_marginTop="4dp"
+            android:id="@+id/MageNative_reviewsection"
+            android:layout_toEndOf="@+id/MageNative_productImage1"
+            >
+            <androidx.appcompat.widget.AppCompatImageView
+                android:layout_width="15dp"
+                android:layout_height="15dp"
+
+                android:adjustViewBounds="true"
+                android:id="@+id/MageNative_star1"
+                />
+            <androidx.appcompat.widget.AppCompatImageView
+                android:layout_width="15dp"
+                android:layout_height="15dp"
+
+                android:id="@+id/MageNative_star2"
+                android:layout_marginStart="2dp"
+                />
+            <androidx.appcompat.widget.AppCompatImageView
+                android:layout_width="15dp"
+                android:layout_height="15dp"
+
+                android:id="@+id/MageNative_star3"
+                android:layout_marginStart="2dp"
+                />
+            <androidx.appcompat.widget.AppCompatImageView
+                android:layout_width="15dp"
+                android:layout_height="15dp"
+
+                android:id="@+id/MageNative_star4"
+                android:layout_marginStart="2dp"
+                />
+            <androidx.appcompat.widget.AppCompatImageView
+                android:layout_width="15dp"
+                android:layout_height="15dp"
+                android:id="@+id/MageNative_star5"
+                android:layout_marginStart="2dp"
+                />
+            <androidx.appcompat.widget.AppCompatTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/white"
+                android:id="@+id/MageNative_reviewtext"
+                android:textSize="12sp"
+                android:layout_toEndOf="@+id/MageNative_star"
+                android:layout_marginStart="2dp"
+                android:layout_centerVertical="true"
+                android:visibility="gone"
+                />
+        </LinearLayout>
+        <RelativeLayout
+            android:layout_width="65dp"
+            android:layout_height="25dp"
+            android:background="@color/secondory_color"
+            android:layout_marginTop="15dp"
+            android:visibility="gone"
+            android:id="@+id/percentagerelative">
+            <androidx.appcompat.widget.AppCompatTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/percentage"
+                android:textAllCaps="true"
+                android:textSize="13sp"
+                android:textStyle="bold|italic"
+                android:layout_centerInParent="true"
+                android:textColor="@color/white"/>
+        </RelativeLayout>
+    </RelativeLayout>
+</RelativeLayout>

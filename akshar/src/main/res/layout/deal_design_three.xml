@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/dealgrouptittle"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@color/AppTheme"
+        android:gravity="center"
+        android:text="Home Furniture"
+        android:textAllCaps="true"
+        android:textColor="@color/white"
+        android:textSize="15sp"
+         />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/dealgrouptimer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/dealgrouptittle"
+        android:layout_marginTop="5dp"
+        android:gravity="center"
+        android:text="10 H:10 M:10 S"
+        android:textColor="@color/main_color_gray"
+        android:textSize="15sp"
+
+        android:visibility="gone" />
+
+    <LinearLayout
+        android:id="@+id/dealdata3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/dealgrouptimer"
+        android:layout_marginTop="10dp"
+        android:orientation="vertical">
+
+    </LinearLayout>
+
+</RelativeLayout>

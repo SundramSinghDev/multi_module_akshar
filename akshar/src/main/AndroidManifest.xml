@@ -1,0 +1,490 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.akshar.store">
+    <!-- user permissions -->
+    <uses-permission android:name="android.permission.GET_ACCOUNTS" />
+    <uses-permission android:name="android.permission.USE_CREDENTIALS" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.CALL_PHONE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.GET_TASKS" />
+
+    <uses-feature
+        android:name="android.hardware.sensor.accelerometer"
+        android:required="true" />
+    <uses-feature
+        android:name="android.hardware.camera"
+        android:required="true" />
+    <uses-feature
+        android:name="android.hardware.telephony"
+        android:required="false" /> <!-- user permissions -->
+    <!-- screen supports -->
+    <supports-screens
+        android:anyDensity="true"
+        android:largeScreens="true"
+        android:normalScreens="true"
+        android:resizeable="true"
+        android:smallScreens="true" />
+
+    <application
+        android:hardwareAccelerated="true"
+        android:largeHeap="true"
+        android:allowBackup="true"
+        tools:replace="android:allowBackup"
+        android:supportsRtl="true">
+
+
+        <activity
+            android:name=".ui.checkoutsection.activity.CustomOrderSummaryActivity"
+            android:configChanges="orientation|screenSize"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.loginsection.activity.OTPActivity"
+            android:configChanges="orientation|screenSize"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.schoolorder.ui.SchoolDetailsActivity"
+            android:configChanges="orientation|screenSize"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.schoolorder.ui.SchoolListActivity"
+            android:configChanges="orientation|screenSize"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+<!--        <activity
+            android:name=".ui.checkoutsection.activity.PlaceOrderPayU"
+            android:configChanges="orientation|screenSize"
+            android:exported="true"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait" />-->
+        <activity
+            android:name=".ui.productsection.activity.SubCategory_SelectPage"
+            android:configChanges="orientation|screenSize"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name=".ui.notificationactivity.activity.Ced_NotificationList"
+            android:configChanges="orientation|screenSize"
+            android:exported="false"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name=".ui.product_compare_section.activity.Ced_CompareList"
+            android:configChanges="orientation|screenSize"
+            android:exported="false"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name=".ui.checkoutsection.activity.ReviewOrderSummary"
+            android:configChanges="orientation|screenSize"
+            android:label="@string/app_name"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name=".ui.productsection.activity.Ced_RecyclerView_Activity"
+            android:configChanges="orientation|screenSize"
+            android:exported="false"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait" />
+
+        <meta-data
+            android:name="com.google.android.gms.vision.DEPENDENCIES"
+            android:value="barcode" />
+        <meta-data
+            android:name="com.google.android.gms.version"
+            android:value="@integer/google_play_services_version" />
+        <meta-data
+            android:name="com.facebook.sdk.ApplicationId"
+            android:value="@string/facebook_app_id" />
+
+        <activity
+            android:name="com.facebook.FacebookActivity"
+            android:exported="false"
+            android:configChanges="keyboard|keyboardHidden|screenLayout|screenSize|orientation"
+            android:label="@string/app_name" />
+        <activity
+            android:name="com.facebook.CustomTabActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data
+                    android:scheme="@string/fb_login_protocol_scheme"
+                    tools:ignore="ManifestResource" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".base.activity.Ced_MainActivity"
+            android:configChanges="orientation|screenSize"
+            android:exported="false"
+            android:screenOrientation="portrait">
+        </activity>
+        <activity
+            android:name=".ui.introsection.activity.Ced_Illustration"
+            android:configChanges="orientation|screenSize"
+            android:label="@string/app_name"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".base.activity.Ced_NavigationActivity"
+            android:configChanges="orientation|screenSize"
+            android:label="@string/app_name"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+        <!--
+ <activity
+            android:name=".Ced_MageNative_CheckoutAddon.PlaceOrderBraintree"
+            android:configChanges="orientation|screenSize"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait" />
+        -->
+        <activity
+            android:name=".ui.orderssection.activity.Ced_ViewOrder"
+            android:configChanges="orientation|screenSize"
+            android:label="@string/app_name"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.homesection.activity.Ced_New_home_page"
+            android:configChanges="orientation|screenSize"
+            android:label="@string/app_name"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.productsection.activity.Ced_NewProductView"
+            android:configChanges="orientation|screenSize"
+            android:label="@string/app_name"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.wishlistsection.activity.Ced_WishListing"
+            android:configChanges="orientation|screenSize"
+            android:label="@string/app_name"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.cartsection.activity.Ced_CartListing"
+            android:configChanges="orientation|screenSize"
+            android:label="@string/app_name"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.loginsection.activity.Ced_Login"
+            android:configChanges="orientation|screenSize"
+            android:label="@string/app_name"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.loginsection.activity.Ced_Register"
+            android:configChanges="orientation|screenSize"
+            android:label="@string/app_name"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+        <!--
+ <activity
+            android:name=".ui.loginsection.activity.Ced_ForgotPassword"
+            android:configChanges="orientation|screenSize"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait" />
+        -->
+        <activity
+            android:name=".ui.profilesection.activity.Ced_User_Profile"
+            android:configChanges="orientation|screenSize"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:exported="false"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name=".ui.addresssection.activity.Ced_Addressbook"
+            android:configChanges="orientation|screenSize"
+            android:label="@string/app_name"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.addresssection.activity.Ced_AddAddress"
+            android:configChanges="orientation|screenSize"
+            android:label="@string/app_name"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.orderssection.activity.Ced_ShowOrder"
+            android:configChanges="orientation|screenSize"
+            android:label="@string/app_name"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.addresssection.activity.Ced_UpdateAddressbook"
+            android:configChanges="orientation|screenSize"
+            android:label="@string/app_name"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.searchsection.activity.Ced_Search"
+            android:configChanges="orientation|screenSize"
+            android:label="@string/app_name"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.searchsection.activity.Ced_Searchview"
+            android:configChanges="orientation|screenSize"
+            android:label="@string/app_name"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateVisible" />
+        <activity
+            android:name=".ui.websection.Ced_Weblink"
+            android:configChanges="orientation|screenSize"
+            android:label="@string/app_name"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.product_review_section.activity.Ced_ReviewListing"
+            android:configChanges="orientation|screenSize"
+            android:label="@string/app_name"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.product_review_section.activity.Ced_AddReview"
+            android:configChanges="orientation|screenSize"
+            android:label="@string/app_name"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+
+        <receiver
+            android:name="com.google.android.gms.gcm.GcmReceiver"
+            android:exported="true"
+            android:permission="com.google.android.c2dm.permission.SEND">
+            <intent-filter>
+                <action android:name="com.google.android.c2dm.intent.RECEIVE" />
+
+                <category android:name="com.cedcommerce.magento" />
+            </intent-filter>
+        </receiver>
+        <!--
+<receiver
+            android:name="com.google.android.gms.analytics.AnalyticsReceiver"
+            android:enabled="true">
+            <intent-filter>
+                <action android:name="com.google.android.gms.analytics.ANALYTICS_DISPATCH" />
+            </intent-filter>
+        </receiver>
+
+        <service
+            android:name="com.google.android.gms.analytics.AnalyticsService"
+            android:enabled="true"
+            android:exported="false" />
+
+        <receiver
+            android:name="com.google.android.gms.analytics.CampaignTrackingReceiver"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="com.android.vending.INSTALL_REFERRER" />
+            </intent-filter>
+        </receiver>
+        -->
+        <!--
+ Set custom default icon. This is used when no icon is set for incoming notification messages.
+             See README(https://goo.gl/l4GJaQ) for more.
+        -->
+        <meta-data
+            android:name="com.google.firebase.messaging.default_notification_icon"
+            android:resource="@drawable/ic_shopping" />
+        <!--
+ Set color used with incoming notification messages. This is used when no color is set for the incoming
+             notification message. See README(https://goo.gl/6BKBk7) for more.
+        -->
+        <meta-data
+            android:name="com.google.firebase.messaging.default_notification_color"
+            android:resource="@color/AppTheme" />
+        <!--
+ <meta-data
+            android:name="firebase_messaging_auto_init_enabled"
+            android:value="false" />
+        <meta-data
+            android:name="firebase_analytics_collection_enabled"
+            android:value="false" />
+        -->
+        <!-- <service -->
+        <!-- android:name=".ui.notificationactivity.MageNative_MyFirebaseMessagingService" -->
+        <!-- android:exported="false"> -->
+        <!-- <intent-filter> -->
+        <!-- <action android:name="com.google.firebase.MESSAGING_EVENT" /> -->
+        <!-- </intent-filter> -->
+        <!-- </service> -->
+        <service
+            android:name=".ui.notificationactivity.MageNative_MyFirebaseMessagingService"
+            android:exported="false">
+            <intent-filter android:priority="10000">
+                <action android:name="com.google.firebase.MESSAGING_EVENT" />
+            </intent-filter>
+        </service>
+
+        <activity
+            android:name=".ui.productsection.activity.Ced_MyDownloadableProducts"
+            android:configChanges="orientation|screenSize"
+            android:label="@string/app_name"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.productsection.activity.Ced_ProductDescription"
+            android:configChanges="orientation|screenSize"
+            android:label="@string/app_name"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="@string/google_maps_key" />
+
+        <activity
+            android:name=".ui.productsection.fragment.Ced_ZoomImagePagerActivity"
+            android:configChanges="orientation|screenSize"
+            android:label="@string/app_name"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.networkhandlea_activities.Ced_NoInternetconnection"
+            android:configChanges="orientation|screenSize"
+            android:label="@string/app_name"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.networkhandlea_activities.Ced_UnAuthourizedRequestError"
+            android:configChanges="orientation|screenSize"
+            android:label="@string/app_name"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.networkhandlea_activities.Ced_ExpireActivity"
+            android:configChanges="orientation|screenSize"
+            android:label="@string/app_name"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.profilesection.activity.Ced_AccountDashboard"
+            android:configChanges="orientation|screenSize"
+            android:label="@string/app_name"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.productsection.activity.Ced_New_Product_Listing"
+            android:configChanges="orientation|screenSize"
+            android:label="@string/app_name"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Ced_MageNative_Scanner.CaptureActivityPortrait"
+            android:screenOrientation="portrait"
+            android:stateNotNeeded="true"
+            android:exported="false"
+            android:theme="@style/zxing_CaptureTheme"
+            android:windowSoftInputMode="stateAlwaysHidden" />
+        <activity
+            android:name=".Ced_MageNative_Scanner.Ced_Scanner"
+            android:screenOrientation="portrait"
+            android:exported="false"
+            android:stateNotNeeded="true" />
+        <activity
+            android:name=".Ced_MageNative_Upgrade.Ced_Upgrade"
+            android:configChanges="orientation|screenSize"
+            android:label="@string/app_name"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.checkoutsection.activity.BillingShippingAddress"
+            android:configChanges="orientation|screenSize"
+            android:exported="false"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.checkoutsection.activity.PayMentMethodList"
+            android:configChanges="orientation|screenSize"
+            android:label="@string/app_name"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.checkoutsection.activity.ProcessOrder"
+            android:configChanges="orientation|screenSize"
+            android:label="@string/app_name"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.checkoutsection.activity.PlacedOrderRazorPay"
+            android:configChanges="orientation|screenSize"
+            android:exported="true"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait" />
+        <!--
+  <activity
+            android:name=".ui.checkoutsection.activity.PlaceOrderBraintree"
+            android:configChanges="orientation|screenSize"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait" />
+        -->
+        <activity
+            android:name=".ui.checkoutsection.activity.ShippingMethodList"
+            android:configChanges="orientation|screenSize"
+            android:label="@string/app_name"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.homesection.activity.Ced_Categories"
+            android:configChanges="orientation|screenSize"
+            android:label="@string/app_name"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.sellersection.activity.Ced_SellerListing"
+            android:configChanges="orientation|screenSize"
+            android:label="@string/app_name"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.sellersection.activity.Ced_Seller_Shop"
+            android:configChanges="orientation|screenSize"
+            android:label="@string/app_name"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.sellersection.activity.Ced_AddVendorReview"
+            android:configChanges="orientation|screenSize"
+            android:label="@string/app_name"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.sellersection.activity.Ced_WriteVendorReview"
+            android:configChanges="orientation|screenSize"
+            android:label="@string/app_name"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.orderssection.activity.Ced_Orderview"
+            android:configChanges="orientation|screenSize"
+            android:label="@string/app_name"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.newhomesection.activity.Magenative_HomePageNewTheme"
+            android:configChanges="orientation|screenSize"
+            android:label="@string/app_name"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+    </application>
+
+</manifest>

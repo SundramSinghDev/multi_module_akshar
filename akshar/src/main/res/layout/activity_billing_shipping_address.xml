@@ -1,0 +1,441 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/check"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:contentDescription="@string/app_name"
+            android:adjustViewBounds="true"
+            android:src="@drawable/check1" />
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/check"
+            android:layout_centerHorizontal="true"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="10dp"
+            android:background="@color/white"
+            android:scrollbars="none"
+            android:fillViewport="true">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white">
+
+               <!-- <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/billingaddresstext"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="8dp"
+                    android:text="@string/billingaddress"
+                    android:textAllCaps="true"
+                    android:textColor="@color/black"
+                    android:textSize="15sp" />-->
+
+                <LinearLayout
+                    android:id="@+id/defaultaddress"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:background="@color/white"
+                    android:orientation="vertical" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/addnewaddress"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_below="@+id/defaultaddress"
+                    android:gravity="center"
+                    android:fontFamily="@font/celias_regular"
+                    android:text="@string/addnewaddress"
+                    android:textColor="@color/onwhitetextcolor"
+                    android:textSize="15sp" />
+
+                <LinearLayout
+                    android:id="@+id/address"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/addnewaddress"
+                    android:orientation="vertical"
+                    android:visibility="gone">
+
+                    <LinearLayout
+                        android:id="@+id/prefixsection"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:visibility="gone">
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/prefixlabel"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textColor="#BDBDBD"
+                            android:textSize="13sp" />
+
+                        <RadioGroup
+                            android:id="@+id/prefix"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="8dp"
+                            android:orientation="vertical" />
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/prefixname"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:visibility="gone" />
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/prefixoptions"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:visibility="gone" />
+                    </LinearLayout>
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/emaillayout"
+                        style="@style/LoginTextInputLayoutStyle"
+app:hintTextColor="@color/user_icon_default_gray"
+                        android:hint="@string/email"
+                        android:layout_width="match_parent"
+                        android:layout_height="?attr/actionBarSize"
+                        android:backgroundTint="@color/black">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/email"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:inputType="textEmailAddress"
+                            android:singleLine="true" />
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/firstnamelayout"
+                        style="@style/LoginTextInputLayoutStyle"
+app:hintTextColor="@color/user_icon_default_gray"
+                        android:layout_width="match_parent"
+                        android:layout_height="?attr/actionBarSize"
+                        android:backgroundTint="@color/black"
+                        android:hint="@string/firstname"
+                        android:layout_marginTop="10dp">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/firstname"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:singleLine="true" />
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                <!--    <LinearLayout
+                        android:id="@+id/middlenamesection"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:layout_marginTop="10dp"
+                        android:visibility="gonne">
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/middlenamelabel"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textColor="#BDBDBD"
+                            android:textSize="13sp" />
+
+                        <com.google.android.material.textfield.TextInputLayout
+                            style="@style/LoginTextInputLayoutStyle"
+app:hintTextColor="@color/user_icon_default_gray"
+                            android:layout_width="match_parent"
+                            android:layout_height="?attr/actionBarSize"
+                            android:backgroundTint="@color/black">
+
+                            <com.google.android.material.textfield.TextInputEditText
+                                android:id="@+id/MageNative_midllename"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:backgroundTint="#D7D7D7"
+                                android:singleLine="true"
+                                android:textColor="#5C5C5C"
+                                android:textSize="17sp" />
+                        </com.google.android.material.textfield.TextInputLayout>
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/midllenamename"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:visibility="gone" />
+                    </LinearLayout>-->
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/middlenamelayout"
+                        style="@style/LoginTextInputLayoutStyle"
+                        app:hintTextColor="@color/user_icon_default_gray"
+                        android:layout_width="match_parent"
+                        android:layout_height="?attr/actionBarSize"
+                        android:backgroundTint="@color/black"
+                        android:visibility="gone"
+                        android:layout_marginTop="10dp">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/middlename"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:singleLine="true" />
+                    </com.google.android.material.textfield.TextInputLayout>
+
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/lastnamelayout"
+                        style="@style/LoginTextInputLayoutStyle"
+app:hintTextColor="@color/user_icon_default_gray"
+                        android:layout_width="match_parent"
+                        android:layout_height="?attr/actionBarSize"
+                        android:backgroundTint="@color/black"
+                        android:hint="@string/lastname"
+                        android:layout_marginTop="10dp">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/lastname"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:singleLine="true" />
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <LinearLayout
+                        android:id="@+id/suffixsection"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:visibility="gone">
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/suffixlabel"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textColor="#BDBDBD"
+                            android:textSize="13sp" />
+
+                        <RadioGroup
+                            android:id="@+id/suffix"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="8dp"
+                            android:orientation="vertical" />
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/suffixname"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:visibility="gone" />
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/suffixoptions"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:visibility="gone" />
+                    </LinearLayout>
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/companylayout"
+                        style="@style/LoginTextInputLayoutStyle"
+app:hintTextColor="@color/user_icon_default_gray"
+                        android:layout_width="match_parent"
+                        android:layout_height="?attr/actionBarSize"
+                        android:backgroundTint="@color/black"
+                        android:hint="@string/company"
+                        android:layout_marginTop="10dp">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/company"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:singleLine="true" />
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        style="@style/LoginTextInputLayoutStyle"
+app:hintTextColor="@color/user_icon_default_gray"
+                        android:layout_width="match_parent"
+                        android:layout_height="?attr/actionBarSize"
+                        android:backgroundTint="@color/black"
+                        android:hint="@string/country"
+                        android:layout_marginTop="10dp">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/country"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:editable="false"
+                            android:singleLine="true" />
+                    </com.google.android.material.textfield.TextInputLayout>
+
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/region_layout"
+                        style="@style/LoginTextInputLayoutStyle"
+app:hintTextColor="@color/user_icon_default_gray"
+                        android:layout_width="match_parent"
+                        android:layout_height="?attr/actionBarSize"
+                        android:backgroundTint="@color/black"
+                        android:layout_marginTop="10dp"
+                        android:hint="@string/state"
+                        android:visibility="gone" >
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/region"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:singleLine="true" />
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/region_id_layout"
+                        style="@style/LoginTextInputLayoutStyle"
+app:hintTextColor="@color/user_icon_default_gray"
+                        android:layout_width="match_parent"
+                        android:layout_height="?attr/actionBarSize"
+                        android:backgroundTint="@color/black"
+                        android:layout_marginTop="10dp"
+                        android:hint="@string/taptoselectdata"
+                        android:visibility="gone">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/region_id"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:editable="false"
+                            android:singleLine="true" />
+                    </com.google.android.material.textfield.TextInputLayout>
+
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/streetlayout"
+                        style="@style/LoginTextInputLayoutStyle"
+app:hintTextColor="@color/user_icon_default_gray"
+                        android:layout_width="match_parent"
+                        android:layout_height="?attr/actionBarSize"
+                        android:backgroundTint="@color/black"
+                        android:hint="@string/streetaddress"
+                        android:layout_marginTop="10dp">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/street"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:singleLine="true" />
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/citylayout"
+                        style="@style/LoginTextInputLayoutStyle"
+app:hintTextColor="@color/user_icon_default_gray"
+                        android:layout_width="match_parent"
+                        android:layout_height="?attr/actionBarSize"
+                        android:backgroundTint="@color/black"
+                        android:hint="@string/city"
+                        android:layout_marginTop="10dp">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/city"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:singleLine="true" />
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/zipcodelayout"
+                        style="@style/LoginTextInputLayoutStyle"
+app:hintTextColor="@color/user_icon_default_gray"
+                        android:layout_width="match_parent"
+                        android:layout_height="?attr/actionBarSize"
+                        android:backgroundTint="@color/black"
+                        android:hint="@string/Zipcode"
+                        android:layout_marginTop="10dp">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/zipcode"
+                            android:layout_width="match_parent"
+                            android:inputType="number"
+                            android:layout_height="match_parent"
+                            android:singleLine="true" />
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/phonenumberlayout"
+                        style="@style/LoginTextInputLayoutStyle"
+app:hintTextColor="@color/user_icon_default_gray"
+                        android:layout_width="match_parent"
+                        android:layout_height="?attr/actionBarSize"
+                        android:backgroundTint="@color/black"
+                        android:hint="@string/number"
+                        android:layout_marginTop="10dp">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/phonenumber"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:inputType="phone"
+                            android:singleLine="true" />
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/taxvatsection"
+                        style="@style/LoginTextInputLayoutStyle"
+app:hintTextColor="@color/user_icon_default_gray"
+                        android:layout_width="match_parent"
+                        android:layout_height="?attr/actionBarSize"
+                        android:backgroundTint="@color/black"
+                        android:layout_marginTop="10dp"
+                        android:visibility="gone">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/MageNative_taxvat"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:singleLine="true" />
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:visibility="gone">
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/taxvatname"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:visibility="gone" />
+                    </LinearLayout>
+
+                </LinearLayout>
+
+               <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/continueaddress"
+                    android:layout_width="match_parent"
+                    android:fontFamily="@font/celias_bold"
+                    android:layout_height="wrap_content"
+                    android:padding="@dimen/pad_10dp"
+                    android:layout_below="@+id/address"
+                    android:background="@drawable/buttonbackground"
+                    android:gravity="center"
+                    android:text="@string/nativecontinue"
+                    android:textSize="@dimen/txt_subheading15"
+                    android:textAllCaps="true"
+                    android:textColor="@color/txtapptheme_color" />
+            </RelativeLayout>
+        </ScrollView>
+    </RelativeLayout>
+
+</layout>
+

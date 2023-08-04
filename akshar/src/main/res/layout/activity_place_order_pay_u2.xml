@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+    <androidx.coordinatorlayout.widget.CoordinatorLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:scrollbars="none">
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/warning"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:background="@color/AppTheme"
+                    android:gravity="center"
+                    android:text="@string/do_not_press_back_button_or_refresh_the_page_processing_your_order"
+                    android:textColor="@color/white"
+                    android:textSize="12sp"
+                    android:visibility="gone" />
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/warning"
+                        android:background="@color/white">
+
+                        <androidx.appcompat.widget.AppCompatImageView
+                            android:id="@+id/check"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp"
+                            android:adjustViewBounds="true"
+                            android:src="@drawable/check4" />
+                    </RelativeLayout>
+
+
+            </RelativeLayout>
+        </ScrollView>
+        <View
+            android:id="@+id/view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#99000000"
+            android:visibility="gone"/>
+
+        <include
+            android:id="@+id/payuverify_layout"
+            layout="@layout/magenative_payu_verifydialog"/>
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>
+</layout>

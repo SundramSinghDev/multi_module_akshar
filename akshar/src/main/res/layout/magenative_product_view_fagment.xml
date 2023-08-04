@@ -1,0 +1,137 @@
+<!--
+  ~ Copyright/**
+  ~          * CedCommerce
+  ~           *
+  ~           * NOTICE OF LICENSE
+  ~           *
+  ~           * This source file is subject to the End User License Agreement (EULA)
+  ~           * that is bundled with this package in the file LICENSE.txt.
+  ~           * It is also available through the world-wide-web at this URL:
+  ~           * http://cedcommerce.com/license-agreement.txt
+  ~           *
+  ~           * @category  Ced
+  ~           * @package   MageNative
+  ~           * @author    CedCommerce Core Team <connect@cedcommerce.com >
+  ~           * @copyright Copyright CEDCOMMERCE (http://cedcommerce.com/)
+  ~           * @license      http://cedcommerce.com/license-agreement.txt
+  ~           */
+  -->
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/main"
+        android:background="@color/white">
+        <androidx.viewpager.widget.ViewPager
+            android:id="@+id/MageNative_viewpager"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_above="@+id/MageNative_nextandskipsection"
+            android:background="@color/white"/>
+<!--
+        <RelativeLayout
+            android:id="@+id/MageNative_indicator"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/MageNative_nextandskipsection"
+            android:layout_marginBottom="25dp"
+            android:background="@color/white"
+            android:visibility="gone">
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:orientation="horizontal">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/first"
+                    android:layout_width="30dp"
+                    android:layout_height="2dp"
+                    android:textColor="@color/txtapptheme_color"
+                    android:background="@color/AppTheme" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/second"
+                    android:layout_width="30dp"
+                    android:layout_height="2dp"
+                    android:layout_marginStart="10dp"
+                    android:background="@color/gray_light" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/third"
+                    android:layout_width="30dp"
+                    android:layout_height="2dp"
+                    android:layout_marginStart="10dp"
+                    android:background="@color/gray_light" />
+            </LinearLayout>
+        </RelativeLayout>-->
+        <RelativeLayout
+            android:id="@+id/MageNative_nextandskipsection"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_alignParentBottom="true"
+            android:orientation="horizontal"
+            android:weightSum="1">
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/MageNative_skip"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:paddingStart="@dimen/pad_30dp"
+                android:paddingEnd="@dimen/pad_30dp"
+                android:fontFamily="@font/celias_regular"
+                android:drawablePadding="@dimen/pad_10dp"
+                android:layout_weight="0.5"
+                android:background="@color/onwhitetextcolor"
+                android:gravity="center"
+                android:text="@string/skip"
+                android:drawableTint="@color/white"
+                android:textAllCaps="true"
+                android:layout_alignParentStart="true"
+                android:textColor="@color/white"
+                android:textSize="15sp" />
+            <!--<androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/space"
+                android:layout_width="1dp"
+                android:layout_height="match_parent"
+                android:alpha="0.8"
+                android:layout_toEndOf="@+id/MageNative_skip"
+                android:background="@color/white" />-->
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/MageNative_next"
+                android:layout_width="wrap_content"
+                android:paddingStart="@dimen/pad_30dp"
+                android:paddingEnd="@dimen/pad_30dp"
+                android:drawableTint="@color/white"
+                android:fontFamily="@font/celias_regular"
+                android:layout_height="match_parent"
+                android:drawablePadding="@dimen/pad_10dp"
+                android:layout_gravity="center"
+                android:layout_weight="0.5"
+                android:layout_alignParentEnd="true"
+                android:background="@color/onwhitetextcolor"
+                android:gravity="center"
+                android:text="@string/next"
+                android:textAllCaps="true"
+                android:textColor="#FFFFFF"
+                android:textSize="15sp" />
+        </RelativeLayout>
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/MageNative_getstarted"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_alignParentBottom="true"
+            android:background="@drawable/corner_white"
+            android:gravity="center"
+            android:text="@string/gotit"
+            android:textAllCaps="true"
+            android:layout_margin="@dimen/pad_10dp"
+            android:textColor="@color/black"
+            android:textSize="15sp"
+            android:fontFamily="@font/celias_regular"
+            android:visibility="gone" />
+    </RelativeLayout>
+
+</layout>
+

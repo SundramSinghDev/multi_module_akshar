@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/dealgrouptittle"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="@color/AppTheme"
+            android:gravity="center"
+            android:text="Home Furniture"
+            android:textAllCaps="true"
+            android:textColor="@color/white"
+            android:textSize="15sp"
+             />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/dealgrouptimer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/dealgrouptittle"
+            android:layout_marginTop="5dp"
+            android:gravity="center"
+            android:text="10 H:10 M:10 S"
+            android:textColor="@color/main_color_gray"
+            android:textSize="15sp"
+
+            android:visibility="gone" />
+
+        <!--<GridLayout
+            android:id="@+id/dealdata"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/dealgrouptimer"
+            android:layout_centerHorizontal="true"
+            android:layout_margin="5dp"
+            android:columnCount="2"
+            android:rowCount="1" />-->
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/deals_recycler"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/dealgrouptimer"
+            app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
+            app:spanCount="2"
+            tools:listitem="@layout/deal"/>
+
+    </RelativeLayout>
+
+</layout>

@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cv_calendarView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:cardElevation="@dimen/_3sdp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <com.shrikanthravi.collapsiblecalendarview.widget.CollapsibleCalendar
+                android:id="@+id/calendarView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:elevation="@dimen/_4sdp"
+                app:buttonLeft_drawableTintColor="@android:color/black"
+                app:buttonRight_drawableTintColor="@android:color/black"
+                app:expandIconColor="@android:color/white"
+                app:primaryColor="@color/cal_bg"
+                app:selectedItem_background="@drawable/rectangle_yellow_corners_background"
+                app:selectedItem_textColor="@color/black"
+                app:todayItem_background="@drawable/cal_today_background"
+                app:todayItem_textColor="@android:color/black" />
+        </androidx.cardview.widget.CardView>
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/filter_profile_section"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/_12sdp"
+            android:background="@drawable/btn_outline_dark_border"
+            android:fontFamily="@font/open_sans_medium"
+            android:padding="@dimen/_6sdp"
+            android:text="@string/select_profile_type"
+            app:drawableRightCompat="@drawable/ic_baseline_arrow_drop_down_24"
+            app:layout_constraintTop_toBottomOf="@id/cv_calendarView" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/filter_class_section"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/_12sdp"
+            android:background="@drawable/btn_outline_dark_border"
+            android:fontFamily="@font/open_sans_medium"
+            android:padding="@dimen/_6sdp"
+            android:text="@string/select_class"
+            android:visibility="gone"
+            app:drawableRightCompat="@drawable/ic_baseline_arrow_drop_down_24"
+            app:layout_constraintTop_toBottomOf="@id/filter_profile_section"
+            tools:visibility="visible"/>
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:id="@+id/llShift"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/filter_class_section">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/filter_shift_section"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/_12sdp"
+                android:layout_weight="50"
+                android:background="@drawable/btn_outline_dark_border"
+                android:fontFamily="@font/open_sans_medium"
+                android:padding="@dimen/_6sdp"
+                android:text="@string/select_shift"
+                app:drawableRightCompat="@drawable/ic_baseline_arrow_drop_down_24" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/filter_mark_all_section"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/_12sdp"
+                android:layout_weight="50"
+                android:background="@drawable/btn_outline_dark_border"
+                android:fontFamily="@font/open_sans_medium"
+                android:padding="@dimen/_6sdp"
+                android:text="@string/mark_as_all"
+                android:visibility="gone"
+                app:drawableRightCompat="@drawable/ic_baseline_arrow_drop_down_24" />
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerView"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginTop="@dimen/_12sdp"
+            android:background="@color/cal_bg"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            app:layout_constraintBottom_toTopOf="@id/btnSaveAttendance"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/llShift"
+            tools:itemCount="3"
+            tools:listitem="@layout/row_attendance_entry" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btnSaveAttendance"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/_12sdp"
+            android:background="@drawable/btn_selector_yellow"
+            android:enabled="false"
+            android:text="@string/save_attendance"
+            android:textAllCaps="false"
+            android:textColor="@color/white"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

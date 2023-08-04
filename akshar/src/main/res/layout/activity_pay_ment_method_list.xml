@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/check"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:adjustViewBounds="true"
+            android:contentDescription="@string/app_name"
+            android:src="@drawable/check3" />
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/check"
+            android:layout_centerHorizontal="true"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="10dp"
+            android:background="@color/white"
+            android:fillViewport="true"
+            android:scrollbars="none">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <!--
+                                <androidx.appcompat.widget.AppCompatTextView
+                                    android:id="@+id/billingaddresstext"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_margin="8dp"
+                                    android:text="@string/paymentmethods"
+                                    android:textAllCaps="true"
+                                    android:textColor="@color/black"
+                                    android:textSize="15sp" />
+
+                                <androidx.appcompat.widget.AppCompatTextView
+                                    android:id="@+id/line"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="1dp"
+                                    android:layout_below="@+id/billingaddresstext"
+                                    android:layout_marginStart="8dp"
+                                    android:layout_marginEnd="8dp"
+                                    android:alpha="0.5"
+                                    android:background="@color/main_color_gray" />-->
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/MageNative_view"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="4dp"
+                    app:cardBackgroundColor="@color/white"
+                    app:cardCornerRadius="4dp"
+                    app:cardUseCompatPadding="true">
+
+                    <RadioGroup
+                        android:id="@+id/radiogroup"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/line"
+                        android:layout_margin="8dp"
+                        android:orientation="vertical">
+
+                        <RadioButton
+                            android:id="@+id/payuradio"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/pay_with_payu"
+                            android:visibility="gone" />
+
+                        <RadioButton
+                            android:id="@+id/razorpayradio"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="-5dp"
+                            android:fontFamily="@font/celias_regular"
+                            android:text="@string/pay_with_razorpay"
+                            android:visibility="visible"
+                            tools:ignore="TouchTargetSizeCheck" />
+                    </RadioGroup>
+                </androidx.cardview.widget.CardView>
+
+                <LinearLayout
+                    android:id="@+id/additionaldata"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/MageNative_view"
+                    android:layout_margin="8dp"
+                    android:orientation="vertical">
+
+                </LinearLayout>
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/continueshipping"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/additionaldata"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginBottom="5dp"
+                    android:background="@drawable/sortbyselector"
+                    android:fontFamily="@font/celias_bold"
+                    android:gravity="center"
+                    android:minHeight="40dp"
+                    android:padding="@dimen/pad_10dp"
+                    android:text="@string/nativecontinue"
+                    android:textAllCaps="true"
+                    android:textColor="@color/AppTheme"
+                    android:textSize="@dimen/txt_subheading15" />
+            </RelativeLayout>
+        </ScrollView>
+    </RelativeLayout>
+
+</layout>

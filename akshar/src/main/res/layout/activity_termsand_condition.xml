@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:scrollbars="none"
+    android:layout_height="match_parent"
+    tools:context="com.akshar.store.Ced_MageNative_CMS.TermsandCondition"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+        <androidx.appcompat.widget.AppCompatImageView
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:adjustViewBounds="true"
+            android:scaleType="fitXY"
+            android:src="@drawable/staticbannerdata"
+            />
+        <androidx.appcompat.widget.AppCompatTextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Terms and Conditions"
+            android:textAllCaps="true"
+            android:textColor="#000"
+            android:layout_margin="5dp"
+            />
+        <androidx.appcompat.widget.AppCompatTextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="The terms and conditions apply to the use of the hairtreat.co.uk website. By placing an order with us, you are agreeing to accept these terms and conditions. If you have any questions relating to the conditions, please emails us on info@hairtreat.co.uk or call us on +447921707560 before placing an order.
+
+Note that these conditions are subject to change at any time and without notice, and it is your responsibility to check these conditions regularly before ordering products in case there are any changes. If you do not agree with the conditions, you should not use or access hairtreat.co.uk website. Your use of www.hairtreat.co.uk confirms your agreement to follow and be bound by these conditions."
+            android:textColor="#000"
+            android:layout_margin="8dp" />
+        <androidx.appcompat.widget.AppCompatTextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text=" General Information"
+            android:textColor="#000"
+            android:layout_margin="5dp"
+            />
+        <androidx.appcompat.widget.AppCompatTextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Hairtreat.co.uk is the website of HAIRTREAT which is the trading name of HAIR TREAT LTD, 2 Portal Way, Suite 507, London W3 6RT, United Kingdom. These conditions will apply between you and Hairtreat, when you buy an item from hairtreat.co.uk The conditions do not affect the rights you may have under any relevant statutory law. You must be 18 years old or older to use this site. If you are not, you will need the agreement of, and under the supervision of, a parent or a responsible person for you. Your contract for purchases made through hairtreat.co.uk is with Hairtreat. All goods ordered by you are for your professional use only and are not for resale. Please contact us on info@hairtreat.co.uk if you would like to discuss wholesale or retailer queries. You confirm that all details provided to hairtreat.co.uk for the purpose are true, accurate, current and complete in all respects. You confirm that emails can be used as a means of communication, notification and billing between us. In the registration process, you will choose a username and password. You are responsible for all actions taken under that username and password. You guarantee that you will not use a false name or a invalid credit card to order. Hairtreat.co.uk reserves the right to end this agreement or suspend or terminate your access to the site immediately if: - you fail to make payment; - or you breach any of these conditions; - or when requested by us to do so, you fail to provide within a reasonable time, enough information to enable us to check the accuracy and validity of any information supplied by you, or your identity; - or we suspect you have engaged, or are about to engage, or are connected to or otherwise have way of being involved in fraudulent or illegal activity on hairtreat.co.uk If you break these conditions, or any liabilities are incurred arising out of your use of this website, you will be responsible for the costs and expenses that we or our officers, directors, employees, agents and suppliers incur as a result of the breach, including reasonable legal fees (if applicable). You will still be responsible if someone else uses your shopping account and/or personal information unless you can prove that such use was fraudulent."
+            android:textColor="#000"
+            android:layout_margin="8dp" />
+        <androidx.appcompat.widget.AppCompatTextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text=" Ordering"
+            android:textColor="#000"
+            android:layout_margin="5dp"
+            />
+        <androidx.appcompat.widget.AppCompatTextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="All orders are subject to acceptance by HAIRTREAT. All orders will be either combined in one shipment or your parcel may arrive in separate packaging. You will receive and one invoice. We reserve the right to change prices of any product at any time. You will receive a confirmation email in the email address provided with all details of your order, shipping method and if possible, delivery times. You must check that all the details on this confirmation email are correct and contact us if any details are incorrect. Payment Hairtreat.co.uk only accepts payment via PayPal. You will be charged when your items are ready to go. All orders placed with PayPal payment are debited directly at the time of order, before your items are shipped."
+            android:textColor="#000"
+            android:layout_margin="8dp" />
+        <androidx.appcompat.widget.AppCompatTextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text=" Delivery"
+            android:textColor="#000"
+            android:layout_margin="5dp"
+            />
+        <androidx.appcompat.widget.AppCompatTextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Details about delivery can be checked in our Delivery page. Returns /exchanges policy &amp; cancellation rights If you are not happy with any item you have ordered, you must contact us by emailing info@hairtreat.co.uk or by phone +447921707560. UK returns on any full price and sale items returned to us in perfect condition and original packaging, within 14 days of receipt of order, and proof of purchase. We only refund postage paid if the product is faulty. Photographic evidence must be recorded and submitted to sales@hairtreat.co.uk Please return the item/s to us on the following address: 2 Portal Way, Suite 507, London W3 6RT and we will be able to process your refund once the item/s have been arrived. Items received that are not in perfect condition, or are not deemed faulty, will be returned to you, at your cost. Money will only be refunded once we have received the item."
+            android:textColor="#000"
+            android:layout_margin="8dp" />
+        <androidx.appcompat.widget.AppCompatTextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text=" Submissions"
+            android:textColor="#000"
+            android:layout_margin="5dp"
+            />
+        <androidx.appcompat.widget.AppCompatTextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text=" We try to respond promptly to email messages from customers and visitors to our site. However, we are under no obligation to respond to such messages, to maintain such messages in confidence, or to pay for such comments or submissions. Please be advised that all emails, comments, feedback, suggestions, ideas and other information disclosed or submitted to us will become our property. By submitting any email or correspondence to us, you thereby release all proprietary claims and intellectual or other property rights therein. You agree that we may use and/or disclose information about you, such as demographics or your use of this site, in any way without revealing your personal information or identity. By taking part in promotions, contests or sweepstakes offered on the site, or by requesting promotional information or product updates, you agree that we may use your information for marketing and promotional purposes. You are responsible for your communications and all consequences of their submission to us. Please do not: transmit to us material that is copyrighted by a third party, without that party's permission; send material that reveals trade secrets without permission of the owner of those trade secrets; send material that infringes on any third party's intellectual property rights without that party's permission; send material that is threatening, harassing, defamatory, obscene, hateful, abusive, defamatory or embarrassing to any other party; send sexually explicit images; send advertisements or solicitations; send chain letters or pyramid schemes; or impersonate another person. If you violate these provisions, or if we think you have violated them, we reserve the right to expel you from the site and prevent your future use of the site."
+            android:textColor="#000"
+            android:layout_margin="8dp" />
+        <androidx.appcompat.widget.AppCompatTextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text=" Liability"
+            android:textColor="#000"
+            android:layout_margin="5dp"
+            />
+        <androidx.appcompat.widget.AppCompatTextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text=" We do not accept liability (except as set out below) for any errors and/or omissions contained in our website and reserve the right to change information, prices, specifications and descriptions of listed goods, products and services at any time and without notice. If an error is discovered in the price of the goods that you have ordered, we will inform you as soon as possible. We shall be under no obligation to fulfill an order for a product that was advertised at an incorrect price. In the event that you order an item and the price published on hairtreat.co.uk is incorrect for any reason, we will email you to inform you that we have not accepted your order, and that your order has been cancelled. You will be advised of the correct price of the subject product. You may re-order it if you wish. If you have already paid for the goods in the circumstances described in this clause, we shall refund the full amount within 14 days of the date of order. Should you choose to re-order at the correct price, a separate transaction will be posted to your paypal account. In the unlikely event that you receive goods which were not what you ordered or which are damaged or defective, or are of a different quantity to that stated on your order form, we shall make good any shortage or non-delivery, replace or repair any damaged or defective goods, or refund to you the amount you paid for the goods in question provided that you notify us of the problem in writing at the address stated in the confirmation email within 10 working days of delivery of the goods plus return the goods to us, unless we inform you that return is not necessary. This provision does not affect your statutory rights. We have taken great care to provide accurate product images for each product for sale on the site. However, the colours we use, as well as the display and colour capabilities of your particular computer monitor, will affect the colours you actually see on the screen. We are not responsible for the limitations of your monitor and cannot guarantee that your monitor's display of any colour, or detail of merchandise will be accurate. If you are not satisfied with your purchase for any reason, you may simply return the product following the provisions set out in these conditions. The products sold on hairtreat.co.uk under the professional range and Brazilian keratin are provided for PROFESSIONAL USE ONLY. Accordingly, we do not accept liability for any indirect loss, consequential loss, loss of data, loss of income or profit, loss of damage to property and/or loss from claims of third parties arising out of the use of the site or for any products or services purchased from hairtreat.co.uk We have taken great care to prevent internet fraud and to ensure that any data collected from you is stored securely and safely. However, we cannot be held liable in the unlikely event of a breach in our secure computer servers. We shall have no liability to you for any delay in the delivery of products ordered or any other matters to the extent that the delay is due to any event outside our reasonable control, including but not limited to acts war, flood, fire, labour disputes, strikes, lock-outs, riots, civil commotion, malicious damage, explosion, governmental actions and any other similar events. We make no warranty that the website will meet your requirements or will be uninterrupted, timely or error-free, that defects will be corrected, or that the site or the server that makes it available are free of viruses or other harmful material or represents the full functionality, accuracy, or reliability of the website. We will not be responsible or liable to you for any loss of content or material uploaded or transmitted through the website. If your use of the website or the site's material results in any costs or expenses, including without limitation, the need for services or replacement of equipment or data, we shall not be liable for those costs or expenses. This website and its material are provided on as 'as is' basis without warranties of any kind. To the fullest extent provided by law, we disclaim warranties, whether express or implied, including those of merchantability, non-infringement of third parties' rights, and of fitness for particular purpose. We make no warranties about the accuracy, reliability, completeness or timeliness of the site's material, services, software, test, graphics and links. This does not affect your statutory rights as a consumer, nor does it affect your right to cancel an order or return or exchange a product as provided herein. We will not be liable, in contract, tort (including, without limitation, negligence), pre-contract or other representations (other than fraudulent or negligent misrepresentations) or otherwise out of or in connection with the Conditions for: Any economic losses (including without limitation loss of revenues, profits, contracts, business or anticipated savings); or Any loss of goodwill or reputation; or Any special or indirect losses suffered or incurred by that party arising out of or in connection with the provisions of any matter under the Conditions."
+            android:textColor="#000"
+            android:layout_margin="8dp" />
+        <androidx.appcompat.widget.AppCompatTextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text=" Site Contents Ownership"
+            android:textColor="#000"
+            android:layout_margin="5dp"
+            />
+        <androidx.appcompat.widget.AppCompatTextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text=" This site is expressly owned and operated by Hair Treat Ltd unless otherwise noted, the design and content featured on this website, including illustrations and other product details, icons, navigational buttons, images, artwork, graphics, photography, text, audio and video clips or content, software and the like, are owned by Hair treat Ltd. This website, as a whole, is protected by copyright, trademark, trade dress, intellectual property and other applicable laws. All worldwide rights are reserved. Third party information We are not responsible for material displayed on third party websites or any other written material. The only prices that apply for HAIRTREAT products are those stated on the website. We cannot vouch for the reliability of prices stated on shopping directories or through any other third party. This website may contain links to sites owned and operated by third parties. These links are provided as a convenience to you and are not an endorsement by us of the products or materials on those sites. We are not responsible for the content of those sites and make no representation regarding the truth, quality or accuracy of same. Visiting the linked sites is at your own risk."
+        android:textColor="#000"
+        android:layout_margin="8dp" />
+        <androidx.appcompat.widget.AppCompatTextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="  Termination"
+            android:textColor="#000"
+            android:layout_margin="5dp"
+            />
+        <androidx.appcompat.widget.AppCompatTextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="  These Conditions are effective unless and until terminated by either party. If, in our sole discretion, we determine that you have failed to abide by any of these Condition, we may terminate your access to our website, upon which termination, you must destroy all materials downloaded or obtained from the site and copies of those materials, whether made under the terms of these Conditions or otherwise. Law These Conditions shall be governed by and construed in accordance with the laws of England and by using this website you irrevocably submit to the exclusive jurisdiction of the courts of England. General information Every care has been taken to describe and portray items accurately using current printing technology, but slight variations in actual goods may occur. In order to maintain the highest standards of customer service and to help with the training of new staff, we sometimes listen in to, and occasionally record, incoming calls. Orders are placed with Hairtreat. HAIRTREAT's total liability for any claim whatsoever arising shall not exceed the price of the goods supplied by HAIRTREAT to the customer. HAIRTREAT shall not be liable for any consequential customer loss whether this arises from a breach of duty in contract or in any other way. PROUD cannot accept any liability for a failure to comply with specific instructions stated in the catalogue. Customer statutory rights are not affected by this statement. All content is Copyright HAIRTREAT and/or its licensors. All rights reserved. You may not reproduce catalogue content for any purpose without the prior written permission of HAIRTREAT. The products offered for sale on this website are directed solely at residents of the United Kingdom. HAIRTREAT make no representation that any products or services referred to in the materials on this website are appropriate for use, or available, in other locations. If you choose to access this site from other locations, then you are responsible for compliance with local laws if and to the extent that local laws are applicable."
+            android:textColor="#000"
+            android:layout_margin="8dp" />
+        <androidx.appcompat.widget.AppCompatTextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="APPART FROM OUR HOME CARE RANGE PRODUCTS, ALL HAIR TREATMENT PRODUCTS ARE INTENDED FOR PROFESSIONAL USE ONLY.WE RECOMMEND THE USE OF OUR PRODUCTS BY TRAINED AND LICENSED PROFESSIONALS (HAIRDRESSER OR HAIR SALONS).FOLLOW THE STEP-BY-STEP STATED ON THE BOTTLE. WE DO NOT REFUND OR REPLACE PRODUCTS IF THE DESIRED EFFECT HASN’T BEEN ACHIEVED AS A RESULT OF FAILURE TO FOLLOW THE INSTRUCTIONS.IF ANYONE OTHER THAN A LICENCED PROFESSIONAL USES THE PRODUCTS IS AGREEING THAT THESE PRODUCTS ARE INTENDED FOR PROFESSIONAL USE ONLY AND ARE USING THE PRODUCT AT THEIR OWN RISK."
+            android:textAllCaps="true"
+            android:textColor="#000"
+            android:layout_margin="5dp"
+            />
+    </LinearLayout>
+
+</ScrollView>

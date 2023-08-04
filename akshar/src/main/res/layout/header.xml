@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+    <pl.pzienowicz.autoscrollviewpager.AutoScrollViewPager
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:id="@+id/MageNative_homepagebanner"
+        android:padding="10dp"
+        />
+    <com.akshar.store.ui.productsection.util.Ced_CircleCedPageIndicator
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/MageNative_indicator2"
+        android:layout_below="@+id/MageNative_homepagebanner"
+        android:layout_marginTop="5dp"
+        />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/MageNative_catsection"
+        android:orientation="vertical"
+        android:layout_below="@+id/MageNative_indicator2"
+        android:background="@color/white"
+        android:layout_marginBottom="5dp"
+        android:layout_marginTop="5dp"
+        >
+    </LinearLayout>
+</LinearLayout>

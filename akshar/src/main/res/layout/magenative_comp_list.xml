@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  ~ Copyright/**
+  ~          * CedCommerce
+  ~           *
+  ~           * NOTICE OF LICENSE
+  ~           *
+  ~           * This source file is subject to the End User License Agreement (EULA)
+  ~           * that is bundled with this package in the file LICENSE.txt.
+  ~           * It is also available through the world-wide-web at this URL:
+  ~           * http://cedcommerce.com/license-agreement.txt
+  ~           *
+  ~           * @category  Ced
+  ~           * @package   MageNative
+  ~           * @author    CedCommerce Core Team <connect@cedcommerce.com >
+  ~           * @copyright Copyright CEDCOMMERCE (http://cedcommerce.com/)
+  ~           * @license      http://cedcommerce.com/license-agreement.txt
+  ~           */
+  -->
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="8dp"
+    card_view:cardUseCompatPadding="true"
+    android:background="@color/white"
+    android:id="@+id/Magenative_view"
+    android:clickable="false"
+    android:descendantFocusability="blocksDescendants"
+    android:focusable="false"
+    card_view:cardBackgroundColor="@color/white"
+    android:focusableInTouchMode="false">
+    <RelativeLayout
+        android:layout_width="match_parent" android:layout_height="wrap_content"
+        android:clickable="false"
+        android:focusable="false"
+        android:focusableInTouchMode="false"
+        >
+        <SingleShotImageView
+            android:layout_height="150dp"
+            android:layout_width="150dp"
+            android:id="@+id/Magenative_productImage"
+            android:background="@color/white"
+            android:adjustViewBounds="true"
+            android:layout_margin="5dp"
+
+            />
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/Magenative_productId"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:layout_toEndOf="@+id/Magenative_productImage"
+            android:visibility="invisible"
+            android:clickable="false"
+            android:focusable="false"
+            android:focusableInTouchMode="false"
+            />
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/Magenative_productName"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:layout_below="@+id/Magenative_productId"
+            android:layout_toEndOf="@+id/Magenative_productImage"
+            android:maxLines="1"
+            android:scrollHorizontally="true"
+            android:ellipsize="end"
+            android:clickable="false"
+            android:focusable="false"
+            android:layout_margin="5dp"
+            android:focusableInTouchMode="false"
+            android:textColor="#444444"
+
+            android:textColorHighlight="#FFFFFF"
+
+            />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_below="@+id/Magenative_productName"
+            android:layout_toEndOf="@+id/Magenative_productImage"
+            android:id="@+id/pricesection"
+            android:layout_marginStart="5dp"
+            android:layout_marginBottom="10dp"
+            >
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginStart="5dp"
+                android:layout_marginBottom="10dp"
+                >
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/Magenative_price"
+                    android:clickable="false"
+                    android:focusable="false"
+                    android:text="@string/price"
+                    android:textSize="12sp"
+                    android:textColor="#444444"
+                    android:maxLines="1"
+                    android:scrollHorizontally="true"
+                    android:ellipsize="end"
+                    android:focusableInTouchMode="false"
+                    />
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/Magenative_productPrice"
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:textColor="#444444"
+                    android:textSize="12sp"
+                    android:textColorHighlight="#FFFFFF"
+                    android:paddingBottom="@dimen/pad_5dp"
+                    android:maxLines="1"
+                    android:scrollHorizontally="true"
+                    android:ellipsize="end"
+
+                    />
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_below="@+id/Magenative_pricesection"
+                android:id="@+id/Magenative_specialpricesection"
+                android:layout_marginStart="5dp"
+                android:layout_marginBottom="10dp"
+                >
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/Magenative_specialpricetagprice"
+                    android:clickable="false"
+                    android:focusable="false"
+                    android:text="@string/specialPrice"
+                    android:textSize="12sp"
+                    android:textColor="#444444"
+                    android:maxLines="1"
+                    android:scrollHorizontally="true"
+                    android:ellipsize="end"
+                    android:focusableInTouchMode="false"
+                    android:visibility="invisible"
+                    />
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/Magenative_productSpecialPrice"
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:textColor="#444444"
+                    android:textSize="13sp"
+                    android:textColorHighlight="#FFFFFF"
+                    android:maxLines="1"
+                    android:scrollHorizontally="true"
+                    android:ellipsize="end"
+                    android:layout_marginStart="5dp"
+                    android:visibility="invisible"
+                    />
+            </LinearLayout>
+        </LinearLayout>
+    </RelativeLayout>
+
+
+</androidx.cardview.widget.CardView>
+
+
+
+

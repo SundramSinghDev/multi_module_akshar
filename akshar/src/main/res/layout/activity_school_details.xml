@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="dataModel"
+            type="com.akshar.store.ui.schoolorder.model.SchoolDetailsDataModel" />
+    </data>
+
+
+    <ScrollView
+        android:id="@+id/nestedScrollView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            tools:context=".ui.schoolorder.ui.SchoolDetailsActivity">
+
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/header_view"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:minHeight="@dimen/dim_200dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:backgroundTint="#E2323030"
+                    android:scaleType="fitXY"
+                    imgViewSrc="@{dataModel.bannerPic}"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+<!--                E2323030-->
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:alpha="0.5"
+                    android:background="@color/black"
+                    android:backgroundTint="#D2121212"
+                    android:elevation="@dimen/dimen_1dp"
+                    android:scaleType="fitXY"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/back_iv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/dimen_8dp"
+                    android:layout_marginTop="@dimen/dimen_5dp"
+                    android:elevation="2dp"
+                    android:padding="@dimen/dimen_5dp"
+                    android:contentDescription="@string/app_name"
+                    android:src="@drawable/ic_baseline_arrow_back_24"
+                    android:tint="@color/white"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/school_image"
+                    android:layout_width="@dimen/dimen_70dp"
+                    android:layout_height="@dimen/dimen_70dp"
+                    android:layout_margin="@dimen/dimen_5dp"
+                    android:background="@drawable/corner_apptheme"
+                    android:elevation="@dimen/dimen_2dp"
+                    android:padding="@dimen/dimen_4dp"
+                    android:contentDescription="@string/app_name"
+                    imgViewSrc="@{dataModel.logo}"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="@id/back_iv" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/item_title"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/dimen_15dp"
+                    android:layout_marginTop="@dimen/pad_5dp"
+                    android:elevation="@dimen/dimen_8dp"
+                    android:gravity="center_vertical"
+                    android:textAlignment="viewStart"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Title"
+                    android:textColor="@color/white"
+                    android:textFontWeight="600"
+                    android:text="@{dataModel.shopTitle}"
+                    android:textSize="@dimen/dimen_16sp"
+                    android:textStyle="normal"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@id/school_image"
+                    app:layout_constraintTop_toTopOf="@id/school_image"
+                    tools:ignore="UnusedAttribute" />
+<!--                E55530-->
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/locality"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dimen_8dp"
+                    android:drawableStart="@drawable/location_icon"
+                    android:drawablePadding="@dimen/dimen_2dp"
+                    android:elevation="@dimen/dimen_8dp"
+                    android:gravity="center_vertical"
+                    android:text="@{dataModel.companyLocality}"
+                    android:textAlignment="viewStart"
+                    android:textColor="#E55530"
+                    android:textFontWeight="500"
+                    android:letterSpacing="0.1"
+                    android:textSize="@dimen/dimen_16sp"
+                    android:textStyle="normal"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="@id/item_title"
+                    app:layout_constraintTop_toBottomOf="@id/item_title"
+                    tools:ignore="UnusedAttribute" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <com.google.android.material.appbar.AppBarLayout
+                android:id="@+id/tool_bar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dimen_8dp"
+                android:layout_marginTop="@dimen/dimen_10dp"
+                android:layout_marginEnd="@dimen/dimen_8dp"
+                android:background="@color/transparent"
+                android:elevation="@dimen/dimen_0dp"
+                android:fitsSystemWindows="true"
+                app:elevation="@dimen/dimen_0dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/header_view">
+
+                <com.google.android.material.tabs.TabLayout
+                    android:id="@+id/tab_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dimen_40dp"
+                    android:background="@drawable/bg_with_with_high_corner"
+                    app:tabBackground="@drawable/tab_color_selector"
+                    app:tabIndicatorColor="@color/transparent"
+                    app:tabTextAppearance="@style/CustomTextAppearanceTab"
+                    tools:ignore="SpeakableTextPresentCheck" />
+            </com.google.android.material.appbar.AppBarLayout>
+
+            <com.akshar.store.ui.schoolorder.utils.CustomViewPager
+                android:id="@+id/viewPager"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:padding="@dimen/dimen_8dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="@id/tool_bar"
+                app:layout_constraintStart_toStartOf="@id/tool_bar"
+                app:layout_constraintTop_toBottomOf="@id/tool_bar" />
+
+            <!--            <androidx.viewpager2.widget.ViewPager2-->
+            <!--                android:id="@+id/viewPager"-->
+            <!--                android:layout_width="match_parent"-->
+            <!--                android:layout_height="0dp"-->
+            <!--                android:layout_weight="1"-->
+            <!--                android:padding="@dimen/dimen_8dp"-->
+            <!--                app:layout_constraintBottom_toBottomOf="parent"-->
+            <!--                app:layout_constraintEnd_toEndOf="@id/tool_bar"-->
+            <!--                app:layout_constraintStart_toStartOf="@id/tool_bar"-->
+            <!--                app:layout_constraintTop_toBottomOf="@id/tool_bar" />-->
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+</layout>

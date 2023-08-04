@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="clickListeners"
+            type="com.akshar.store.ui.schoolorder.adapter.SchoolProductListAdapter" />
+
+        <variable
+            name="data"
+            type="com.akshar.store.ui.schoolorder.model.ProductDataModel" />
+
+        <variable
+            name="bundlePrice"
+            type="java.lang.String" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/corner_grey_1bottomline_white"
+        android:onClick="@{(view)->clickListeners.onParentViewClick(view,data)}"
+        android:padding="@dimen/dimen_5dp">
+
+        <!--        bg_top_croner_round-->
+        <!--        bg_white_round_corner_with_storke-->
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/item_image"
+            imgViewSrc="@{data.imageName}"
+            android:layout_width="55dp"
+            android:layout_height="55dp"
+            android:background="@drawable/bg_top_croner_round"
+            android:padding="@dimen/dimen_5dp"
+            android:scaleType="fitCenter"
+            android:src="@drawable/school_single_item_image"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            setText="@{data.className}"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:background="@drawable/bg_bottom_corner_round"
+            android:backgroundTint="#E55530"
+            android:gravity="center"
+            android:maxLength="8"
+            android:padding="@dimen/dimen_5dp"
+            android:textColor="@color/white"
+            android:textSize="12sp"
+            android:visibility="visible"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="@id/item_image"
+            app:layout_constraintStart_toStartOf="@id/item_image"
+            app:layout_constraintTop_toBottomOf="@id/item_image" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/item_title"
+            setText="@{data.productName}"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dimen_15dp"
+            android:layout_marginTop="@dimen/pad_5dp"
+            android:gravity="center_vertical"
+            android:textColor="#191919"
+            android:textFontWeight="500"
+            android:textStyle="normal"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/item_image"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:ignore="UnusedAttribute" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/price_layout"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dimen_8dp"
+            android:orientation="horizontal"
+            android:visibility="@{data.type!=`bundle`?1:0}"
+            android:weightSum="1"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@id/item_title"
+            app:layout_constraintTop_toBottomOf="@id/item_title">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/special_price"
+                setSpecialPrice="@{data.specialPrice}"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:textColor="#717171"
+                android:textSize="@dimen/dimen_12sp"
+                android:textStyle="normal"
+                android:visibility="gone"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/regular_price"
+                setText="@{data.regularPrice}"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dimen_8dp"
+                android:gravity="center_vertical"
+                android:textColor="#717171"
+                android:textSize="@dimen/dimen_12sp"
+                android:textStyle="normal"
+                app:layout_constraintStart_toEndOf="@id/special_price"
+                app:layout_constraintTop_toTopOf="@id/special_price" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/bundle_price"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:text="@{data.from_price+` - `+data.to_price}"
+            android:textColor="#717171"
+            android:textSize="@dimen/dimen_12sp"
+            android:textStyle="normal"
+            android:visibility="@{data.type==`bundle`?1:0}"
+            app:layout_constraintStart_toStartOf="@id/item_title"
+            app:layout_constraintTop_toBottomOf="@id/price_layout" />
+
+        <RatingBar
+            android:id="@+id/product_rating"
+            style="@style/Widget.AppCompat.RatingBar.Small"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="@dimen/dimen_5dp"
+            android:layout_marginBottom="5dp"
+            android:numStars="5"
+            android:progressBackgroundTint="@color/main_color_gray_dk"
+            android:progressTint="@color/ratingbar"
+            android:rating="@{data.review}"
+            android:theme="@style/RatingBar"
+            app:layout_constraintStart_toStartOf="@id/item_title"
+            app:layout_constraintTop_toBottomOf="@id/bundle_price" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/add_to_wish_list"
+            tintCustom="@{data.inwishlist}"
+            android:layout_width="@dimen/dimen_24sp"
+            android:layout_height="@dimen/dimen_24sp"
+            android:onClick="@{(view)->clickListeners.addToWishList(view,data)}"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

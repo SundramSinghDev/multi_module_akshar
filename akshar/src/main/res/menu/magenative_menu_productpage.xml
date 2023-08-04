@@ -1,0 +1,54 @@
+<!--
+  ~ Copyright/**
+  ~          * CedCommerce
+  ~           *
+  ~           * NOTICE OF LICENSE
+  ~           *
+  ~           * This source file is subject to the End User License Agreement (EULA)
+  ~           * that is bundled with this package in the file LICENSE.txt.
+  ~           * It is also available through the world-wide-web at this URL:
+  ~           * http://cedcommerce.com/license-agreement.txt
+  ~           *
+  ~           * @category  Ced
+  ~           * @package   MageNative
+  ~           * @author    CedCommerce Core Team <connect@cedcommerce.com >
+  ~           * @copyright Copyright CEDCOMMERCE (http://cedcommerce.com/)
+  ~           * @license      http://cedcommerce.com/license-agreement.txt
+  ~           */
+  -->
+
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".MainActivity">
+    <item
+        android:id="@+id/MageNative_action_cart"
+        android:actionLayout="@layout/magenative_feed_product_page_count"
+        android:orderInCategory="0"
+        android:title="@string/action_cart"
+        app:showAsAction="ifRoom" />
+    <item
+        android:id="@+id/MageNative_action_search"
+        android:actionLayout="@layout/magenative_wishlist_product_page_icon"
+        android:orderInCategory="1"
+        android:visible="false"
+        android:title="@string/action_search"
+        app:showAsAction="ifRoom"
+        tools:targetApi="o" />
+
+    <item
+        android:id="@+id/MageNative_action_wish"
+        android:icon="@drawable/ic_baseline_favorite_24"
+        android:orderInCategory="3"
+        android:title="@string/action_search"
+        app:showAsAction="always" />
+    <item
+        android:id="@+id/MageNative_action_notification"
+        android:icon="@drawable/notification_bell_whie"
+        android:iconTint="@color/white"
+        android:orderInCategory="3"
+        android:visible="false"
+        android:title="@string/action_cart"
+        app:showAsAction="always"
+        tools:targetApi="o" />
+</menu>

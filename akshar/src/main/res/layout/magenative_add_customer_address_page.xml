@@ -1,0 +1,483 @@
+<?xml version="1.0" encoding="utf-8"?><!--
+  ~ Copyright/**
+  ~          * CedCommerce
+  ~           *
+  ~           * NOTICE OF LICENSE
+  ~           *
+  ~           * This source file is subject to the End User License Agreement (EULA)
+  ~           * that is bundled with this package in the file LICENSE.txt.
+  ~           * It is also available through the world-wide-web at this URL:
+  ~           * http://cedcommerce.com/license-agreement.txt
+  ~           *
+  ~           * @category  Ced
+  ~           * @package   MageNative
+  ~           * @author    CedCommerce Core Team <connect@cedcommerce.com >
+  ~           * @copyright Copyright CEDCOMMERCE (http://cedcommerce.com/)
+  ~           * @license      http://cedcommerce.com/license-agreement.txt
+  ~           */
+  -->
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="10dp">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/MageNative_txt_add_button"
+                    android:layout_width="match_parent"
+                    android:layout_height="?attr/actionBarSize"
+                    android:layout_gravity="center"
+                    android:clickable="false"
+                    android:fontFamily="@font/celias_bold"
+                    android:gravity="center"
+                    android:padding="@dimen/pad_10dp"
+                    android:text="@string/AddAddress"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/txt_bigheading18" />
+
+
+                <com.google.android.material.textfield.TextInputLayout
+                    style="@style/LoginTextInputLayoutStyle"
+                    android:layout_width="match_parent"
+                    android:layout_height="?attr/actionBarSize"
+                    app:hintTextColor="@color/user_icon_default_gray"
+                    app:startIconDrawable="@drawable/ic_username">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/MageNative_email"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="0.50"
+                        android:editable="false"
+                        android:ems="10"
+                        android:inputType="textEmailAddress"
+                        android:padding="@dimen/pad_15dp"
+                        android:singleLine="true"
+                        android:textSize="@dimen/txt_12sp"
+                        tools:targetApi="m" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+
+                <LinearLayout
+                    android:id="@+id/prefixsection"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:visibility="gone">
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/prefixlabel"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="#BDBDBD"
+                        android:textSize="13sp" />
+
+                    <RadioGroup
+                        android:id="@+id/prefix"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="8dp"
+                        android:orientation="vertical" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/prefixname"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:visibility="gone" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/prefixoptions"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:visibility="gone" />
+                </LinearLayout>
+
+
+                <com.google.android.material.textfield.TextInputLayout
+                    style="@style/LoginTextInputLayoutStyle"
+                    android:layout_width="match_parent"
+                    android:layout_height="?attr/actionBarSize"
+                    android:hint="@string/FirstName"
+                    android:textColorHint="@color/TextHintColor"
+                    app:hintTextColor="@color/user_icon_default_gray">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/MageNative_User_firstname"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="0.50"
+                        android:fontFamily="@font/celias_regular"
+                        android:padding="@dimen/pad_15dp"
+                        android:scrollHorizontally="true"
+                        android:singleLine="true"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/txt_12sp" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/middlenamesection"
+                    style="@style/LoginTextInputLayoutStyle"
+                    android:layout_width="match_parent"
+                    android:layout_height="?attr/actionBarSize"
+                    android:textColorHint="@color/TextHintColor"
+                    android:visibility="gone"
+                    app:hintTextColor="@color/user_icon_default_gray">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/MageNative_midllename"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:fontFamily="@font/celias_regular"
+                        android:singleLine="true"
+                        android:textColor="#5C5C5C"
+                        android:textSize="@dimen/txt_12sp" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+
+                <com.google.android.material.textfield.TextInputLayout
+                    style="@style/LoginTextInputLayoutStyle"
+                    android:layout_width="match_parent"
+                    android:layout_height="?attr/actionBarSize"
+                    android:hint="@string/LastName"
+                    android:textColorHint="@color/TextHintColor"
+                    app:hintTextColor="@color/user_icon_default_gray">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/MageNative_User_LastName"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="0.50"
+                        android:fontFamily="@font/celias_regular"
+                        android:padding="@dimen/pad_15dp"
+                        android:scrollHorizontally="true"
+                        android:singleLine="true"
+                        android:textColor="@color/black"
+                        android:textColorHint="@color/TextHintColor"
+                        android:textSize="@dimen/txt_12sp" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+
+                <LinearLayout
+                    android:id="@+id/dobsection"
+                    android:layout_width="match_parent"
+                    android:layout_height="?attr/actionBarSize"
+                    android:layout_marginTop="@dimen/pad_5dp"
+                    android:orientation="vertical"
+                    android:visibility="gone">
+                    <!-- <com.google.android.material.textfield.TextInputLayout
+                         style="@style/LoginTextInputLayoutStyle"
+app:hintTextColor="@color/user_icon_default_gray"
+                         android:layout_width="match_parent"
+                         android:layout_height="?attr/actionBarSize"
+                         android:layout_marginBottom="10dp">-->
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/dob"
+                        android:layout_width="match_parent"
+                        android:layout_height="?attr/actionBarSize"
+                        android:background="@drawable/cornerdeafult"
+                        android:fontFamily="@font/celias_regular"
+                        android:gravity="center|start"
+                        android:hint="DD/MM/YYYY"
+                        android:imeOptions="actionNext"
+                        android:inputType="date"
+                        android:padding="8dp"
+                        android:singleLine="true"
+                        android:textColor="@color/black"
+                        android:textColorHint="@color/TextHintColor"
+                        android:textSize="@dimen/txt_12sp" />
+                    <!-- </com.google.android.material.textfield.TextInputLayout>-->
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/suffixsection"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:orientation="vertical"
+                    android:visibility="gone">
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/suffixlabel"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="#BDBDBD"
+                        android:textSize="13sp" />
+
+                    <RadioGroup
+                        android:id="@+id/suffix"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="8dp"
+                        android:orientation="vertical" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/suffixname"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:visibility="gone" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/suffixoptions"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:visibility="gone" />
+                </LinearLayout>
+
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/taxvatsection"
+                    style="@style/LoginTextInputLayoutStyle"
+                    android:layout_width="match_parent"
+                    android:layout_height="?attr/actionBarSize"
+                    android:textColorHint="@color/TextHintColor"
+                    android:visibility="gone"
+                    app:hintTextColor="@color/user_icon_default_gray">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/MageNative_taxvat"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="0.50"
+                        android:fontFamily="@font/celias_regular"
+                        android:scrollHorizontally="true"
+                        android:singleLine="true"
+                        android:textColorHint="@color/TextHintColor"
+                        android:textSize="@dimen/txt_12sp" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+
+                <com.google.android.material.textfield.TextInputLayout
+                    style="@style/LoginTextInputLayoutStyle"
+                    android:layout_width="match_parent"
+                    android:layout_height="?attr/actionBarSize"
+                    android:hint="@string/Country"
+                    android:textColorHint="@color/TextHintColor"
+                    app:hintTextColor="@color/user_icon_default_gray">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/MageNative_country"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="0.50"
+                        android:editable="false"
+                        android:fontFamily="@font/celias_regular"
+                        android:padding="@dimen/pad_15dp"
+                        android:textColor="@color/black"
+                        android:textColorHint="@color/TextHintColor"
+                        android:textSize="@dimen/txt_12sp" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/state_layout"
+                    style="@style/LoginTextInputLayoutStyle"
+                    android:layout_width="match_parent"
+                    android:layout_height="?attr/actionBarSize"
+                    android:hint="@string/State"
+                    android:textColorHint="@color/TextHintColor"
+                    android:visibility="gone"
+                    app:hintTextColor="@color/user_icon_default_gray">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/MageNative_state"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="0.50"
+                        android:fontFamily="@font/celias_regular"
+                        android:padding="@dimen/pad_15dp"
+                        android:scrollHorizontally="true"
+                        android:singleLine="true"
+                        android:textColor="@color/black"
+                        android:textColorHint="@color/TextHintColor"
+                        android:textSize="@dimen/txt_12sp" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/state_dropdown_layout"
+                    style="@style/LoginTextInputLayoutStyle"
+                    android:layout_width="match_parent"
+                    android:layout_height="?attr/actionBarSize"
+                    android:hint="@string/State"
+                    android:visibility="gone"
+                    app:hintTextColor="@color/user_icon_default_gray">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/MageNative_state_dropdown"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="0.50"
+                        android:editable="false"
+                        android:padding="@dimen/pad_15dp"
+                        android:singleLine="true"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/txt_12sp" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    style="@style/LoginTextInputLayoutStyle"
+                    android:layout_width="match_parent"
+                    android:layout_height="?attr/actionBarSize"
+                    android:hint="@string/City"
+                    android:textColorHint="@color/TextHintColor"
+                    app:hintTextColor="@color/user_icon_default_gray">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/MageNative_city"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="0.50"
+                        android:fontFamily="@font/celias_regular"
+                        android:padding="@dimen/pad_15dp"
+                        android:scrollHorizontally="true"
+                        android:singleLine="true"
+                        android:textColor="@color/black"
+                        android:textColorHint="@color/TextHintColor"
+                        android:textSize="@dimen/txt_12sp" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    style="@style/LoginTextInputLayoutStyle"
+                    android:layout_width="match_parent"
+                    android:layout_height="?attr/actionBarSize"
+                    android:hint="@string/Street"
+                    android:textColorHint="@color/TextHintColor"
+                    app:hintTextColor="@color/user_icon_default_gray">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/MageNative_Street"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="0.50"
+                        android:fontFamily="@font/celias_regular"
+                        android:padding="@dimen/pad_15dp"
+                        android:scrollHorizontally="true"
+                        android:singleLine="true"
+                        android:textColor="@color/black"
+                        android:textColorHint="@color/TextHintColor"
+                        android:textSize="@dimen/txt_12sp" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    style="@style/LoginTextInputLayoutStyle"
+                    android:layout_width="match_parent"
+                    android:layout_height="?attr/actionBarSize"
+                    android:hint="@string/Pincode"
+                    android:textColorHint="@color/TextHintColor"
+                    app:hintTextColor="@color/user_icon_default_gray">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/MageNative_pincode"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="0.50"
+                        android:fontFamily="@font/celias_regular"
+                        android:inputType="number"
+                        android:padding="@dimen/pad_15dp"
+                        android:scrollHorizontally="true"
+                        android:singleLine="true"
+                        android:textColor="@color/black"
+                        android:textColorHint="@color/TextHintColor"
+                        android:textSize="@dimen/txt_12sp" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    style="@style/LoginTextInputLayoutStyle"
+                    android:layout_width="match_parent"
+                    android:layout_height="?attr/actionBarSize"
+                    android:hint="@string/PhoneNumber"
+                    android:textColorHint="@color/TextHintColor"
+                    app:hintTextColor="@color/user_icon_default_gray">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/MageNative_Phone"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="0.50"
+                        android:fontFamily="@font/celias_regular"
+                        android:inputType="phone"
+                        android:padding="@dimen/pad_15dp"
+                        android:scrollHorizontally="true"
+                        android:singleLine="true"
+                        android:textColor="@color/black"
+                        android:textColorHint="@color/TextHintColor"
+                        android:textSize="@dimen/txt_12sp" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+
+                <CheckBox
+                    android:id="@+id/useforbilling"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/pad_15dp"
+                    android:buttonTint="@color/onwhitetextcolor"
+                    android:fontFamily="@font/celias_regular"
+                    android:text="@string/Setasdefaultforbilling"
+                    android:textSize="@dimen/txt_12sp" />
+
+                <CheckBox
+                    android:id="@+id/useforshipping"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:buttonTint="@color/onwhitetextcolor"
+                    android:fontFamily="@font/celias_regular"
+                    android:text="@string/Setasdefaultforshipping"
+                    android:textSize="@dimen/txt_12sp" />
+
+
+                <com.balysv.materialripple.MaterialRippleLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="#ffffff"
+                    app:mrl_rippleAlpha="0.2"
+                    app:mrl_rippleColor="#ffffff"
+                    app:mrl_rippleDelayClick="false"
+                    app:mrl_rippleHover="true"
+                    app:mrl_rippleOverlay="true">
+
+                    <androidx.appcompat.widget.AppCompatButton
+                        android:id="@+id/MageNative_saveAddress"
+                        android:layout_width="match_parent"
+                        android:layout_height="?attr/actionBarSize"
+                        android:layout_gravity="center"
+                        android:background="@drawable/buttonbackground"
+                        android:backgroundTint="@color/blue_variant_figma"
+                        android:fontFamily="@font/celias_bold"
+                        android:text="@string/Save"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/txt_subheading15" />
+                </com.balysv.materialripple.MaterialRippleLayout>
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/MageNative_addressid"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:visibility="gone" />
+
+            </LinearLayout>
+        </ScrollView>
+
+    </RelativeLayout>
+
+</layout>

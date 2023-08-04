@@ -1,0 +1,13 @@
+// Top-level build file where you can add configuration options common to all sub-projects/modules.
+plugins {
+    id 'com.android.application' version '7.2.1' apply false
+    id 'com.android.library' version '7.2.1' apply false
+    id 'org.jetbrains.kotlin.android' version '1.7.10' apply false
+//    id 'org.jetbrains.kotlin.android' version '1.6.10' apply false C:/Users/cedcoss/.gradle/caches/transforms-3/5ba106de7e89e07c7bf1feac5306caf5/transformed/jetified-viewpager2-1.1.0-beta02-api.jar!/META-INF/viewpager2_release.kotlin_module: Module was compiled with an incompatible version of Kotlin. The binary version of its metadata is 1.8.0, expected version is 1.6.0.
+    id 'androidx.navigation.safeargs' version '2.4.1' apply false
+    id 'com.google.dagger.hilt.android' version '2.44' apply false
+    id 'com.google.gms.google-services' version '4.3.10' apply false
+}
+task clean(type: Delete) {
+    delete rootProject.buildDir
+}

@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  ~ Copyright/**
+  ~           * CedCommerce
+  ~           *
+  ~           * NOTICE OF LICENSE
+  ~           *
+  ~           * This source file is subject to the End User License Agreement (EULA)
+  ~           * that is bundled with this package in the file LICENSE.txt.
+  ~           * It is also available through the world-wide-web at this URL:
+  ~           * http://cedcommerce.com/license-agreement.txt
+  ~           *
+  ~           * @category  Ced
+  ~           * @package   MageNative
+  ~           * @author    CedCommerce Core Team <connect@cedcommerce.com >
+  ~           * @copyright Copyright CEDCOMMERCE (http://cedcommerce.com/)
+  ~           * @license   http://cedcommerce.com/license-agreement.txt
+  ~           */
+  -->
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:id="@+id/MageNative_main"
+    tools:context=".ui.productsection.activity.Ced_New_Product_Listing">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:background="#EBEBEB"
+        android:layout_alignParentTop="true"
+        android:weightSum="2.5"
+        android:id="@+id/MageNative_sortingsection">
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1.1"
+            android:id="@+id/MageNative_filtersection"
+            android:background="@color/white">
+            <androidx.appcompat.widget.AppCompatImageView
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:id="@+id/MageNative_filterproductimage"
+                android:src="@drawable/filter_icon"
+                android:layout_toStartOf="@+id/MageNative_filterproduct"
+                android:layout_centerVertical="true"
+                android:padding="5dp"
+                />
+            <androidx.appcompat.widget.AppCompatTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/MageNative_filterproduct"
+                android:text="@string/filter"
+                android:textColor="#000000"
+                android:textAllCaps="true"
+                android:textSize="15sp"
+                android:layout_marginStart="5dp"
+                android:layout_centerInParent="true"
+                />
+        </RelativeLayout>
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1.1"
+            android:id="@+id/MageNative_sortsection"
+            android:layout_marginStart="1dp"
+            android:background="@color/white">
+            <androidx.appcompat.widget.AppCompatImageView
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:id="@+id/MageNative_sortbyimage"
+                android:src="@drawable/sort_icon"
+                android:padding="5dp"
+                android:layout_toStartOf="@+id/MageNative_sortproduct"
+                android:layout_centerVertical="true"
+                />
+            <androidx.appcompat.widget.AppCompatTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/MageNative_sortproduct"
+                android:text="@string/sortby"
+                android:textColor="#000000"
+                android:textAllCaps="true"
+                android:textSize="15sp"
+                android:layout_centerInParent="true"
+                android:layout_marginStart="5dp"
+                />
+        </RelativeLayout>
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="0.3"
+            android:id="@+id/MageNative_changeviewsection"
+            android:background="@color/white"
+            android:layout_marginStart="1dp">
+            <androidx.appcompat.widget.AppCompatImageView
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:id="@+id/MageNative_changeview"
+                android:src="@drawable/list_icon"
+                android:padding="5dp"
+                android:layout_centerInParent="true"
+                />
+        </RelativeLayout>
+    </LinearLayout>
+    <androidx.appcompat.widget.AppCompatTextView
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#EBEBEB"
+        android:id="@+id/MageNative_linebelowsorting"
+        android:layout_below="@+id/MageNative_sortingsection"/>
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:scrollbars="none"
+        android:layout_below="@+id/MageNative_linebelowsorting"
+        android:id="@+id/MageNative_productscroll"
+        >
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/MageNative_catsection"
+                android:orientation="vertical"
+                android:background="@color/white"
+                android:animateLayoutChanges="true"
+                >
+                <GridLayout
+                    android:id="@+id/MageNative_subcatgrid"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:columnCount="3"
+                    android:rowCount="1"
+                    android:orientation="horizontal"
+                    android:layout_below="@+id/MageNative_mainsection"
+                    android:layout_centerHorizontal="true"
+                    android:background="@color/white"
+                    android:layout_marginBottom="10dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_gravity="center_horizontal"
+                    android:animateLayoutChanges="true"
+                    >
+                </GridLayout>
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="#EBEBEB"
+                    android:id="@+id/MageNative_linebelowgrid"/>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:id="@+id/MageNative_listview"
+                android:visibility="gone"
+                android:layout_below="@+id/MageNative_catsection"
+                android:animateLayoutChanges="true"
+                android:background="@color/white">
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:id="@+id/MageNative_gridview"
+                android:layout_below="@+id/MageNative_catsection"
+                android:animateLayoutChanges="true"
+                android:background="@color/white">
+            </LinearLayout>
+        </RelativeLayout>
+    </ScrollView>
+    <ProgressBar
+        style="?android:attr/progressBarStyleLarge"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:id="@+id/progressBar"
+        android:progressDrawable="@drawable/circular_progress_bar"
+        android:layout_centerHorizontal="true"
+        android:visibility="gone"
+       android:layout_alignParentBottom="true"
+       />
+</RelativeLayout>
